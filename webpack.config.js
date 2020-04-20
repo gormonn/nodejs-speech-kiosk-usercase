@@ -15,11 +15,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: './index.js',
+  entry: './src/index.js',
   output: {
     library: 'Speech',
 		libraryTarget: "umd",
-    filename: './speech.js',
+    filename: './index.js',
   },
   node: {
     child_process: 'empty',
