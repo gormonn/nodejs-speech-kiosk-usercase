@@ -21,8 +21,6 @@
 
 const speech = require('@google-cloud/speech');
 const {GoogleAuth} = require('google-auth-library');
-const Recorder = require('./recorder')
-const VAD = require('./vad')
 
 async function recognize(
   content,
@@ -57,7 +55,7 @@ async function recognize(
   //   .on('data', onData);
 }
 
-module.exports = {Recorder, VAD, recognize};
+module.exports = {recognize};
 
 // class Speech{
 //   construnctor(API_KEY, language = 'ru-RU'){
