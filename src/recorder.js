@@ -2,21 +2,18 @@
 const InlineWorker = require('inline-worker')
 
 class Recorder {
-    config = {
+    constructor(source, cfg = {
         bufferLen: 4096,
         numChannels: 2,
         mimeType: 'audio/wav'
-    };
-
-    recording = false;
-
-    callbacks = {
-        getBuffer: [],
-        exportWAV: []
-    };
-
-    constructor(source, cfg) {
-        Object.assign(this.config, cfg);
+    }) {
+        this.callbacks = {
+            getBuffer: [],
+            exportWAV: []
+        }
+        this.recording = false
+        // Object.assign(this.config, cfg);
+        this.config = cfg
         this.context = source.context;
         this.node = (this.context.createScriptProcessor ||
         this.context.createJavaScriptNode).call(this.context,
