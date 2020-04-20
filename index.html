@@ -1,0 +1,61 @@
+<!--
+Copyright 2020 Google LLC
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<html>
+<head>
+<script src="./dist/speech.js"></script>
+<title>Google Cloud Speech-To-Text in browser with API Key</title>
+</head>
+<body>
+<h1>Google Cloud Speech-To-Text in browser with API Key</h1>
+
+<script>
+async function process(file) {
+  const div = document.getElementById('result');
+  try {
+    const API_KEY = 'SET_YOUR_KEY'
+    // const GSpeech = new Speech(API_KEY, 'ru-RU')
+    // GSpeech.init(API_KEY)
+    // console.log({GSpeech})
+    // const GSpeech = new Speech()
+    const arrayBuffer = await file.arrayBuffer();
+    const uint8Array = new Uint8Array(arrayBuffer);
+    const recognitionResult = await Speech.recognize(uint8Array, API_KEY);
+    div.innerHTML = recognitionResult.results[0].alternatives[0].transcript;
+  }
+  catch (err) {
+    console.error(err)
+    div.innerHTML = 'Error: ' + err.toString();
+  }
+}
+</script>
+
+<!-- Speech input example from https://developers.google.com/web/fundamentals/media/recording-audio#start_simple_and_progressively -->
+
+<input type="file" accept="audio/*" capture id="recorder">
+<audio id="player" controls></audio>
+<script>
+  const recorder = document.getElementById('recorder');
+  const player = document.getElementById('player');
+
+  recorder.addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    const url = URL.createObjectURL(file);
+    player.src = url;
+    process(file);
+  });
+</script>
+
+<div id="result"><i>Recognition result will appear here</i></div>
+</body>
+</html>

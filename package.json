@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-speech-kiosk-usercase",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "contributors": [
+    "Alexander Fenster <fenster@google.com> (https://github.com/alexander-fenster)",
+    "Dmitriy Aleksandrovich Chernukho <wfuzerbar@gmail.com> (https://github.com/gormonn)"
+  ],
+  "description": "Google Speech node-js build for Electron kiosk usercase",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gormonn/nodejs-speech-kiosk-usercase.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gormonn/nodejs-speech-kiosk-usercase/issues"
+  },
+  "homepage": "https://github.com/gormonn/nodejs-speech-kiosk-usercase#readme",
+  "dependencies": {
+    "@google-cloud/speech": "^3.6.0",
+    "google-auth-library": "^6.0.0"
+  },
+  "devDependencies": {
+    "null-loader": "^4.0.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
