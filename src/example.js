@@ -1,4 +1,4 @@
-const Recorder = require('recorderjs')
+const Recorder = require('./recorder')
 const { recognize } = require('./index')
 const VAD = require('./vad')
 
