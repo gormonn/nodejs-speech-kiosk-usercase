@@ -1,4 +1,4 @@
-const Recorder = require('./recorder')
+const Recorder = require('recorderjs')
 const VAD = require('./vad')
 
 // example use:
@@ -68,4 +68,4 @@ function Recognizer({
 	}
 }
 
-module.exports = Recognizer
+module.exports = {Recognizer}

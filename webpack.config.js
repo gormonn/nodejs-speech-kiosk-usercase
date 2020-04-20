@@ -15,7 +15,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/example.js',
   output: {
     library: 'Speech',
 		libraryTarget: "umd",

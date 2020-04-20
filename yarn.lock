@@ -2500,6 +2500,11 @@ readdirp@^2.2.1:
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
 
+recorderjs@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/recorderjs/-/recorderjs-1.0.1.tgz#f8211a0f90bdcdcfa2f431a597b6cb94a1b93571"
+  integrity sha1-+CEaD5C9zc+i9DGll7bLlKG5NXE=
+
 regex-not@^1.0.0, regex-not@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/regex-not/-/regex-not-1.0.2.tgz#1f4ece27e00b0b65e0247a6810e6a85d83a5752c"
