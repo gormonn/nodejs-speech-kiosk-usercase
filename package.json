@@ -1,7 +1,7 @@
 {
   "name": "nodejs-speech-kiosk-usercase",
-  "version": "0.0.2",
-  "main": "index.js",
+  "version": "0.0.4",
+  "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack.config.js"
@@ -21,7 +21,8 @@
   "homepage": "https://github.com/gormonn/nodejs-speech-kiosk-usercase#readme",
   "dependencies": {
     "@google-cloud/speech": "^3.6.0",
-    "google-auth-library": "^6.0.0"
+    "google-auth-library": "^6.0.0",
+    "inline-worker": "^1.1.0"
   },
   "devDependencies": {
     "null-loader": "^4.0.0",
