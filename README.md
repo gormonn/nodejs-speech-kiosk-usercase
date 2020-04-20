@@ -1,5 +1,6 @@
 # nodejs-speech-kiosk-usercase
-Google Speech node-js build for Electron kiosk usercase
+Google Speech node-js build for Electron kiosk usercase.
+
 This is just a library build, for a specific project on Electron.
 
 I hope this is a temporary solution. Dictated by a bug:
