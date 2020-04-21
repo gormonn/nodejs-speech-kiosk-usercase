@@ -37,3 +37,13 @@ const Rec = new Recognizer({
 // Rec.stopRecognize() - stop recording and recognize
 // Rec.startRecognize() - start recording and recognize
 ```
+
+> **For those who read it: the example below can only be used in kiosk usecase. For regular browsers, please use `OAuth2Client` to implement a proper authentication workflow.**
+
+Создание ключа:
+1. https://console.cloud.google.com/apis/credentials
+2. Клик "Создать учетные данные" > "Ключ API" > "Применить ограничения для ключа"
+3. Выбрать "Допустимый тип приложений" > "HTTP-источники перехода (веб-сайты)"
+4. Сохранить
+
+> More on API keys: https://cloud.google.com/docs/authentication/api-keys
