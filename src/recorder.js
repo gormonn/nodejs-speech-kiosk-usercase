@@ -113,7 +113,6 @@ class Recorder {
             }
 
             function mergeBuffers(recBuffers, recLength) {
-                console.log('mergeBuffers', recBuffers, recLength)
                 let result = new Float32Array(recLength);
                 let offset = 0;
                 for (let i = 0; i < recBuffers.length; i++) {

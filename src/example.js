@@ -15,20 +15,57 @@ const VAD = require('./vad')
 // })
 
 function Recognizer({
-	keys,
+	apiKeys,
 	onSpeechStart = () => console.log('voice_start'),
 	onSpeechEnd = () => console.log('voice_stop'),
-	onSpeechRecognized = res => console.log('onSpeechRecognized', res)
+	onSpeechRecognized = res => console.log('onSpeechRecognized', res),
+	isSpeech2Text = true
 }){
-	navigator.getUserMedia({audio: true}, init, err => {
-		console.error("No live audio input in this browser: " + err)
-	})
+	this._isSpeech2Text = isSpeech2Text
 
-	function init(stream){
+	this.stopRecognize = () => {
+		this._isSpeech2Text = false
+	}
+	this.startRecognize = () => {
+		this._isSpeech2Text = true
+	}
+
+	const init = stream => {
 		const audioContext = new AudioContext();
 		const source = audioContext.createMediaStreamSource(stream)
 
 		const recorder = new Recorder(source, {numChannels: 1})
+
+		const onVoiceStart = () => {
+			onSpeechStart()
+			if(this._isSpeech2Text) recorder.record()
+		}
+
+		const onVoiceEnd = () => {
+			onSpeechEnd()
+			if(this._isSpeech2Text) stopRecording()
+		}
+
+		const stopRecording = () => {
+			recorder.stop()
+			recorder.exportWAV(googleSpeechRequest)
+			recorder.clear() // иначе, запись склеивается
+		}
+
+		const googleSpeechRequest = blob => {
+			const { googleCloud = [] } = apiKeys
+			const [googleCloudKey] = googleCloud
+			let reader = new FileReader()
+			reader.onload = async function() {
+				if (reader.readyState == 2) {
+					const uint8Array = new Uint8Array(reader.result);
+					const recognitionResult = await recognize(uint8Array, googleCloudKey);
+					onSpeechRecognized(recognitionResult)
+					// console.log({recognitionResult})
+				}
+			}
+			reader.readAsArrayBuffer(blob)
+		}
 
 		VAD({
 			source,
@@ -36,37 +73,11 @@ function Recognizer({
 			voice_stop: onVoiceEnd,
 			DEBUG: true
 		})
-
-		function onVoiceStart(){
-			onSpeechStart()
-			recorder.record()
-		}
-
-		function onVoiceEnd(){
-			onSpeechEnd()
-			stopRecording()
-		}
-
-		function stopRecording() {
-			recorder.stop();
-			// gumStream.getAudioTracks()[0].stop();
-			recorder.exportWAV(googleSpeechRequest);
-			recorder.clear(); // иначе, запись склеивается
-		}
-
-		function googleSpeechRequest(blob) {
-			let reader = new FileReader()
-			reader.onload = async function() {
-				if (reader.readyState == 2) {
-					const uint8Array = new Uint8Array(reader.result);
-					const recognitionResult = await recognize(uint8Array, keys.googleCloud[0]);
-					onSpeechRecognized(recognitionResult)
-					// console.log({recognitionResult})
-				}
-			}
-			reader.readAsArrayBuffer(blob)
-		}
 	}
+	
+	navigator.getUserMedia({audio: true}, init, err => {
+		console.error("No live audio input in this browser: " + err)
+	})
 }
 
 module.exports = {Recognizer, Recorder, VAD, recognize}
