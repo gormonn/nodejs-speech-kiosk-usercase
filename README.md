@@ -32,10 +32,17 @@ const apiKeys = {
 
 const Rec = new Recognizer({
 	apiKeys, 
-	onSpeechRecognized: res => console.log('РЕЗУЛЬТАТ! ' + JSON.stringify(res)),
-	onSpeechStart: () => console.log('ГОВОРИТ!'),
-	onSpeechEnd: () => console.log('ЗАМОЛЧАЛ!')
+	onSpeechRecognized: res => console.log('РЕЗУЛЬТАТ! ' + JSON.stringify(res)), 
+	onSpeechStart: () => console.log('ГОВОРИТ!'), // fires on speech started
+	onSpeechEnd: () => console.log('ЗАМОЛЧАЛ!'), // fires on speech ended
+	autoStart: false
 })
+
+// Rec.startAll() - start listening
+// Rec.stopAll() - stop listening
+
+// Rec.startListening() - start listening, recording and recognize
+// Rec.stopListening() - stop listening, recording and recognize
 
 // Rec.stopRecognize() - stop recording and recognize
 // Rec.startRecognize() - start recording and recognize

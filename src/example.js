@@ -14,12 +14,15 @@ const VAD = require('./vad')
 // 	onSpeechEnd: () => console.log('ЗАМОЛЧАЛ!')
 // })
 
+// todo: добавить возможность остановить прослушку
+
 function Recognizer({
 	apiKeys,
 	onSpeechStart = () => console.log('voice_start'),
 	onSpeechEnd = () => console.log('voice_stop'),
 	onSpeechRecognized = res => console.log('onSpeechRecognized', res),
-	isSpeech2Text = true
+	isSpeech2Text = true,
+	autoStart = true
 }){
 	this._isSpeech2Text = isSpeech2Text
 
@@ -30,9 +33,9 @@ function Recognizer({
 		this._isSpeech2Text = true
 	}
 
-	const init = stream => {
-		const audioContext = new AudioContext();
-		const source = audioContext.createMediaStreamSource(stream)
+	const mediaListener = stream => {
+		this._audioContext = new AudioContext();
+		const source = this._audioContext.createMediaStreamSource(stream)
 
 		const recorder = new Recorder(source, {numChannels: 1})
 
@@ -75,9 +78,29 @@ function Recognizer({
 		})
 	}
 	
-	navigator.getUserMedia({audio: true}, init, err => {
-		console.error("No live audio input in this browser: " + err)
-	})
+	this.startListening = () => {
+		navigator.getUserMedia({audio: true}, mediaListener, err => {
+			console.error("No live audio input in this browser: " + err)
+		})
+	}
+
+	this.stopListening = async () => {
+		await this._audioContext.close();
+	}
+
+	this.stopAll = async () => {
+		this.stopRecognize()
+		await this.stopListening()
+	}
+
+	this.startAll = async () => {
+		this.startRecognize()
+		this.startListening()
+	}
+
+	if(autoStart){
+		this.startListening()
+	}
 }
 
 module.exports = {Recognizer, Recorder, VAD, recognize}
