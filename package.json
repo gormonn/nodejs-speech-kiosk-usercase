@@ -1,11 +1,16 @@
 {
   "name": "nodejs-speech-kiosk-usercase",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack.config.js"
   },
+  "keywords": [
+    "vad",
+    "google-speech",
+    "electron"
+  ],
   "contributors": [
     "Alexander Fenster <fenster@google.com> (https://github.com/alexander-fenster)",
     "Dmitriy Aleksandrovich Chernukho <wfuzerbar@gmail.com> (https://github.com/gormonn)"
