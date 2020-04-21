@@ -15,3 +15,25 @@ https://github.com/googleapis/nodejs-speech/issues/547
 > 
 > Let me know if you need help!
 
+Install:
+
+`yarn add nodejs-speech-kiosk-usercase`
+
+Example usage:
+
+```
+const {Recognizer} = require('nodejs-speech-kiosk-usercase')
+const apiKeys = {
+	googleCloud: ['YOUR_API_KEY']
+}
+
+const Rec = new Recognizer({
+	apiKeys, 
+	onSpeechRecognized: res => console.log('РЕЗУЛЬТАТ! ' + JSON.stringify(res)),
+	onSpeechStart: () => console.log('ГОВОРИТ!'),
+	onSpeechEnd: () => console.log('ЗАМОЛЧАЛ!')
+})
+
+// Rec.stopRecognize() - stop recording and recognize
+// Rec.startRecognize() - start recording and recognize
+```
