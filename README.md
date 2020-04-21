@@ -38,11 +38,11 @@ const Rec = new Recognizer({
 	autoStart: false
 })
 
-// Rec.startAll() - start listening
-// Rec.stopAll() - stop listening
+// Rec.startAll() - start listening, recording and recognize
+// Rec.stopAll() - stop listening, recording and recognize
 
-// Rec.startListening() - start listening, recording and recognize
-// Rec.stopListening() - stop listening, recording and recognize
+// Rec.startListening() - start listening
+// Rec.stopListening() - stop listening
 
 // Rec.stopRecognize() - stop recording and recognize
 // Rec.startRecognize() - start recording and recognize
