@@ -4,8 +4,10 @@ Google Speech node-js build for Electron kiosk usercase.
 This is just a library build, for a specific project on Electron.
 
 I hope this is a temporary solution. Dictated by a bug:
+
 https://github.com/googleapis/nodejs-speech/issues/547
-(googleapis/nodejs-speech#547)
+
+googleapis/nodejs-speech#547
 
 > @gormonn In your specific case (kiosk application), you can use API keys for authentication. We don't advertise this option too much because we really don't want it to be used in browsers (where users could easily see the api key in the source code).
 > 
