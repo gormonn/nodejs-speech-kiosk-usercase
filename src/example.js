@@ -16,27 +16,31 @@ const VAD = require('./vad')
 
 // todo: добавить возможность остановить прослушку
 
+
 function Recognizer({
 	apiKeys,
 	onSpeechStart = () => console.log('voice_start'),
 	onSpeechEnd = () => console.log('voice_stop'),
 	onSpeechRecognized = res => console.log('onSpeechRecognized', res),
+	onAllStart = () => console.log('onAllStart'),
+	onAllStop = () => console.log('onAllStop'),
 	options = {}
 }){
 	const {
 		isSpeech2Text = true,
 		autoInit = true,
 		forced = true,
+		idleDelay = 5000,
 		vad = {}
 	} = options
 	this._isSpeech2Text = isSpeech2Text
+	this._idleTimeout = null
 
 	const mediaListener = stream => {
 		this._audioContext = new AudioContext();
 		const source = this._audioContext.createMediaStreamSource(stream)
 
 		const recorder = new Recorder(source, {numChannels: 1})
-
 
 		const onVoiceStart = () => {
 			startRecording()
@@ -51,8 +55,9 @@ function Recognizer({
 			if(this._isSpeech2Text) recorder.record()
 		}
 		const stopRecording = () => {
+			restartIdleTimeout()
 			recorder.stop()
-			if(this._isSpeech2Text) recorder.exportWAV(googleSpeechRequest)
+			if(this._isSpeech2Text) recorder.exportWAV(googleSpeechRequest) // might be a bug
 			recorder.clear() // иначе, запись склеивается
 		}
 
@@ -71,6 +76,27 @@ function Recognizer({
 			reader.readAsArrayBuffer(blob)
 		}
 
+		const forcedStartRecord = () => {
+			if(forced){
+				startRecording()
+			}
+		}
+
+		const restartIdleTimeout = () => {
+			clearTimeout(this._idleTimeout)
+			if(idleDelay){
+				this._idleTimeout = setTimeout(beforeStopAll, idleDelay)
+			}
+		}
+		const beforeStopAll = () => {
+			// console.log('beforeStopAll', recorder.recording)
+			if(recorder.recording){
+				restartIdleTimeout()
+			}else{
+				this.stopAll()
+			}
+		}
+
 		VAD({
 			...vad,
 			source,
@@ -79,12 +105,12 @@ function Recognizer({
 			DEBUG: true
 		})
 
-		if(forced){
-			onVoiceStart()
-			setTimeout(onVoiceEnd, 5000)
-		}
+		onAllStart()
+		forcedStartRecord()
+		// this.startIdleTimeout()
+		restartIdleTimeout()
 	}
-	
+
 	this.startListening = () => {
 		navigator.getUserMedia({audio: true}, mediaListener, err => {
 			console.error("No live audio input in this browser: " + err)
@@ -102,14 +128,16 @@ function Recognizer({
 	}
 
 	this.stopAll = async () => {
+		// не понятно, останавливается ли запись
 		this.stopRecognize()
 		await this.stopListening()
+		onAllStop()
 	}
 	this.startAll = async () => {
 		this.startRecognize()
 		this.startListening()
 	}
-
+	
 	if(autoInit){
 		this.startListening()
 	}
