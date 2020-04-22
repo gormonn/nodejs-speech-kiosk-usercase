@@ -35,7 +35,12 @@ const Rec = new Recognizer({
 	onSpeechRecognized: res => console.log('РЕЗУЛЬТАТ! ' + JSON.stringify(res)), 
 	onSpeechStart: () => console.log('ГОВОРИТ!'), // fires on speech started
 	onSpeechEnd: () => console.log('ЗАМОЛЧАЛ!'), // fires on speech ended
-	autoStart: false
+	options: {
+		isSpeech2Text = true,
+		autoInit = true,
+		forced = true, // forced start recording
+		vad = {} // pass options to vad function
+	}
 })
 
 // Rec.startAll() - start listening, recording and recognize

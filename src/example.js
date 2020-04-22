@@ -21,17 +21,15 @@ function Recognizer({
 	onSpeechStart = () => console.log('voice_start'),
 	onSpeechEnd = () => console.log('voice_stop'),
 	onSpeechRecognized = res => console.log('onSpeechRecognized', res),
-	isSpeech2Text = true,
-	autoStart = true
+	options = {}
 }){
+	const {
+		isSpeech2Text = true,
+		autoInit = true,
+		forced = true,
+		vad = {}
+	} = options
 	this._isSpeech2Text = isSpeech2Text
-
-	this.stopRecognize = () => {
-		this._isSpeech2Text = false
-	}
-	this.startRecognize = () => {
-		this._isSpeech2Text = true
-	}
 
 	const mediaListener = stream => {
 		this._audioContext = new AudioContext();
@@ -39,19 +37,22 @@ function Recognizer({
 
 		const recorder = new Recorder(source, {numChannels: 1})
 
+
 		const onVoiceStart = () => {
+			startRecording()
 			onSpeechStart()
+		}
+		const onVoiceEnd = () => {
+			stopRecording()
+			onSpeechEnd()
+		}
+
+		const startRecording = () => {
 			if(this._isSpeech2Text) recorder.record()
 		}
-
-		const onVoiceEnd = () => {
-			onSpeechEnd()
-			if(this._isSpeech2Text) stopRecording()
-		}
-
 		const stopRecording = () => {
 			recorder.stop()
-			recorder.exportWAV(googleSpeechRequest)
+			if(this._isSpeech2Text) recorder.exportWAV(googleSpeechRequest)
 			recorder.clear() // иначе, запись склеивается
 		}
 
@@ -71,11 +72,17 @@ function Recognizer({
 		}
 
 		VAD({
+			...vad,
 			source,
 			voice_start: onVoiceStart,
 			voice_stop: onVoiceEnd,
 			DEBUG: true
 		})
+
+		if(forced){
+			onVoiceStart()
+			setTimeout(onVoiceEnd, 5000)
+		}
 	}
 	
 	this.startListening = () => {
@@ -83,22 +90,27 @@ function Recognizer({
 			console.error("No live audio input in this browser: " + err)
 		})
 	}
-
 	this.stopListening = async () => {
 		await this._audioContext.close();
+	}
+	
+	this.stopRecognize = () => {
+		this._isSpeech2Text = false
+	}
+	this.startRecognize = () => {
+		this._isSpeech2Text = true
 	}
 
 	this.stopAll = async () => {
 		this.stopRecognize()
 		await this.stopListening()
 	}
-
 	this.startAll = async () => {
 		this.startRecognize()
 		this.startListening()
 	}
 
-	if(autoStart){
+	if(autoInit){
 		this.startListening()
 	}
 }
