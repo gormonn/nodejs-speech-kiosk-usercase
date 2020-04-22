@@ -17,7 +17,6 @@ const VAD = require('./vad')
 // todo: добавить возможность остановить прослушку
 
 
-
 function Recognizer({
 	apiKeys,
 	onSpeechStart = () => console.log('voice_start'),
@@ -96,6 +95,12 @@ function Recognizer({
 			const isRecording = recorder.recording
 			const wasSpeech = this._touched
 			const isIdleWithotSpeech = !wasSpeech && isRecording
+			// если делать clearTimeout(this._idleTimeout) в stopListening то не надо
+			// const audioNodeAlreadyClosed = this._audioContext.state === 'closed'
+			// if(audioNodeAlreadyClosed){
+			// 	console.log('lol')
+			// 	return
+			// }
 			if(isIdleWithotSpeech){
 				return this.stopAll()
 			}
@@ -126,7 +131,11 @@ function Recognizer({
 		})
 	}
 	this.stopListening = async () => {
-		await this._audioContext.close();
+		// console.log('stopListening', this._audioContext.state)
+		clearTimeout(this._idleTimeout)
+		if(this._audioContext.state !== 'closed'){ // по сути недостижимо, ибо чистим idleTimeout
+			await this._audioContext.close();
+		}
 	}
 	
 	this.stopRecognize = () => {
@@ -151,4 +160,5 @@ function Recognizer({
 		this.startListening()
 	}
 }
+
 module.exports = {Recognizer, Recorder, VAD, recognize}

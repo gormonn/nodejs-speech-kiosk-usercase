@@ -3074,11 +3074,6 @@ v8-compile-cache@2.0.3:
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.0.3.tgz#00f7494d2ae2b688cfe2899df6ed2c54bef91dbe"
   integrity sha512-CNmdbwQMBjwr9Gsmohvm0pbL954tJrNzf6gWL3K+QMQf00PF7ERGrEiLgjuU3mKreLC2MeGhUsNV9ybTbLgd3w==
 
-vad@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/vad/-/vad-0.0.1.tgz#8c78fef59a9e8ca2e9c15df2383c975a1938f698"
-  integrity sha1-jHj+9ZqejKLpwV3yODyXWhk49pg=
-
 vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
