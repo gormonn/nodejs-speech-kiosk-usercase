@@ -17,6 +17,7 @@ const VAD = require('./vad')
 // todo: добавить возможность остановить прослушку
 
 
+
 function Recognizer({
 	apiKeys,
 	onSpeechStart = () => console.log('voice_start'),
@@ -35,6 +36,7 @@ function Recognizer({
 	} = options
 	this._isSpeech2Text = isSpeech2Text
 	this._idleTimeout = null
+	this._touched = false
 
 	const mediaListener = stream => {
 		this._audioContext = new AudioContext();
@@ -43,6 +45,7 @@ function Recognizer({
 		const recorder = new Recorder(source, {numChannels: 1})
 
 		const onVoiceStart = () => {
+			this._touched = true
 			startRecording()
 			onSpeechStart()
 		}
@@ -90,10 +93,16 @@ function Recognizer({
 		}
 		const beforeStopAll = () => {
 			// console.log('beforeStopAll', recorder.recording)
-			if(recorder.recording){
-				restartIdleTimeout()
+			const isRecording = recorder.recording
+			const wasSpeech = this._touched
+			const isIdleWithotSpeech = !wasSpeech && isRecording
+			if(isIdleWithotSpeech){
+				return this.stopAll()
+			}
+			if(isRecording){
+				return restartIdleTimeout()
 			}else{
-				this.stopAll()
+				return this.stopAll()
 			}
 		}
 
@@ -142,5 +151,4 @@ function Recognizer({
 		this.startListening()
 	}
 }
-
 module.exports = {Recognizer, Recorder, VAD, recognize}
