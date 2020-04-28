@@ -105,6 +105,7 @@ class Recorder {
                 recBuffers = [];
                 initBuffers();
             }
+            
 
             function initBuffers() {
                 for (let channel = 0; channel < numChannels; channel++) {
@@ -202,7 +203,6 @@ class Recorder {
             }
         };
     }
-
 
     record() {
         this.recording = true;

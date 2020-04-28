@@ -1,3 +1,4 @@
+'use strict'
 const Recorder = require('./recorder')
 const { recognize } = require('./index')
 const VAD = require('./vad')
@@ -33,15 +34,18 @@ function Recognizer({
 		idleDelay = 5000,
 		vad = {}
 	} = options
+	// it's might be an issue with memory (global)
 	this._isSpeech2Text = isSpeech2Text
 	this._idleTimeout = null
 	this._touched = false
+	this._recorder = { worker: false }
 
 	const mediaListener = stream => {
 		this._audioContext = new AudioContext();
 		const source = this._audioContext.createMediaStreamSource(stream)
-
-		const recorder = new Recorder(source, {numChannels: 1})
+		
+		
+		this._recorder = new Recorder(source, {numChannels: 1})
 
 		const onVoiceStart = () => {
 			this._touched = true
@@ -54,13 +58,13 @@ function Recognizer({
 		}
 
 		const startRecording = () => {
-			if(this._isSpeech2Text) recorder.record()
+			if(this._isSpeech2Text) this._recorder.record()
 		}
 		const stopRecording = () => {
 			restartIdleTimeout()
-			recorder.stop()
-			if(this._isSpeech2Text) recorder.exportWAV(googleSpeechRequest) // might be a bug
-			recorder.clear() // иначе, запись склеивается
+			this._recorder.stop()
+			if(this._isSpeech2Text) this._recorder.exportWAV(googleSpeechRequest) // might be a bug
+			this._recorder.clear() // иначе, запись склеивается
 		}
 
 		const googleSpeechRequest = blob => {
@@ -92,7 +96,7 @@ function Recognizer({
 		}
 		const beforeStopAll = () => {
 			// console.log('beforeStopAll', recorder.recording)
-			const isRecording = recorder.recording
+			const isRecording = this._recorder.recording
 			const wasSpeech = this._touched
 			const isIdleWithotSpeech = !wasSpeech && isRecording
 			// если делать clearTimeout(this._idleTimeout) в stopListening то не надо
@@ -111,7 +115,7 @@ function Recognizer({
 			}
 		}
 
-		VAD({
+		const vadHandler = new VAD({
 			...vad,
 			source,
 			voice_start: onVoiceStart,
@@ -149,9 +153,11 @@ function Recognizer({
 		// не понятно, останавливается ли запись
 		this.stopRecognize()
 		await this.stopListening()
+		if(this._recorder.worker) this._recorder.worker.terminate()
 		onAllStop()
 	}
 	this.startAll = async () => {
+		await this.stopAll() // во избежание дублирования
 		this.startRecognize()
 		this.startListening()
 	}

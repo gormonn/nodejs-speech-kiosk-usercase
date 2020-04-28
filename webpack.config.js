@@ -11,7 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+const webpack = require('webpack')
 const path = require('path');
 
 module.exports = {
@@ -29,6 +29,10 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json'],
   },
+  optimization: {
+		// We no not want to minimize our code.
+		minimize: false
+	},
   module: {
     rules: [
       {
@@ -54,4 +58,11 @@ module.exports = {
     ],
   },
   mode: 'production',
+  
+  // devtool: 'eval',
+  // plugins: [
+  //   new webpack.SourceMapDevToolPlugin({
+  //     filename: 'index.js.map'
+  //   })
+  // ]
 };
