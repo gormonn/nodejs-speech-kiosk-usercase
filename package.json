@@ -1,6 +1,6 @@
 {
   "name": "nodejs-speech-kiosk-usercase",
-  "version": "0.1.901",
+  "version": "0.2.0",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
