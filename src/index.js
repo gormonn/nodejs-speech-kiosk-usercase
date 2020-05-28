@@ -21,7 +21,8 @@
 // https://cloud.google.com/docs/authentication/api-keys
 
 const speech = require('@google-cloud/speech');
-const {GoogleAuth} = require('google-auth-library');
+const { GoogleAuth } = require('google-auth-library');
+// const Speech = require('./gs/build/src');
 
 async function recognize(
   content,
@@ -30,8 +31,12 @@ async function recognize(
   onData = data => console.log({data})
 ){
   const googleAuth = new GoogleAuth();
-  const auth = googleAuth.fromAPIKey(apiKey);
+  const auth = googleAuth.fromAPIKey(apiKey)
   const client = new speech.v1p1beta1.SpeechClient({auth});
+  // const client = new Speech.v1p1beta1.SpeechClient({
+  //   auth,
+  //   fallback: true
+  // })
   const audio = {
     content
   };
@@ -47,7 +52,12 @@ async function recognize(
   };
 
   const [response] = await client.recognize(request);
-  return response;
+  return response
+  
+  // const recognizeStream = client.streamingRecognize(request)
+  //   .on('error', console.error)
+  //   .on('data', data => console.log('recognizeStream', data))
+  // return recognizeStream
 
   // Create a recognize stream
   // const recognizeStream = client

@@ -1,4 +1,5 @@
 'use strict'
+const hark = require('hark')
 const Recorder = require('./recorder')
 const { recognize } = require('./index')
 const VAD = require('./vad')
@@ -32,7 +33,7 @@ function Recognizer({
 		autoInit = true,
 		forced = true,
 		idleDelay = 5000,
-		vad = {}
+		harkOptions = {}
 	} = options
 	// it's might be an issue with memory (global)
 	this._isSpeech2Text = isSpeech2Text
@@ -41,10 +42,10 @@ function Recognizer({
 	this._recorder = { worker: false }
 
 	const mediaListener = stream => {
+		const speechEvents = hark(stream, harkOptions)
+
 		this._audioContext = new AudioContext();
-		const source = this._audioContext.createMediaStreamSource(stream)
-		
-		
+		const source = this._audioContext.createMediaStreamSource(stream)		
 		this._recorder = new Recorder(source, {numChannels: 1})
 
 		const onVoiceStart = () => {
@@ -56,6 +57,9 @@ function Recognizer({
 			stopRecording()
 			onSpeechEnd()
 		}
+
+		speechEvents.on('speaking', onVoiceStart)
+		speechEvents.on('stopped_speaking', onVoiceEnd)
 
 		const startRecording = () => {
 			if(this._isSpeech2Text) this._recorder.record()
@@ -114,14 +118,6 @@ function Recognizer({
 				return this.stopAll()
 			}
 		}
-
-		const vadHandler = new VAD({
-			...vad,
-			source,
-			voice_start: onVoiceStart,
-			voice_stop: onVoiceEnd,
-			DEBUG: true
-		})
 
 		onAllStart()
 		forcedStartRecord()

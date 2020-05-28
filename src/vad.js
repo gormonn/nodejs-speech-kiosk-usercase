@@ -1,5 +1,104 @@
 'use strict'
-//https://github.com/kdavis-mozilla/vad.js
+
+
+// var lastDate = 0;
+// var data = []
+// var TICKINTERVAL = 86400000
+// let XAXISRANGE = 777600000
+// // function getDayWiseTimeSeries(baseval, count, yrange) {
+// //   var i = 0;
+// //   while (i < count) {
+// //     var x = baseval;
+// //     var y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+
+// //     data.push({
+// //       x, y
+// //     });
+// //     lastDate = baseval
+// //     baseval += TICKINTERVAL;
+// //     i++;
+// //   }
+// // }
+
+// // getDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 10, {
+// //   min: 10,
+// //   max: 90
+// // })
+
+// function getNewSeries(baseval, y) {
+//   var newDate = baseval + TICKINTERVAL;
+//   lastDate = newDate
+
+//   for(var i = 0; i< data.length - 10; i++) {
+//     // IMPORTANT
+//     // we reset the x and y of the data which is out of drawing area
+//     // to prevent memory leaks
+//     data[i].x = newDate - XAXISRANGE - TICKINTERVAL
+//     data[i].y = 0
+//   }
+
+//   data.push({
+//     x: newDate,
+//     y
+//   })
+
+//   chart.updateSeries([{ data }])
+// }
+
+// function resetData(){
+//   // Alternatively, you can also reset the data at certain intervals to prevent creating a huge series 
+//   data = data.slice(data.length - 10, data.length);
+// }
+
+
+// const ApexCharts = require('apexcharts/dist/apexcharts.common')
+
+// // let data = []
+
+// var options = {
+//   series: [{ data: data.slice() }],
+//   chart: {
+//     id: 'realtime',
+//     height: 350,
+//     type: 'line',
+//     animations: {
+//       enabled: true,
+//       easing: 'linear',
+//       dynamicAnimation: {speed: 1000}
+//     },
+//     toolbar: {show: false},
+//     zoom: {enabled: false}
+//   },
+//   dataLabels: {enabled: false},
+//   stroke: {curve: 'smooth'},
+//   title: {
+//     text: 'Dynamic Updating Chart',
+//     align: 'left'
+//   },
+//   markers: {size: 0},
+//   xaxis: {
+//     type: 'datetime',
+//     range: XAXISRANGE,
+//   },
+//   yaxis: {max: 30, min: -30},
+//   legend: {show: false}
+// };
+
+// var chart = new ApexCharts(document.querySelector("#chart"), options);
+// chart.render()
+
+// window.setInterval(function () {
+//   getNewSeries(lastDate, { min: 10, max: 90 })
+//   chart.updateSeries([{ data: data }])
+// }, 1000)
+
+// var chart = new ApexCharts(document.querySelector('#chart'), options)
+// chart.appendSeries({
+//   name: 'newSeries',
+//   data: [32, 44, 31, 41, 22]
+// })
+// chart.render()
+
 //https://github.com/kdavis-mozilla/vad.js
 class VAD {
   constructor(options) {
@@ -7,8 +106,8 @@ class VAD {
     // debugger;
     // Default options
     this.options = {
-      fftSize: 512,
-      bufferLen: 512,
+      fftSize: 512, //512,
+      bufferLen: 512, //512,
       voice_stop: function () { },
       voice_start: function () { },
       smoothingTimeConstant: 0.99,
@@ -24,6 +123,8 @@ class VAD {
       context: null,
       DEBUG: false
     };
+    this.canvas = document.getElementById('draw')
+    this.canvasCtx = this.canvas.getContext("2d");
     // User options
     for (let option in options) {
       if (options.hasOwnProperty(option)) {
@@ -85,7 +186,10 @@ class VAD {
     this.scriptProcessorNode.connect(this.options.context.destination);
     // Create callback to update/analyze floatFrequencyData
     let self = this;
-    this.scriptProcessorNode.onaudioprocess = function (event) {
+    this.scriptProcessorNode.onaudioprocess = function (e) {
+      console.log('onaudioprocess')
+      // const floatSamples = e.inputBuffer.getChannelData(0)
+      // console.log(floatSamples.getSettings())
       self.analyser.getFloatFrequencyData(self.floatFrequencyData);
       self.update();
       self.monitor();
@@ -131,6 +235,7 @@ class VAD {
       this.ready.energy = true;
       return energy;
     };
+    let logg = []
     this.monitor = function () {
       let energy = this.getEnergy();
       let signal = energy - this.energy_offset;
@@ -158,10 +263,27 @@ class VAD {
         // End of speech detected
         end = true;
       }
+      // const loggData = {
+      //   energy,
+      //   energy_offset: this.energy_offset,
+      //   energy_threshold_pos: this.energy_threshold_pos,
+      //   energy_threshold_neg: this.energy_threshold_neg,
+      //   signal, integration, voiceTrend: this.voiceTrend, start, end
+      // }
+
+      // logg.push(this.voiceTrend)
+      // getNewSeries(lastDate, this.voiceTrend)
+
       // Integration brings in the real-time aspect through the relationship with the frequency this functions is called.
+
+      // Интеграция привносит аспект реального времени через связь с частотой, которую называют эти функции.
       let integration = signal * this.iterationPeriod * this.options.energy_integration;
+
       // Idea?: The integration is affected by the voiceTrend magnitude? - Not sure. Not doing atm.
       // The !end limits the offset delta boost till after the end is detected.
+
+      // Идея ?: На интеграцию влияет величина voiceTrend? - Точно сказать не могу. Не делаю атм.
+      //! End ограничивает увеличение дельты смещения до тех пор, пока не будет обнаружен конец.
       if (integration > 0 || !end) {
         this.energy_offset += integration;
       }
@@ -177,6 +299,7 @@ class VAD {
         this.options.voice_start();
       }
       if (end && this.vadState) {
+        console.log(logg)
         this.vadState = false;
         this.options.voice_stop();
       }

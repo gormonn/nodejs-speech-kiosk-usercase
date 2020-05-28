@@ -300,7 +300,7 @@ process.umask = function() { return 0; };
 
 
 var base64 = __webpack_require__(34)
-var ieee754 = __webpack_require__(156)
+var ieee754 = __webpack_require__(158)
 var isArray = __webpack_require__(70)
 
 exports.Buffer = Buffer
@@ -2125,9 +2125,9 @@ var roots = __webpack_require__(111);
 var Type, // cyclic
     Enum;
 
-util.codegen = __webpack_require__(231);
-util.fetch   = __webpack_require__(232);
-util.path    = __webpack_require__(233);
+util.codegen = __webpack_require__(233);
+util.fetch   = __webpack_require__(234);
+util.path    = __webpack_require__(235);
 
 /**
  * Node's fs module if available.
@@ -2357,10 +2357,10 @@ var inherits = __webpack_require__(4);
 
 inherits(Stream, EE);
 Stream.Readable = __webpack_require__(16);
-Stream.Writable = __webpack_require__(161);
-Stream.Duplex = __webpack_require__(162);
-Stream.Transform = __webpack_require__(163);
-Stream.PassThrough = __webpack_require__(164);
+Stream.Writable = __webpack_require__(163);
+Stream.Duplex = __webpack_require__(164);
+Stream.Transform = __webpack_require__(165);
+Stream.PassThrough = __webpack_require__(166);
 
 // Backwards-compat with node 0.4.x
 Stream.Stream = Stream;
@@ -3117,25 +3117,25 @@ var util = exports;
 util.asPromise = __webpack_require__(108);
 
 // converts to / from base64 encoded strings
-util.base64 = __webpack_require__(222);
+util.base64 = __webpack_require__(224);
 
 // base class of rpc.Service
-util.EventEmitter = __webpack_require__(223);
+util.EventEmitter = __webpack_require__(225);
 
 // float handling accross browsers
-util.float = __webpack_require__(224);
+util.float = __webpack_require__(226);
 
 // requires modules optionally and hides the call from bundlers
 util.inquire = __webpack_require__(109);
 
 // converts to / from utf8 encoded strings
-util.utf8 = __webpack_require__(225);
+util.utf8 = __webpack_require__(227);
 
 // provides a node-like buffer pool in the browser
-util.pool = __webpack_require__(226);
+util.pool = __webpack_require__(228);
 
 // utility to work with the low and high bits of a 64 bit value
-util.LongBits = __webpack_require__(227);
+util.LongBits = __webpack_require__(229);
 
 // global object reference
 util.global = typeof window !== "undefined" && window
@@ -3534,8 +3534,8 @@ util._configure = function() {
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(174);
-exports.encode = exports.stringify = __webpack_require__(175);
+exports.decode = exports.parse = __webpack_require__(176);
+exports.encode = exports.stringify = __webpack_require__(177);
 
 
 /***/ }),
@@ -4214,7 +4214,7 @@ function isPrimitive(arg) {
 }
 exports.isPrimitive = isPrimitive;
 
-exports.isBuffer = __webpack_require__(187);
+exports.isBuffer = __webpack_require__(189);
 
 function objectToString(o) {
   return Object.prototype.toString.call(o);
@@ -4258,7 +4258,7 @@ exports.log = function() {
  *     prototype.
  * @param {function} superCtor Constructor function to inherit prototype from.
  */
-exports.inherits = __webpack_require__(188);
+exports.inherits = __webpack_require__(190);
 
 exports._extend = function(origin, add) {
   // Don't do anything if add isn't an object
@@ -4847,7 +4847,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(154);
+__webpack_require__(156);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -4870,7 +4870,7 @@ exports.Readable = exports;
 exports.Writable = __webpack_require__(45);
 exports.Duplex = __webpack_require__(11);
 exports.Transform = __webpack_require__(75);
-exports.PassThrough = __webpack_require__(160);
+exports.PassThrough = __webpack_require__(162);
 
 
 /***/ }),
@@ -6756,7 +6756,7 @@ const stream = __webpack_require__(5);
 const formatEcdsa = __webpack_require__(39);
 const crypto_1 = __webpack_require__(80);
 const messages = __webpack_require__(20);
-const authclient_1 = __webpack_require__(185);
+const authclient_1 = __webpack_require__(187);
 const loginticket_1 = __webpack_require__(82);
 var CodeChallengeMethod;
 (function (CodeChallengeMethod) {
@@ -7886,7 +7886,7 @@ const stream = __webpack_require__(5);
 const formatEcdsa = __webpack_require__(39);
 const crypto_1 = __webpack_require__(118);
 const messages = __webpack_require__(26);
-const authclient_1 = __webpack_require__(244);
+const authclient_1 = __webpack_require__(246);
 const loginticket_1 = __webpack_require__(120);
 var CodeChallengeMethod;
 (function (CodeChallengeMethod) {
@@ -8575,7 +8575,7 @@ const querystring = __webpack_require__(10);
 const stream = __webpack_require__(5);
 const formatEcdsa = __webpack_require__(39);
 const crypto_1 = __webpack_require__(137);
-const authclient_1 = __webpack_require__(283);
+const authclient_1 = __webpack_require__(285);
 const loginticket_1 = __webpack_require__(139);
 var CodeChallengeMethod;
 (function (CodeChallengeMethod) {
@@ -9803,7 +9803,7 @@ exports.Response = global.Response;
 
 
 var punycode = __webpack_require__(46);
-var util = __webpack_require__(176);
+var util = __webpack_require__(178);
 
 exports.parse = urlParse;
 exports.resolve = urlResolve;
@@ -10522,7 +10522,7 @@ Url.prototype.parseHost = function() {
 
 var Buffer = __webpack_require__(17).Buffer;
 
-var getParamBytesForAlg = __webpack_require__(184);
+var getParamBytesForAlg = __webpack_require__(186);
 
 var MAX_OCTET = 0x80,
 	CLASS_UNIVERSAL = 0,
@@ -11064,13 +11064,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /*!
  * @module common/util
  */
-const projectify_1 = __webpack_require__(155);
-const ent = __webpack_require__(165);
+const projectify_1 = __webpack_require__(157);
+const ent = __webpack_require__(167);
 const extend = __webpack_require__(28);
-const google_auth_library_1 = __webpack_require__(171);
+const google_auth_library_1 = __webpack_require__(173);
 const retryRequest = __webpack_require__(92);
 const stream_1 = __webpack_require__(5);
-const teeny_request_1 = __webpack_require__(194);
+const teeny_request_1 = __webpack_require__(196);
 const duplexify = __webpack_require__(97);
 const requestDefaults = {
     timeout: 60000,
@@ -12869,7 +12869,7 @@ Writable.prototype._destroy = function (err, cb) {
 
 }(this));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(167)(module), __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(169)(module), __webpack_require__(2)))
 
 /***/ }),
 /* 47 */
@@ -12890,7 +12890,7 @@ Writable.prototype._destroy = function (err, cb) {
 // See the License for the specific language governing permissions and
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", { value: true });
-const gaxios_1 = __webpack_require__(173);
+const gaxios_1 = __webpack_require__(175);
 exports.Gaxios = gaxios_1.Gaxios;
 var common_1 = __webpack_require__(77);
 exports.GaxiosError = common_1.GaxiosError;
@@ -13003,9 +13003,9 @@ a=c;!(a instanceof Uint8Array)&&a.buffer instanceof ArrayBuffer&&(a=new Uint8Arr
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", { value: true });
 const gaxios_1 = __webpack_require__(47);
-const options_1 = __webpack_require__(182);
+const options_1 = __webpack_require__(184);
 // tslint:disable-next-line no-var-requires
-const pkg = __webpack_require__(183);
+const pkg = __webpack_require__(185);
 const PRODUCT_NAME = 'google-api-nodejs-client';
 class DefaultTransporter {
     /**
@@ -13109,8 +13109,8 @@ DefaultTransporter.USER_AGENT = `${PRODUCT_NAME}/${pkg.version}`;
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global exports*/
-var SignStream = __webpack_require__(186);
-var VerifyStream = __webpack_require__(190);
+var SignStream = __webpack_require__(188);
+var VerifyStream = __webpack_require__(192);
 
 var ALGORITHMS = [
   'HS256', 'HS384', 'HS512',
@@ -13140,7 +13140,7 @@ exports.createVerify = function createVerify(opts) {
 
 
 // A linked list to keep track of recently-used-ness
-const Yallist = __webpack_require__(191)
+const Yallist = __webpack_require__(193)
 
 const MAX = Symbol('max')
 const LENGTH = Symbol('length')
@@ -16667,9 +16667,9 @@ exports.constructSettings = constructSettings;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", { value: true });
 const gaxios_1 = __webpack_require__(47);
-const options_1 = __webpack_require__(242);
+const options_1 = __webpack_require__(244);
 // tslint:disable-next-line no-var-requires
-const pkg = __webpack_require__(243);
+const pkg = __webpack_require__(245);
 const PRODUCT_NAME = 'google-api-nodejs-client';
 class DefaultTransporter {
     /**
@@ -17062,9 +17062,9 @@ exports.requestTimeout = requestTimeout;
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", { value: true });
 const gaxios_1 = __webpack_require__(135);
-const options_1 = __webpack_require__(281);
+const options_1 = __webpack_require__(283);
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const pkg = __webpack_require__(282);
+const pkg = __webpack_require__(284);
 const PRODUCT_NAME = 'google-api-nodejs-client';
 class DefaultTransporter {
     /**
@@ -17188,7 +17188,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /*!
  * @module common/service-object
  */
-const promisify_1 = __webpack_require__(153);
+const promisify_1 = __webpack_require__(155);
 const arrify = __webpack_require__(27);
 const events_1 = __webpack_require__(6);
 const extend = __webpack_require__(28);
@@ -17505,7 +17505,7 @@ util.inherits = __webpack_require__(4);
 /*</replacement>*/
 
 /*<replacement>*/
-var debugUtil = __webpack_require__(157);
+var debugUtil = __webpack_require__(159);
 var debug = void 0;
 if (debugUtil && debugUtil.debuglog) {
   debug = debugUtil.debuglog('stream');
@@ -17514,7 +17514,7 @@ if (debugUtil && debugUtil.debuglog) {
 }
 /*</replacement>*/
 
-var BufferList = __webpack_require__(158);
+var BufferList = __webpack_require__(160);
 var destroyImpl = __webpack_require__(73);
 var StringDecoder;
 
@@ -18907,8 +18907,8 @@ exports.GaxiosError = GaxiosError;
 /* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var json_stringify = __webpack_require__(178).stringify;
-var json_parse     = __webpack_require__(179);
+var json_stringify = __webpack_require__(180).stringify;
+var json_parse     = __webpack_require__(181);
 
 module.exports = function(options) {
     return  {
@@ -21752,8 +21752,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;;(function (globalObject) {
 // See the License for the specific language governing permissions and
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", { value: true });
-const crypto_1 = __webpack_require__(180);
-const crypto_2 = __webpack_require__(181);
+const crypto_1 = __webpack_require__(182);
+const crypto_2 = __webpack_require__(183);
 function createCrypto() {
     if (hasBrowserCrypto()) {
         return new crypto_1.BrowserCrypto();
@@ -22607,7 +22607,7 @@ module.exports = DataStream;
 /* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var bufferEqual = __webpack_require__(189);
+var bufferEqual = __webpack_require__(191);
 var Buffer = __webpack_require__(17).Buffer;
 var crypto = __webpack_require__(7);
 var formatEcdsa = __webpack_require__(39);
@@ -22997,10 +22997,10 @@ exports.UserRefreshClient = UserRefreshClient;
 /* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {var ClientRequest = __webpack_require__(196)
+/* WEBPACK VAR INJECTION */(function(global) {var ClientRequest = __webpack_require__(198)
 var response = __webpack_require__(95)
-var extend = __webpack_require__(198)
-var statusCodes = __webpack_require__(199)
+var extend = __webpack_require__(200)
+var statusCodes = __webpack_require__(201)
 var url = __webpack_require__(38)
 
 var http = exports
@@ -23402,7 +23402,7 @@ IncomingMessage.prototype._onXHRProgress = function () {
 "use strict";
 
 
-var stubs = __webpack_require__(202)
+var stubs = __webpack_require__(204)
 
 /*
  * StreamEvents can be used 2 ways:
@@ -23677,7 +23677,7 @@ module.exports = Duplexify
 /* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var wrappy = __webpack_require__(203)
+var wrappy = __webpack_require__(205)
 module.exports = wrappy(once)
 module.exports.strict = wrappy(onceStrict)
 
@@ -23811,7 +23811,7 @@ function _isUint8Array(obj) {
 /*<replacement>*/
 
 
-var debugUtil = __webpack_require__(210);
+var debugUtil = __webpack_require__(212);
 
 var debug;
 
@@ -23823,7 +23823,7 @@ if (debugUtil && debugUtil.debuglog) {
 /*</replacement>*/
 
 
-var BufferList = __webpack_require__(211);
+var BufferList = __webpack_require__(213);
 
 var destroyImpl = __webpack_require__(102);
 
@@ -24760,7 +24760,7 @@ Readable.prototype.wrap = function (stream) {
 if (typeof Symbol === 'function') {
   Readable.prototype[Symbol.asyncIterator] = function () {
     if (createReadableStreamAsyncIterator === undefined) {
-      createReadableStreamAsyncIterator = __webpack_require__(213);
+      createReadableStreamAsyncIterator = __webpack_require__(215);
     }
 
     return createReadableStreamAsyncIterator(this);
@@ -24862,7 +24862,7 @@ function endReadableNT(state, stream) {
 if (typeof Symbol === 'function') {
   Readable.from = function (iterable, opts) {
     if (from === undefined) {
-      from = __webpack_require__(214);
+      from = __webpack_require__(216);
     }
 
     return from(Readable, iterable, opts);
@@ -25967,16 +25967,16 @@ const protobuf = __webpack_require__(107);
 exports.protobuf = protobuf;
 const gax = __webpack_require__(64);
 const nodeFetch = __webpack_require__(37);
-const routingHeader = __webpack_require__(236);
+const routingHeader = __webpack_require__(238);
 exports.routingHeader = routingHeader;
-const abort_controller_1 = __webpack_require__(237);
+const abort_controller_1 = __webpack_require__(239);
 const status_1 = __webpack_require__(25);
-const google_auth_library_1 = __webpack_require__(238);
-const operationsClient_1 = __webpack_require__(246);
+const google_auth_library_1 = __webpack_require__(240);
+const operationsClient_1 = __webpack_require__(248);
 const createApiCall_1 = __webpack_require__(126);
 const isbrowser_1 = __webpack_require__(130);
-const fallbackError_1 = __webpack_require__(266);
-var pathTemplate_1 = __webpack_require__(268);
+const fallbackError_1 = __webpack_require__(268);
+var pathTemplate_1 = __webpack_require__(270);
 exports.PathTemplate = pathTemplate_1.PathTemplate;
 var gax_1 = __webpack_require__(64);
 exports.CallSettings = gax_1.CallSettings;
@@ -26284,7 +26284,7 @@ exports.createApiCall = createApiCall;
 // full library entry point.
 
 
-module.exports = __webpack_require__(219);
+module.exports = __webpack_require__(221);
 
 
 /***/ }),
@@ -26410,7 +26410,7 @@ var rpc = exports;
  * @returns {undefined}
  */
 
-rpc.Service = __webpack_require__(230);
+rpc.Service = __webpack_require__(232);
 
 
 /***/ }),
@@ -27655,8 +27655,8 @@ function tokenize(source, alternateCommentMode) {
 // See the License for the specific language governing permissions and
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", { value: true });
-const crypto_1 = __webpack_require__(240);
-const crypto_2 = __webpack_require__(241);
+const crypto_1 = __webpack_require__(242);
+const crypto_2 = __webpack_require__(243);
 function createCrypto() {
     if (hasBrowserCrypto()) {
         return new crypto_1.BrowserCrypto();
@@ -28573,8 +28573,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Provides function wrappers that implement page streaming and retrying.
  */
-const apiCaller_1 = __webpack_require__(247);
-const retries_1 = __webpack_require__(248);
+const apiCaller_1 = __webpack_require__(249);
+const retries_1 = __webpack_require__(250);
 const timeout_1 = __webpack_require__(127);
 /**
  * Converts an rpc call into an API call governed by the settings.
@@ -28712,13 +28712,13 @@ exports.addTimeoutArg = addTimeoutArg;
  * limitations under the License.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var longRunningDescriptor_1 = __webpack_require__(249);
+var longRunningDescriptor_1 = __webpack_require__(251);
 exports.LongrunningDescriptor = longRunningDescriptor_1.LongRunningDescriptor;
-var pageDescriptor_1 = __webpack_require__(252);
+var pageDescriptor_1 = __webpack_require__(254);
 exports.PageDescriptor = pageDescriptor_1.PageDescriptor;
-var streamDescriptor_1 = __webpack_require__(256);
+var streamDescriptor_1 = __webpack_require__(258);
 exports.StreamDescriptor = streamDescriptor_1.StreamDescriptor;
-var bundleDescriptor_1 = __webpack_require__(258);
+var bundleDescriptor_1 = __webpack_require__(260);
 exports.BundleDescriptor = bundleDescriptor_1.BundleDescriptor;
 //# sourceMappingURL=descriptor.js.map
 
@@ -28928,7 +28928,7 @@ exports.StreamProxy = StreamProxy;
 /* 132 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_from\":\"google-gax@^1.11.1\",\"_id\":\"google-gax@1.15.2\",\"_inBundle\":false,\"_integrity\":\"sha512-yNNiRf9QxWpZNfQQmSPz3rIDTBDDKnLKY/QEsjCaJyDxttespr6v8WRGgU5KrU/6ZM7QRlgBAYXCkxqHhJp0wA==\",\"_location\":\"/google-gax\",\"_phantomChildren\":{\"arrify\":\"2.0.1\",\"base64-js\":\"1.3.1\",\"ecdsa-sig-formatter\":\"1.0.11\",\"fast-text-encoding\":\"1.0.2\",\"gaxios\":\"2.3.4\",\"gcp-metadata\":\"3.5.0\",\"gtoken\":\"4.1.4\",\"jws\":\"4.0.0\",\"lru-cache\":\"5.1.1\"},\"_requested\":{\"type\":\"range\",\"registry\":true,\"raw\":\"google-gax@^1.11.1\",\"name\":\"google-gax\",\"escapedName\":\"google-gax\",\"rawSpec\":\"^1.11.1\",\"saveSpec\":null,\"fetchSpec\":\"^1.11.1\"},\"_requiredBy\":[\"/@google-cloud/speech\"],\"_resolved\":\"https://registry.npmjs.org/google-gax/-/google-gax-1.15.2.tgz\",\"_shasum\":\"a58aff43ec383f4f056f9d796e8d5e4891161eb8\",\"_spec\":\"google-gax@^1.11.1\",\"_where\":\"C:\\\\_proj\\\\nodejs-speech-kiosk-usercase\\\\node_modules\\\\@google-cloud\\\\speech\",\"author\":{\"name\":\"Google API Authors\"},\"bin\":{\"compileProtos\":\"build/tools/compileProtos.js\"},\"browser\":\"build/src/fallback.js\",\"bugs\":{\"url\":\"https://github.com/googleapis/gax-nodejs/issues\"},\"bundleDependencies\":false,\"dependencies\":{\"@grpc/grpc-js\":\"^0.7.4\",\"@grpc/proto-loader\":\"^0.5.1\",\"@types/fs-extra\":\"^8.0.1\",\"@types/long\":\"^4.0.0\",\"abort-controller\":\"^3.0.0\",\"duplexify\":\"^3.6.0\",\"google-auth-library\":\"^5.0.0\",\"is-stream-ended\":\"^0.1.4\",\"lodash.at\":\"^4.6.0\",\"lodash.has\":\"^4.5.2\",\"node-fetch\":\"^2.6.0\",\"protobufjs\":\"^6.8.9\",\"retry-request\":\"^4.0.0\",\"semver\":\"^6.0.0\",\"walkdir\":\"^0.4.0\"},\"deprecated\":false,\"description\":\"Google API Extensions\",\"devDependencies\":{\"@compodoc/compodoc\":\"^1.1.7\",\"@types/chai\":\"^4.1.3\",\"@types/lodash.at\":\"^4.6.4\",\"@types/lodash.has\":\"^4.5.4\",\"@types/mocha\":\"^7.0.0\",\"@types/ncp\":\"^2.0.1\",\"@types/node\":\"^10.3.2\",\"@types/node-fetch\":\"^2.5.4\",\"@types/proxyquire\":\"^1.3.28\",\"@types/pumpify\":\"^1.4.1\",\"@types/rimraf\":\"^2.0.2\",\"@types/semver\":\"^6.0.0\",\"@types/sinon\":\"^7.0.0\",\"@types/through2\":\"^2.0.33\",\"c8\":\"^7.0.0\",\"chai\":\"*\",\"codecov\":\"^3.1.0\",\"download\":\"^7.1.0\",\"eslint\":\"^6.0.0\",\"eslint-config-prettier\":\"^6.0.0\",\"eslint-plugin-node\":\"^11.0.0\",\"eslint-plugin-prettier\":\"^3.0.0\",\"execa\":\"^4.0.0\",\"file-loader\":\"^5.0.0\",\"fs-extra\":\"^8.0.0\",\"google-proto-files\":\"^1.0.0\",\"gts\":\"^1.0.0\",\"is-docker\":\"^2.0.0\",\"json-loader\":\"^0.5.7\",\"karma\":\"^4.1.0\",\"karma-child-process\":\"^1.0.3\",\"karma-chrome-launcher\":\"^3.0.0\",\"karma-coverage\":\"^2.0.0\",\"karma-mocha\":\"^1.3.0\",\"karma-remap-coverage\":\"^0.1.5\",\"karma-sourcemap-loader\":\"^0.3.7\",\"karma-webpack\":\"^4.0.2\",\"linkinator\":\"^2.0.0\",\"mkdirp\":\"^0.5.1\",\"mocha\":\"^7.0.0\",\"ncp\":\"^2.0.0\",\"null-loader\":\"^3.0.0\",\"pegjs\":\"~0.10.0\",\"prettier\":\"^1.15.2\",\"proxyquire\":\"^2.0.1\",\"pumpify\":\"^2.0.0\",\"puppeteer\":\"^2.0.0\",\"rimraf\":\"^3.0.0\",\"sinon\":\"^9.0.0\",\"stream-events\":\"^1.0.4\",\"through2\":\"^3.0.0\",\"ts-loader\":\"^6.0.3\",\"typescript\":\"3.6.4\",\"webpack\":\"^4.34.0\",\"webpack-cli\":\"^3.3.4\"},\"engines\":{\"node\":\">=8.10.0\"},\"files\":[\"build/src\",\"build/tools/compileProtos.js\",\"protos\",\"build/protos/operations.d.ts\"],\"homepage\":\"https://github.com/googleapis/gax-nodejs#readme\",\"keywords\":[\"grpc\"],\"license\":\"Apache-2.0\",\"main\":\"build/src/index.js\",\"name\":\"google-gax\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/googleapis/gax-nodejs.git\"},\"scripts\":{\"browser-test\":\"karma start\",\"clean\":\"gts clean\",\"compile\":\"tsc -p . && cp src/*.json build/src && cp src/*.js build/src && cp -r test/fixtures build/test\",\"compile-protos\":\"pbjs -t json google/longrunning/operations.proto -p ./protos > protos/operations.json && pbjs -t json google/rpc/status.proto google/rpc/error_details.proto google/protobuf/any.proto -p ./protos > protos/status.json && pbjs -t static-module google/longrunning/operations.proto -p ./protos > protos/operations.js && pbts protos/operations.js -o protos/operations.d.ts\",\"docs\":\"compodoc src/\",\"docs-test\":\"linkinator docs\",\"fix\":\"gts fix && eslint --fix samples/*.js samples/**/*.js\",\"gen-parser\":\"pegjs src/pathTemplateParser.pegjs\",\"lint\":\"gts check && eslint samples/*.js samples/**/*.js\",\"predocs-test\":\"npm run docs\",\"prelint\":\"cd samples; npm link ../; npm i\",\"prepare\":\"npm run compile && node ./build/tools/prepublish.js && mkdirp build/protos && cp protos/operations.d.ts build/protos/\",\"pretest\":\"npm run prepare\",\"samples-test\":\"cd samples/ && npm link ../ && npm test && cd ../\",\"system-test\":\"c8 mocha build/test/system-test --timeout 120000\",\"test\":\"c8 mocha build/test/unit\"},\"types\":\"build/src/index.d.ts\",\"version\":\"1.15.2\"}");
+module.exports = JSON.parse("{\"_args\":[[\"google-gax@1.15.3\",\"C:\\\\_Dmitry\\\\_proj\\\\nodejs-speech-kiosk-usercase\"]],\"_from\":\"google-gax@1.15.3\",\"_id\":\"google-gax@1.15.3\",\"_inBundle\":false,\"_integrity\":\"sha512-3JKJCRumNm3x2EksUTw4P1Rad43FTpqrtW9jzpf3xSMYXx+ogaqTM1vGo7VixHB4xkAyATXVIa3OcNSh8H9zsQ==\",\"_location\":\"/@google-cloud/speech/google-gax\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"google-gax@1.15.3\",\"name\":\"google-gax\",\"escapedName\":\"google-gax\",\"rawSpec\":\"1.15.3\",\"saveSpec\":null,\"fetchSpec\":\"1.15.3\"},\"_requiredBy\":[\"/@google-cloud/speech\"],\"_resolved\":\"https://registry.npmjs.org/google-gax/-/google-gax-1.15.3.tgz\",\"_spec\":\"1.15.3\",\"_where\":\"C:\\\\_Dmitry\\\\_proj\\\\nodejs-speech-kiosk-usercase\",\"author\":{\"name\":\"Google API Authors\"},\"bin\":{\"compileProtos\":\"build/tools/compileProtos.js\"},\"browser\":\"build/src/fallback.js\",\"bugs\":{\"url\":\"https://github.com/googleapis/gax-nodejs/issues\"},\"dependencies\":{\"@grpc/grpc-js\":\"~1.0.3\",\"@grpc/proto-loader\":\"^0.5.1\",\"@types/fs-extra\":\"^8.0.1\",\"@types/long\":\"^4.0.0\",\"abort-controller\":\"^3.0.0\",\"duplexify\":\"^3.6.0\",\"google-auth-library\":\"^5.0.0\",\"is-stream-ended\":\"^0.1.4\",\"lodash.at\":\"^4.6.0\",\"lodash.has\":\"^4.5.2\",\"node-fetch\":\"^2.6.0\",\"protobufjs\":\"^6.8.9\",\"retry-request\":\"^4.0.0\",\"semver\":\"^6.0.0\",\"walkdir\":\"^0.4.0\"},\"description\":\"Google API Extensions\",\"devDependencies\":{\"@compodoc/compodoc\":\"^1.1.7\",\"@types/chai\":\"^4.1.3\",\"@types/lodash.at\":\"^4.6.4\",\"@types/lodash.has\":\"^4.5.4\",\"@types/mocha\":\"^7.0.0\",\"@types/ncp\":\"^2.0.1\",\"@types/node\":\"^10.3.2\",\"@types/node-fetch\":\"^2.5.4\",\"@types/proxyquire\":\"^1.3.28\",\"@types/pumpify\":\"^1.4.1\",\"@types/rimraf\":\"^2.0.2\",\"@types/semver\":\"^6.0.0\",\"@types/sinon\":\"^7.0.0\",\"@types/through2\":\"^2.0.33\",\"c8\":\"^7.0.0\",\"chai\":\"*\",\"codecov\":\"^3.1.0\",\"download\":\"^7.1.0\",\"eslint\":\"^6.0.0\",\"eslint-config-prettier\":\"^6.0.0\",\"eslint-plugin-node\":\"^11.0.0\",\"eslint-plugin-prettier\":\"^3.0.0\",\"execa\":\"^4.0.0\",\"file-loader\":\"^5.0.0\",\"fs-extra\":\"^8.0.0\",\"google-proto-files\":\"^1.0.0\",\"gts\":\"^1.0.0\",\"is-docker\":\"^2.0.0\",\"json-loader\":\"^0.5.7\",\"karma\":\"^4.1.0\",\"karma-child-process\":\"^1.0.3\",\"karma-chrome-launcher\":\"^3.0.0\",\"karma-coverage\":\"^2.0.0\",\"karma-mocha\":\"^1.3.0\",\"karma-remap-coverage\":\"^0.1.5\",\"karma-sourcemap-loader\":\"^0.3.7\",\"karma-webpack\":\"^4.0.2\",\"linkinator\":\"^2.0.0\",\"mkdirp\":\"^0.5.1\",\"mocha\":\"^7.0.0\",\"ncp\":\"^2.0.0\",\"null-loader\":\"^3.0.0\",\"pegjs\":\"~0.10.0\",\"prettier\":\"^1.15.2\",\"proxyquire\":\"^2.0.1\",\"pumpify\":\"^2.0.0\",\"puppeteer\":\"^2.0.0\",\"rimraf\":\"^3.0.0\",\"sinon\":\"^9.0.0\",\"stream-events\":\"^1.0.4\",\"through2\":\"^3.0.0\",\"ts-loader\":\"^6.0.3\",\"typescript\":\"3.6.4\",\"webpack\":\"^4.34.0\",\"webpack-cli\":\"^3.3.4\"},\"engines\":{\"node\":\">=8.10.0\"},\"files\":[\"build/src\",\"build/tools/compileProtos.js\",\"protos\",\"build/protos/operations.d.ts\"],\"homepage\":\"https://github.com/googleapis/gax-nodejs#readme\",\"keywords\":[\"grpc\"],\"license\":\"Apache-2.0\",\"main\":\"build/src/index.js\",\"name\":\"google-gax\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/googleapis/gax-nodejs.git\"},\"scripts\":{\"browser-test\":\"karma start\",\"clean\":\"gts clean\",\"compile\":\"tsc -p . && cp src/*.json build/src && cp src/*.js build/src && cp -r test/fixtures build/test\",\"compile-protos\":\"pbjs -t json google/longrunning/operations.proto -p ./protos > protos/operations.json && pbjs -t json google/rpc/status.proto google/rpc/error_details.proto google/protobuf/any.proto -p ./protos > protos/status.json && pbjs -t static-module google/longrunning/operations.proto -p ./protos > protos/operations.js && pbts protos/operations.js -o protos/operations.d.ts\",\"docs\":\"compodoc src/\",\"docs-test\":\"linkinator docs\",\"fix\":\"gts fix && eslint --fix samples/*.js samples/**/*.js\",\"gen-parser\":\"pegjs src/pathTemplateParser.pegjs\",\"lint\":\"gts check && eslint samples/*.js samples/**/*.js\",\"predocs-test\":\"npm run docs\",\"prelint\":\"cd samples; npm link ../; npm i\",\"prepare\":\"npm run compile && node ./build/tools/prepublish.js && mkdirp build/protos && cp protos/operations.d.ts build/protos/\",\"pretest\":\"npm run prepare\",\"samples-test\":\"cd samples/ && npm link ../ && npm test && cd ../\",\"system-test\":\"c8 mocha build/test/system-test --timeout 120000\",\"test\":\"c8 mocha build/test/unit\"},\"types\":\"build/src/index.d.ts\",\"version\":\"1.15.3\"}");
 
 /***/ }),
 /* 133 */
@@ -29034,7 +29034,7 @@ exports.finishParse = finishParse;
 /* 134 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_from\":\"@google-cloud/speech@3.6.0\",\"_id\":\"@google-cloud/speech@3.6.0\",\"_inBundle\":false,\"_integrity\":\"sha512-ddnuXLhgVDONjYz66adqmWLBytCYGlQDkt0jiSszOHzCe36aCCaS92f87Txf8u4y9BZk34nOspIFxN2O7o8kfQ==\",\"_location\":\"/@google-cloud/speech\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"@google-cloud/speech@3.6.0\",\"name\":\"@google-cloud/speech\",\"escapedName\":\"@google-cloud%2fspeech\",\"scope\":\"@google-cloud\",\"rawSpec\":\"3.6.0\",\"saveSpec\":null,\"fetchSpec\":\"3.6.0\"},\"_requiredBy\":[\"/\"],\"_resolved\":\"https://registry.npmjs.org/@google-cloud/speech/-/speech-3.6.0.tgz\",\"_shasum\":\"b4a45e8eccf7baad40faa874eae025f4b6f233e9\",\"_spec\":\"@google-cloud/speech@3.6.0\",\"_where\":\"C:\\\\_proj\\\\nodejs-speech-kiosk-usercase\",\"author\":{\"name\":\"Google Inc.\"},\"bugs\":{\"url\":\"https://github.com/googleapis/nodejs-speech/issues\"},\"bundleDependencies\":false,\"dependencies\":{\"@google-cloud/common\":\"^2.0.0\",\"@types/pumpify\":\"^1.4.1\",\"google-gax\":\"^1.11.1\",\"protobufjs\":\"^6.8.6\",\"pumpify\":\"^2.0.0\",\"stream-events\":\"^1.0.4\"},\"deprecated\":false,\"description\":\"Cloud Speech Client Library for Node.js\",\"devDependencies\":{\"@types/mocha\":\"^7.0.0\",\"@types/node\":\"^12.0.0\",\"@types/sinon\":\"^7.5.1\",\"c8\":\"^7.0.0\",\"codecov\":\"^3.0.2\",\"eslint\":\"^6.0.0\",\"eslint-config-prettier\":\"^6.0.0\",\"eslint-plugin-node\":\"^11.0.0\",\"eslint-plugin-prettier\":\"^3.0.0\",\"gts\":\"^1.1.2\",\"jsdoc\":\"^3.5.5\",\"jsdoc-fresh\":\"^1.0.1\",\"jsdoc-region-tag\":\"^1.0.2\",\"linkinator\":\"^1.5.0\",\"mocha\":\"^7.0.0\",\"null-loader\":\"^3.0.0\",\"pack-n-play\":\"^1.0.0-2\",\"prettier\":\"^1.13.5\",\"sinon\":\"^8.0.0\",\"ts-loader\":\"^6.2.1\",\"typescript\":\"3.6.4\",\"webpack\":\"^4.41.2\",\"webpack-cli\":\"^3.3.10\"},\"engines\":{\"node\":\">=8.10.0\"},\"files\":[\"build/protos\",\"build/src\",\"AUTHORS\",\"LICENSE\"],\"homepage\":\"https://github.com/googleapis/nodejs-speech#readme\",\"keywords\":[\"google apis client\",\"google api client\",\"google apis\",\"google api\",\"google\",\"google cloud platform\",\"google cloud\",\"cloud\",\"google speech\",\"speech\",\"Google Cloud Speech API\"],\"license\":\"Apache-2.0\",\"main\":\"./build/src/index.js\",\"name\":\"@google-cloud/speech\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/googleapis/nodejs-speech.git\"},\"scripts\":{\"compile\":\"tsc -p . && cp system-test/*.js build/system-test/ && cp -r protos build/\",\"docs\":\"jsdoc -c .jsdoc.js\",\"docs-test\":\"linkinator docs\",\"fix\":\"gts fix && eslint --fix samples/*.js samples/system-test/*.js system-test/*.js\",\"lint\":\"gts check && eslint samples/*.js samples/system-test/*.js system-test/*.js\",\"predocs-test\":\"npm run docs\",\"prepare\":\"npm run compile\",\"pretest\":\"npm run compile\",\"samples-test\":\"cd samples/ && npm link ../ && npm test && cd ../\",\"system-test\":\"c8 mocha build/system-test/*.js --timeout 600000\",\"test\":\"c8 mocha build/test/*.js\"},\"version\":\"3.6.0\"}");
+module.exports = JSON.parse("{\"_args\":[[\"@google-cloud/speech@3.6.0\",\"C:\\\\_Dmitry\\\\_proj\\\\nodejs-speech-kiosk-usercase\"]],\"_from\":\"@google-cloud/speech@3.6.0\",\"_id\":\"@google-cloud/speech@3.6.0\",\"_inBundle\":false,\"_integrity\":\"sha512-ddnuXLhgVDONjYz66adqmWLBytCYGlQDkt0jiSszOHzCe36aCCaS92f87Txf8u4y9BZk34nOspIFxN2O7o8kfQ==\",\"_location\":\"/@google-cloud/speech\",\"_phantomChildren\":{\"@grpc/grpc-js\":\"1.0.4\",\"@grpc/proto-loader\":\"0.5.4\",\"@types/fs-extra\":\"8.1.1\",\"@types/long\":\"4.0.1\",\"abort-controller\":\"3.0.0\",\"arrify\":\"2.0.1\",\"base64-js\":\"1.3.1\",\"duplexify\":\"3.7.1\",\"ecdsa-sig-formatter\":\"1.0.11\",\"fast-text-encoding\":\"1.0.2\",\"gaxios\":\"2.3.4\",\"gcp-metadata\":\"3.5.0\",\"gtoken\":\"4.1.4\",\"is-stream-ended\":\"0.1.4\",\"jws\":\"4.0.0\",\"lodash.at\":\"4.6.0\",\"lodash.has\":\"4.5.2\",\"lru-cache\":\"5.1.1\",\"node-fetch\":\"2.6.0\",\"protobufjs\":\"6.9.0\",\"retry-request\":\"4.1.1\",\"walkdir\":\"0.4.1\"},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"@google-cloud/speech@3.6.0\",\"name\":\"@google-cloud/speech\",\"escapedName\":\"@google-cloud%2fspeech\",\"scope\":\"@google-cloud\",\"rawSpec\":\"3.6.0\",\"saveSpec\":null,\"fetchSpec\":\"3.6.0\"},\"_requiredBy\":[\"/\"],\"_resolved\":\"https://registry.npmjs.org/@google-cloud/speech/-/speech-3.6.0.tgz\",\"_spec\":\"3.6.0\",\"_where\":\"C:\\\\_Dmitry\\\\_proj\\\\nodejs-speech-kiosk-usercase\",\"author\":{\"name\":\"Google Inc.\"},\"bugs\":{\"url\":\"https://github.com/googleapis/nodejs-speech/issues\"},\"dependencies\":{\"@google-cloud/common\":\"^2.0.0\",\"@types/pumpify\":\"^1.4.1\",\"google-gax\":\"^1.11.1\",\"protobufjs\":\"^6.8.6\",\"pumpify\":\"^2.0.0\",\"stream-events\":\"^1.0.4\"},\"description\":\"Cloud Speech Client Library for Node.js\",\"devDependencies\":{\"@types/mocha\":\"^7.0.0\",\"@types/node\":\"^12.0.0\",\"@types/sinon\":\"^7.5.1\",\"c8\":\"^7.0.0\",\"codecov\":\"^3.0.2\",\"eslint\":\"^6.0.0\",\"eslint-config-prettier\":\"^6.0.0\",\"eslint-plugin-node\":\"^11.0.0\",\"eslint-plugin-prettier\":\"^3.0.0\",\"gts\":\"^1.1.2\",\"jsdoc\":\"^3.5.5\",\"jsdoc-fresh\":\"^1.0.1\",\"jsdoc-region-tag\":\"^1.0.2\",\"linkinator\":\"^1.5.0\",\"mocha\":\"^7.0.0\",\"null-loader\":\"^3.0.0\",\"pack-n-play\":\"^1.0.0-2\",\"prettier\":\"^1.13.5\",\"sinon\":\"^8.0.0\",\"ts-loader\":\"^6.2.1\",\"typescript\":\"3.6.4\",\"webpack\":\"^4.41.2\",\"webpack-cli\":\"^3.3.10\"},\"engines\":{\"node\":\">=8.10.0\"},\"files\":[\"build/protos\",\"build/src\",\"AUTHORS\",\"LICENSE\"],\"homepage\":\"https://github.com/googleapis/nodejs-speech#readme\",\"keywords\":[\"google apis client\",\"google api client\",\"google apis\",\"google api\",\"google\",\"google cloud platform\",\"google cloud\",\"cloud\",\"google speech\",\"speech\",\"Google Cloud Speech API\"],\"license\":\"Apache-2.0\",\"main\":\"./build/src/index.js\",\"name\":\"@google-cloud/speech\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/googleapis/nodejs-speech.git\"},\"scripts\":{\"compile\":\"tsc -p . && cp system-test/*.js build/system-test/ && cp -r protos build/\",\"docs\":\"jsdoc -c .jsdoc.js\",\"docs-test\":\"linkinator docs\",\"fix\":\"gts fix && eslint --fix samples/*.js samples/system-test/*.js system-test/*.js\",\"lint\":\"gts check && eslint samples/*.js samples/system-test/*.js system-test/*.js\",\"predocs-test\":\"npm run docs\",\"prepare\":\"npm run compile\",\"pretest\":\"npm run compile\",\"samples-test\":\"cd samples/ && npm link ../ && npm test && cd ../\",\"system-test\":\"c8 mocha build/system-test/*.js --timeout 600000\",\"test\":\"c8 mocha build/test/*.js\"},\"version\":\"3.6.0\"}");
 
 /***/ }),
 /* 135 */
@@ -29055,7 +29055,7 @@ module.exports = JSON.parse("{\"_from\":\"@google-cloud/speech@3.6.0\",\"_id\":\
 // See the License for the specific language governing permissions and
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", { value: true });
-const gaxios_1 = __webpack_require__(277);
+const gaxios_1 = __webpack_require__(279);
 exports.Gaxios = gaxios_1.Gaxios;
 var common_1 = __webpack_require__(136);
 exports.GaxiosError = common_1.GaxiosError;
@@ -29126,8 +29126,8 @@ exports.GaxiosError = GaxiosError;
 // limitations under the License.
 /* global window */
 Object.defineProperty(exports, "__esModule", { value: true });
-const crypto_1 = __webpack_require__(279);
-const crypto_2 = __webpack_require__(280);
+const crypto_1 = __webpack_require__(281);
+const crypto_2 = __webpack_require__(282);
 function createCrypto() {
     if (hasBrowserCrypto()) {
         return new crypto_1.BrowserCrypto();
@@ -29482,7 +29482,7 @@ async function isComputeEngine() {
 // See the License for the specific language governing permissions and
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", { value: true });
-const gtoken_1 = __webpack_require__(284);
+const gtoken_1 = __webpack_require__(286);
 const jwtaccess_1 = __webpack_require__(143);
 const oauth2client_1 = __webpack_require__(33);
 class JWT extends oauth2client_1.OAuth2Client {
@@ -29976,9 +29976,10 @@ exports.UserRefreshClient = UserRefreshClient;
 
 "use strict";
 
-const Recorder = __webpack_require__(146)
-const { recognize } = __webpack_require__(148)
-const VAD = __webpack_require__(286)
+const hark = __webpack_require__(146)
+const Recorder = __webpack_require__(148)
+const { recognize } = __webpack_require__(150)
+const VAD = __webpack_require__(288)
 
 // example use:
 // const keys = {
@@ -30009,7 +30010,7 @@ function Recognizer({
 		autoInit = true,
 		forced = true,
 		idleDelay = 5000,
-		vad = {}
+		harkOptions = {}
 	} = options
 	// it's might be an issue with memory (global)
 	this._isSpeech2Text = isSpeech2Text
@@ -30018,10 +30019,10 @@ function Recognizer({
 	this._recorder = { worker: false }
 
 	const mediaListener = stream => {
+		const speechEvents = hark(stream, harkOptions)
+
 		this._audioContext = new AudioContext();
-		const source = this._audioContext.createMediaStreamSource(stream)
-		
-		
+		const source = this._audioContext.createMediaStreamSource(stream)		
 		this._recorder = new Recorder(source, {numChannels: 1})
 
 		const onVoiceStart = () => {
@@ -30033,6 +30034,9 @@ function Recognizer({
 			stopRecording()
 			onSpeechEnd()
 		}
+
+		speechEvents.on('speaking', onVoiceStart)
+		speechEvents.on('stopped_speaking', onVoiceEnd)
 
 		const startRecording = () => {
 			if(this._isSpeech2Text) this._recorder.record()
@@ -30092,14 +30096,6 @@ function Recognizer({
 			}
 		}
 
-		const vadHandler = new VAD({
-			...vad,
-			source,
-			voice_start: onVoiceStart,
-			voice_stop: onVoiceEnd,
-			DEBUG: true
-		})
-
 		onAllStart()
 		forcedStartRecord()
 		// this.startIdleTimeout()
@@ -30150,8 +30146,318 @@ module.exports = {Recognizer, Recorder, VAD, recognize}
 /* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
+var WildEmitter = __webpack_require__(147);
+
+function getMaxVolume (analyser, fftBins) {
+  var maxVolume = -Infinity;
+  analyser.getFloatFrequencyData(fftBins);
+
+  for(var i=4, ii=fftBins.length; i < ii; i++) {
+    if (fftBins[i] > maxVolume && fftBins[i] < 0) {
+      maxVolume = fftBins[i];
+    }
+  };
+
+  return maxVolume;
+}
+
+
+var audioContextType;
+if (typeof window !== 'undefined') {
+  audioContextType = window.AudioContext || window.webkitAudioContext;
+}
+// use a single audio context due to hardware limits
+var audioContext = null;
+module.exports = function(stream, options) {
+  var harker = new WildEmitter();
+
+  // make it not break in non-supported browsers
+  if (!audioContextType) return harker;
+
+  //Config
+  var options = options || {},
+      smoothing = (options.smoothing || 0.1),
+      interval = (options.interval || 50),
+      threshold = options.threshold,
+      play = options.play,
+      history = options.history || 10,
+      running = true;
+
+  // Ensure that just a single AudioContext is internally created
+  audioContext = options.audioContext || audioContext || new audioContextType();
+
+  var sourceNode, fftBins, analyser;
+
+  analyser = audioContext.createAnalyser();
+  analyser.fftSize = 512;
+  analyser.smoothingTimeConstant = smoothing;
+  fftBins = new Float32Array(analyser.frequencyBinCount);
+
+  if (stream.jquery) stream = stream[0];
+  if (stream instanceof HTMLAudioElement || stream instanceof HTMLVideoElement) {
+    //Audio Tag
+    sourceNode = audioContext.createMediaElementSource(stream);
+    if (typeof play === 'undefined') play = true;
+    threshold = threshold || -50;
+  } else {
+    //WebRTC Stream
+    sourceNode = audioContext.createMediaStreamSource(stream);
+    threshold = threshold || -50;
+  }
+
+  sourceNode.connect(analyser);
+  if (play) analyser.connect(audioContext.destination);
+
+  harker.speaking = false;
+
+  harker.suspend = function() {
+    return audioContext.suspend();
+  }
+  harker.resume = function() {
+    return audioContext.resume();
+  }
+  Object.defineProperty(harker, 'state', { get: function() {
+    return audioContext.state;
+  }});
+  audioContext.onstatechange = function() {
+    harker.emit('state_change', audioContext.state);
+  }
+
+  harker.setThreshold = function(t) {
+    threshold = t;
+  };
+
+  harker.setInterval = function(i) {
+    interval = i;
+  };
+
+  harker.stop = function() {
+    running = false;
+    harker.emit('volume_change', -100, threshold);
+    if (harker.speaking) {
+      harker.speaking = false;
+      harker.emit('stopped_speaking');
+    }
+    analyser.disconnect();
+    sourceNode.disconnect();
+  };
+  harker.speakingHistory = [];
+  for (var i = 0; i < history; i++) {
+      harker.speakingHistory.push(0);
+  }
+
+  // Poll the analyser node to determine if speaking
+  // and emit events if changed
+  var looper = function() {
+    setTimeout(function() {
+
+      //check if stop has been called
+      if(!running) {
+        return;
+      }
+
+      var currentVolume = getMaxVolume(analyser, fftBins);
+
+      harker.emit('volume_change', currentVolume, threshold);
+
+      var history = 0;
+      if (currentVolume > threshold && !harker.speaking) {
+        // trigger quickly, short history
+        for (var i = harker.speakingHistory.length - 3; i < harker.speakingHistory.length; i++) {
+          history += harker.speakingHistory[i];
+        }
+        if (history >= 2) {
+          harker.speaking = true;
+          harker.emit('speaking');
+        }
+      } else if (currentVolume < threshold && harker.speaking) {
+        for (var i = 0; i < harker.speakingHistory.length; i++) {
+          history += harker.speakingHistory[i];
+        }
+        if (history == 0) {
+          harker.speaking = false;
+          harker.emit('stopped_speaking');
+        }
+      }
+      harker.speakingHistory.shift();
+      harker.speakingHistory.push(0 + (currentVolume > threshold));
+
+      looper();
+    }, interval);
+  };
+  looper();
+
+  return harker;
+}
+
+
+/***/ }),
+/* 147 */
+/***/ (function(module, exports) {
+
+/*
+WildEmitter.js is a slim little event emitter by @henrikjoreteg largely based
+on @visionmedia's Emitter from UI Kit.
+
+Why? I wanted it standalone.
+
+I also wanted support for wildcard emitters like this:
+
+emitter.on('*', function (eventName, other, event, payloads) {
+
+});
+
+emitter.on('somenamespace*', function (eventName, payloads) {
+
+});
+
+Please note that callbacks triggered by wildcard registered events also get
+the event name as the first argument.
+*/
+
+module.exports = WildEmitter;
+
+function WildEmitter() { }
+
+WildEmitter.mixin = function (constructor) {
+    var prototype = constructor.prototype || constructor;
+
+    prototype.isWildEmitter= true;
+
+    // Listen on the given `event` with `fn`. Store a group name if present.
+    prototype.on = function (event, groupName, fn) {
+        this.callbacks = this.callbacks || {};
+        var hasGroup = (arguments.length === 3),
+            group = hasGroup ? arguments[1] : undefined,
+            func = hasGroup ? arguments[2] : arguments[1];
+        func._groupName = group;
+        (this.callbacks[event] = this.callbacks[event] || []).push(func);
+        return this;
+    };
+
+    // Adds an `event` listener that will be invoked a single
+    // time then automatically removed.
+    prototype.once = function (event, groupName, fn) {
+        var self = this,
+            hasGroup = (arguments.length === 3),
+            group = hasGroup ? arguments[1] : undefined,
+            func = hasGroup ? arguments[2] : arguments[1];
+        function on() {
+            self.off(event, on);
+            func.apply(this, arguments);
+        }
+        this.on(event, group, on);
+        return this;
+    };
+
+    // Unbinds an entire group
+    prototype.releaseGroup = function (groupName) {
+        this.callbacks = this.callbacks || {};
+        var item, i, len, handlers;
+        for (item in this.callbacks) {
+            handlers = this.callbacks[item];
+            for (i = 0, len = handlers.length; i < len; i++) {
+                if (handlers[i]._groupName === groupName) {
+                    //console.log('removing');
+                    // remove it and shorten the array we're looping through
+                    handlers.splice(i, 1);
+                    i--;
+                    len--;
+                }
+            }
+        }
+        return this;
+    };
+
+    // Remove the given callback for `event` or all
+    // registered callbacks.
+    prototype.off = function (event, fn) {
+        this.callbacks = this.callbacks || {};
+        var callbacks = this.callbacks[event],
+            i;
+
+        if (!callbacks) return this;
+
+        // remove all handlers
+        if (arguments.length === 1) {
+            delete this.callbacks[event];
+            return this;
+        }
+
+        // remove specific handler
+        i = callbacks.indexOf(fn);
+        if (i !== -1) {
+            callbacks.splice(i, 1);
+            if (callbacks.length === 0) {
+                delete this.callbacks[event];
+            }
+        }
+        return this;
+    };
+
+    /// Emit `event` with the given args.
+    // also calls any `*` handlers
+    prototype.emit = function (event) {
+        this.callbacks = this.callbacks || {};
+        var args = [].slice.call(arguments, 1),
+            callbacks = this.callbacks[event],
+            specialCallbacks = this.getWildcardCallbacks(event),
+            i,
+            len,
+            item,
+            listeners;
+
+        if (callbacks) {
+            listeners = callbacks.slice();
+            for (i = 0, len = listeners.length; i < len; ++i) {
+                if (!listeners[i]) {
+                    break;
+                }
+                listeners[i].apply(this, args);
+            }
+        }
+
+        if (specialCallbacks) {
+            len = specialCallbacks.length;
+            listeners = specialCallbacks.slice();
+            for (i = 0, len = listeners.length; i < len; ++i) {
+                if (!listeners[i]) {
+                    break;
+                }
+                listeners[i].apply(this, [event].concat(args));
+            }
+        }
+
+        return this;
+    };
+
+    // Helper for for finding special wildcard event handlers that match the event
+    prototype.getWildcardCallbacks = function (eventName) {
+        this.callbacks = this.callbacks || {};
+        var item,
+            split,
+            result = [];
+
+        for (item in this.callbacks) {
+            split = item.split('*');
+            if (item === '*' || (split.length === 2 && eventName.slice(0, split[0].length) === split[0])) {
+                result = result.concat(this.callbacks[item]);
+            }
+        }
+        return result;
+    };
+
+};
+
+WildEmitter.mixin(WildEmitter);
+
+
+/***/ }),
+/* 148 */
+/***/ (function(module, exports, __webpack_require__) {
+
 //https://github.com/mattdiamond/Recorderjs
-const InlineWorker = __webpack_require__(147)
+const InlineWorker = __webpack_require__(149)
 
 class Recorder {
     constructor(source, cfg = {
@@ -30405,7 +30711,7 @@ module.exports = Recorder;
 // export default Recorder;
 
 /***/ }),
-/* 147 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var WORKER_ENABLED = !!(global === global.window && global.URL && global.Blob && global.Worker);
@@ -30451,7 +30757,7 @@ module.exports = InlineWorker;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 148 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30477,8 +30783,9 @@ module.exports = InlineWorker;
 // For more information about API keys, please visit
 // https://cloud.google.com/docs/authentication/api-keys
 
-const speech = __webpack_require__(149);
-const {GoogleAuth} = __webpack_require__(275);
+const speech = __webpack_require__(151);
+const { GoogleAuth } = __webpack_require__(277);
+// const Speech = require('./gs/build/src');
 
 async function recognize(
   content,
@@ -30487,8 +30794,12 @@ async function recognize(
   onData = data => console.log({data})
 ){
   const googleAuth = new GoogleAuth();
-  const auth = googleAuth.fromAPIKey(apiKey);
+  const auth = googleAuth.fromAPIKey(apiKey)
   const client = new speech.v1p1beta1.SpeechClient({auth});
+  // const client = new Speech.v1p1beta1.SpeechClient({
+  //   auth,
+  //   fallback: true
+  // })
   const audio = {
     content
   };
@@ -30504,7 +30815,12 @@ async function recognize(
   };
 
   const [response] = await client.recognize(request);
-  return response;
+  return response
+  
+  // const recognizeStream = client.streamingRecognize(request)
+  //   .on('error', console.error)
+  //   .on('data', data => console.log('recognizeStream', data))
+  // return recognizeStream
 
   // Create a recognize stream
   // const recognizeStream = client
@@ -30551,7 +30867,7 @@ module.exports = {recognize};
 // module.exports = Speech
 
 /***/ }),
-/* 149 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30570,10 +30886,10 @@ module.exports = {recognize};
 // See the License for the specific language governing permissions and
 // limitations under the License.
 Object.defineProperty(exports, "__esModule", { value: true });
-const helpers_1 = __webpack_require__(150);
-const v1p1beta1 = __webpack_require__(217);
+const helpers_1 = __webpack_require__(152);
+const v1p1beta1 = __webpack_require__(219);
 exports.v1p1beta1 = v1p1beta1;
-const v1 = __webpack_require__(272);
+const v1 = __webpack_require__(274);
 exports.v1 = v1;
 // The following code is adapted from http://www.typescriptlang.org/docs/handbook/mixins.html
 // tslint:disable-next-line no-any
@@ -30587,7 +30903,7 @@ exports.default = { v1, v1p1beta1, SpeechClient };
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 150 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30608,8 +30924,8 @@ exports.default = { v1, v1p1beta1, SpeechClient };
  * limitations under the License.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const common = __webpack_require__(151);
-const pumpify = __webpack_require__(205);
+const common = __webpack_require__(153);
+const pumpify = __webpack_require__(207);
 const streamEvents = __webpack_require__(96);
 const stream_1 = __webpack_require__(5);
 class ImprovedStreamingClient {
@@ -30705,7 +31021,7 @@ exports.ImprovedStreamingClient = ImprovedStreamingClient;
 //# sourceMappingURL=helpers.js.map
 
 /***/ }),
-/* 151 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30730,13 +31046,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @type {module:common/operation}
  * @private
  */
-var operation_1 = __webpack_require__(152);
+var operation_1 = __webpack_require__(154);
 exports.Operation = operation_1.Operation;
 /**
  * @type {module:common/service}
  * @private
  */
-var service_1 = __webpack_require__(204);
+var service_1 = __webpack_require__(206);
 exports.Service = service_1.Service;
 /**
  * @type {module:common/serviceObject}
@@ -30754,7 +31070,7 @@ exports.util = util_1.util;
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 152 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30908,7 +31224,7 @@ exports.Operation = Operation;
 //# sourceMappingURL=operation.js.map
 
 /***/ }),
-/* 153 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31073,7 +31389,7 @@ exports.callbackifyAll = callbackifyAll;
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 154 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -31266,7 +31582,7 @@ exports.callbackifyAll = callbackifyAll;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2), __webpack_require__(0)))
 
 /***/ }),
-/* 155 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31337,7 +31653,7 @@ exports.MissingProjectIdError = MissingProjectIdError;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1).Buffer))
 
 /***/ }),
-/* 156 */
+/* 158 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -31427,13 +31743,13 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 157 */
+/* 159 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 158 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31442,7 +31758,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Buffer = __webpack_require__(44).Buffer;
-var util = __webpack_require__(159);
+var util = __webpack_require__(161);
 
 function copyBuffer(src, target, offset) {
   src.copy(target, offset);
@@ -31518,13 +31834,13 @@ if (util && util.inspect && util.inspect.custom) {
 }
 
 /***/ }),
-/* 159 */
+/* 161 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 160 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31577,47 +31893,47 @@ PassThrough.prototype._transform = function (chunk, encoding, cb) {
 };
 
 /***/ }),
-/* 161 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(45);
 
 
 /***/ }),
-/* 162 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(11);
 
 
 /***/ }),
-/* 163 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(16).Transform
 
 
 /***/ }),
-/* 164 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(16).PassThrough
 
 
 /***/ }),
-/* 165 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports.encode = __webpack_require__(166);
-exports.decode = __webpack_require__(169);
+exports.encode = __webpack_require__(168);
+exports.decode = __webpack_require__(171);
 
 
 /***/ }),
-/* 166 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var punycode = __webpack_require__(46);
-var revEntities = __webpack_require__(168);
+var revEntities = __webpack_require__(170);
 
 module.exports = encode;
 
@@ -31658,7 +31974,7 @@ function encode (str, opts) {
 
 
 /***/ }),
-/* 167 */
+/* 169 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -31686,17 +32002,17 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 168 */
+/* 170 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"9\":\"Tab;\",\"10\":\"NewLine;\",\"33\":\"excl;\",\"34\":\"quot;\",\"35\":\"num;\",\"36\":\"dollar;\",\"37\":\"percnt;\",\"38\":\"amp;\",\"39\":\"apos;\",\"40\":\"lpar;\",\"41\":\"rpar;\",\"42\":\"midast;\",\"43\":\"plus;\",\"44\":\"comma;\",\"46\":\"period;\",\"47\":\"sol;\",\"58\":\"colon;\",\"59\":\"semi;\",\"60\":\"lt;\",\"61\":\"equals;\",\"62\":\"gt;\",\"63\":\"quest;\",\"64\":\"commat;\",\"91\":\"lsqb;\",\"92\":\"bsol;\",\"93\":\"rsqb;\",\"94\":\"Hat;\",\"95\":\"UnderBar;\",\"96\":\"grave;\",\"123\":\"lcub;\",\"124\":\"VerticalLine;\",\"125\":\"rcub;\",\"160\":\"NonBreakingSpace;\",\"161\":\"iexcl;\",\"162\":\"cent;\",\"163\":\"pound;\",\"164\":\"curren;\",\"165\":\"yen;\",\"166\":\"brvbar;\",\"167\":\"sect;\",\"168\":\"uml;\",\"169\":\"copy;\",\"170\":\"ordf;\",\"171\":\"laquo;\",\"172\":\"not;\",\"173\":\"shy;\",\"174\":\"reg;\",\"175\":\"strns;\",\"176\":\"deg;\",\"177\":\"pm;\",\"178\":\"sup2;\",\"179\":\"sup3;\",\"180\":\"DiacriticalAcute;\",\"181\":\"micro;\",\"182\":\"para;\",\"183\":\"middot;\",\"184\":\"Cedilla;\",\"185\":\"sup1;\",\"186\":\"ordm;\",\"187\":\"raquo;\",\"188\":\"frac14;\",\"189\":\"half;\",\"190\":\"frac34;\",\"191\":\"iquest;\",\"192\":\"Agrave;\",\"193\":\"Aacute;\",\"194\":\"Acirc;\",\"195\":\"Atilde;\",\"196\":\"Auml;\",\"197\":\"Aring;\",\"198\":\"AElig;\",\"199\":\"Ccedil;\",\"200\":\"Egrave;\",\"201\":\"Eacute;\",\"202\":\"Ecirc;\",\"203\":\"Euml;\",\"204\":\"Igrave;\",\"205\":\"Iacute;\",\"206\":\"Icirc;\",\"207\":\"Iuml;\",\"208\":\"ETH;\",\"209\":\"Ntilde;\",\"210\":\"Ograve;\",\"211\":\"Oacute;\",\"212\":\"Ocirc;\",\"213\":\"Otilde;\",\"214\":\"Ouml;\",\"215\":\"times;\",\"216\":\"Oslash;\",\"217\":\"Ugrave;\",\"218\":\"Uacute;\",\"219\":\"Ucirc;\",\"220\":\"Uuml;\",\"221\":\"Yacute;\",\"222\":\"THORN;\",\"223\":\"szlig;\",\"224\":\"agrave;\",\"225\":\"aacute;\",\"226\":\"acirc;\",\"227\":\"atilde;\",\"228\":\"auml;\",\"229\":\"aring;\",\"230\":\"aelig;\",\"231\":\"ccedil;\",\"232\":\"egrave;\",\"233\":\"eacute;\",\"234\":\"ecirc;\",\"235\":\"euml;\",\"236\":\"igrave;\",\"237\":\"iacute;\",\"238\":\"icirc;\",\"239\":\"iuml;\",\"240\":\"eth;\",\"241\":\"ntilde;\",\"242\":\"ograve;\",\"243\":\"oacute;\",\"244\":\"ocirc;\",\"245\":\"otilde;\",\"246\":\"ouml;\",\"247\":\"divide;\",\"248\":\"oslash;\",\"249\":\"ugrave;\",\"250\":\"uacute;\",\"251\":\"ucirc;\",\"252\":\"uuml;\",\"253\":\"yacute;\",\"254\":\"thorn;\",\"255\":\"yuml;\",\"256\":\"Amacr;\",\"257\":\"amacr;\",\"258\":\"Abreve;\",\"259\":\"abreve;\",\"260\":\"Aogon;\",\"261\":\"aogon;\",\"262\":\"Cacute;\",\"263\":\"cacute;\",\"264\":\"Ccirc;\",\"265\":\"ccirc;\",\"266\":\"Cdot;\",\"267\":\"cdot;\",\"268\":\"Ccaron;\",\"269\":\"ccaron;\",\"270\":\"Dcaron;\",\"271\":\"dcaron;\",\"272\":\"Dstrok;\",\"273\":\"dstrok;\",\"274\":\"Emacr;\",\"275\":\"emacr;\",\"278\":\"Edot;\",\"279\":\"edot;\",\"280\":\"Eogon;\",\"281\":\"eogon;\",\"282\":\"Ecaron;\",\"283\":\"ecaron;\",\"284\":\"Gcirc;\",\"285\":\"gcirc;\",\"286\":\"Gbreve;\",\"287\":\"gbreve;\",\"288\":\"Gdot;\",\"289\":\"gdot;\",\"290\":\"Gcedil;\",\"292\":\"Hcirc;\",\"293\":\"hcirc;\",\"294\":\"Hstrok;\",\"295\":\"hstrok;\",\"296\":\"Itilde;\",\"297\":\"itilde;\",\"298\":\"Imacr;\",\"299\":\"imacr;\",\"302\":\"Iogon;\",\"303\":\"iogon;\",\"304\":\"Idot;\",\"305\":\"inodot;\",\"306\":\"IJlig;\",\"307\":\"ijlig;\",\"308\":\"Jcirc;\",\"309\":\"jcirc;\",\"310\":\"Kcedil;\",\"311\":\"kcedil;\",\"312\":\"kgreen;\",\"313\":\"Lacute;\",\"314\":\"lacute;\",\"315\":\"Lcedil;\",\"316\":\"lcedil;\",\"317\":\"Lcaron;\",\"318\":\"lcaron;\",\"319\":\"Lmidot;\",\"320\":\"lmidot;\",\"321\":\"Lstrok;\",\"322\":\"lstrok;\",\"323\":\"Nacute;\",\"324\":\"nacute;\",\"325\":\"Ncedil;\",\"326\":\"ncedil;\",\"327\":\"Ncaron;\",\"328\":\"ncaron;\",\"329\":\"napos;\",\"330\":\"ENG;\",\"331\":\"eng;\",\"332\":\"Omacr;\",\"333\":\"omacr;\",\"336\":\"Odblac;\",\"337\":\"odblac;\",\"338\":\"OElig;\",\"339\":\"oelig;\",\"340\":\"Racute;\",\"341\":\"racute;\",\"342\":\"Rcedil;\",\"343\":\"rcedil;\",\"344\":\"Rcaron;\",\"345\":\"rcaron;\",\"346\":\"Sacute;\",\"347\":\"sacute;\",\"348\":\"Scirc;\",\"349\":\"scirc;\",\"350\":\"Scedil;\",\"351\":\"scedil;\",\"352\":\"Scaron;\",\"353\":\"scaron;\",\"354\":\"Tcedil;\",\"355\":\"tcedil;\",\"356\":\"Tcaron;\",\"357\":\"tcaron;\",\"358\":\"Tstrok;\",\"359\":\"tstrok;\",\"360\":\"Utilde;\",\"361\":\"utilde;\",\"362\":\"Umacr;\",\"363\":\"umacr;\",\"364\":\"Ubreve;\",\"365\":\"ubreve;\",\"366\":\"Uring;\",\"367\":\"uring;\",\"368\":\"Udblac;\",\"369\":\"udblac;\",\"370\":\"Uogon;\",\"371\":\"uogon;\",\"372\":\"Wcirc;\",\"373\":\"wcirc;\",\"374\":\"Ycirc;\",\"375\":\"ycirc;\",\"376\":\"Yuml;\",\"377\":\"Zacute;\",\"378\":\"zacute;\",\"379\":\"Zdot;\",\"380\":\"zdot;\",\"381\":\"Zcaron;\",\"382\":\"zcaron;\",\"402\":\"fnof;\",\"437\":\"imped;\",\"501\":\"gacute;\",\"567\":\"jmath;\",\"710\":\"circ;\",\"711\":\"Hacek;\",\"728\":\"breve;\",\"729\":\"dot;\",\"730\":\"ring;\",\"731\":\"ogon;\",\"732\":\"tilde;\",\"733\":\"DiacriticalDoubleAcute;\",\"785\":\"DownBreve;\",\"913\":\"Alpha;\",\"914\":\"Beta;\",\"915\":\"Gamma;\",\"916\":\"Delta;\",\"917\":\"Epsilon;\",\"918\":\"Zeta;\",\"919\":\"Eta;\",\"920\":\"Theta;\",\"921\":\"Iota;\",\"922\":\"Kappa;\",\"923\":\"Lambda;\",\"924\":\"Mu;\",\"925\":\"Nu;\",\"926\":\"Xi;\",\"927\":\"Omicron;\",\"928\":\"Pi;\",\"929\":\"Rho;\",\"931\":\"Sigma;\",\"932\":\"Tau;\",\"933\":\"Upsilon;\",\"934\":\"Phi;\",\"935\":\"Chi;\",\"936\":\"Psi;\",\"937\":\"Omega;\",\"945\":\"alpha;\",\"946\":\"beta;\",\"947\":\"gamma;\",\"948\":\"delta;\",\"949\":\"epsilon;\",\"950\":\"zeta;\",\"951\":\"eta;\",\"952\":\"theta;\",\"953\":\"iota;\",\"954\":\"kappa;\",\"955\":\"lambda;\",\"956\":\"mu;\",\"957\":\"nu;\",\"958\":\"xi;\",\"959\":\"omicron;\",\"960\":\"pi;\",\"961\":\"rho;\",\"962\":\"varsigma;\",\"963\":\"sigma;\",\"964\":\"tau;\",\"965\":\"upsilon;\",\"966\":\"phi;\",\"967\":\"chi;\",\"968\":\"psi;\",\"969\":\"omega;\",\"977\":\"vartheta;\",\"978\":\"upsih;\",\"981\":\"varphi;\",\"982\":\"varpi;\",\"988\":\"Gammad;\",\"989\":\"gammad;\",\"1008\":\"varkappa;\",\"1009\":\"varrho;\",\"1013\":\"varepsilon;\",\"1014\":\"bepsi;\",\"1025\":\"IOcy;\",\"1026\":\"DJcy;\",\"1027\":\"GJcy;\",\"1028\":\"Jukcy;\",\"1029\":\"DScy;\",\"1030\":\"Iukcy;\",\"1031\":\"YIcy;\",\"1032\":\"Jsercy;\",\"1033\":\"LJcy;\",\"1034\":\"NJcy;\",\"1035\":\"TSHcy;\",\"1036\":\"KJcy;\",\"1038\":\"Ubrcy;\",\"1039\":\"DZcy;\",\"1040\":\"Acy;\",\"1041\":\"Bcy;\",\"1042\":\"Vcy;\",\"1043\":\"Gcy;\",\"1044\":\"Dcy;\",\"1045\":\"IEcy;\",\"1046\":\"ZHcy;\",\"1047\":\"Zcy;\",\"1048\":\"Icy;\",\"1049\":\"Jcy;\",\"1050\":\"Kcy;\",\"1051\":\"Lcy;\",\"1052\":\"Mcy;\",\"1053\":\"Ncy;\",\"1054\":\"Ocy;\",\"1055\":\"Pcy;\",\"1056\":\"Rcy;\",\"1057\":\"Scy;\",\"1058\":\"Tcy;\",\"1059\":\"Ucy;\",\"1060\":\"Fcy;\",\"1061\":\"KHcy;\",\"1062\":\"TScy;\",\"1063\":\"CHcy;\",\"1064\":\"SHcy;\",\"1065\":\"SHCHcy;\",\"1066\":\"HARDcy;\",\"1067\":\"Ycy;\",\"1068\":\"SOFTcy;\",\"1069\":\"Ecy;\",\"1070\":\"YUcy;\",\"1071\":\"YAcy;\",\"1072\":\"acy;\",\"1073\":\"bcy;\",\"1074\":\"vcy;\",\"1075\":\"gcy;\",\"1076\":\"dcy;\",\"1077\":\"iecy;\",\"1078\":\"zhcy;\",\"1079\":\"zcy;\",\"1080\":\"icy;\",\"1081\":\"jcy;\",\"1082\":\"kcy;\",\"1083\":\"lcy;\",\"1084\":\"mcy;\",\"1085\":\"ncy;\",\"1086\":\"ocy;\",\"1087\":\"pcy;\",\"1088\":\"rcy;\",\"1089\":\"scy;\",\"1090\":\"tcy;\",\"1091\":\"ucy;\",\"1092\":\"fcy;\",\"1093\":\"khcy;\",\"1094\":\"tscy;\",\"1095\":\"chcy;\",\"1096\":\"shcy;\",\"1097\":\"shchcy;\",\"1098\":\"hardcy;\",\"1099\":\"ycy;\",\"1100\":\"softcy;\",\"1101\":\"ecy;\",\"1102\":\"yucy;\",\"1103\":\"yacy;\",\"1105\":\"iocy;\",\"1106\":\"djcy;\",\"1107\":\"gjcy;\",\"1108\":\"jukcy;\",\"1109\":\"dscy;\",\"1110\":\"iukcy;\",\"1111\":\"yicy;\",\"1112\":\"jsercy;\",\"1113\":\"ljcy;\",\"1114\":\"njcy;\",\"1115\":\"tshcy;\",\"1116\":\"kjcy;\",\"1118\":\"ubrcy;\",\"1119\":\"dzcy;\",\"8194\":\"ensp;\",\"8195\":\"emsp;\",\"8196\":\"emsp13;\",\"8197\":\"emsp14;\",\"8199\":\"numsp;\",\"8200\":\"puncsp;\",\"8201\":\"ThinSpace;\",\"8202\":\"VeryThinSpace;\",\"8203\":\"ZeroWidthSpace;\",\"8204\":\"zwnj;\",\"8205\":\"zwj;\",\"8206\":\"lrm;\",\"8207\":\"rlm;\",\"8208\":\"hyphen;\",\"8211\":\"ndash;\",\"8212\":\"mdash;\",\"8213\":\"horbar;\",\"8214\":\"Vert;\",\"8216\":\"OpenCurlyQuote;\",\"8217\":\"rsquor;\",\"8218\":\"sbquo;\",\"8220\":\"OpenCurlyDoubleQuote;\",\"8221\":\"rdquor;\",\"8222\":\"ldquor;\",\"8224\":\"dagger;\",\"8225\":\"ddagger;\",\"8226\":\"bullet;\",\"8229\":\"nldr;\",\"8230\":\"mldr;\",\"8240\":\"permil;\",\"8241\":\"pertenk;\",\"8242\":\"prime;\",\"8243\":\"Prime;\",\"8244\":\"tprime;\",\"8245\":\"bprime;\",\"8249\":\"lsaquo;\",\"8250\":\"rsaquo;\",\"8254\":\"OverBar;\",\"8257\":\"caret;\",\"8259\":\"hybull;\",\"8260\":\"frasl;\",\"8271\":\"bsemi;\",\"8279\":\"qprime;\",\"8287\":\"MediumSpace;\",\"8288\":\"NoBreak;\",\"8289\":\"ApplyFunction;\",\"8290\":\"it;\",\"8291\":\"InvisibleComma;\",\"8364\":\"euro;\",\"8411\":\"TripleDot;\",\"8412\":\"DotDot;\",\"8450\":\"Copf;\",\"8453\":\"incare;\",\"8458\":\"gscr;\",\"8459\":\"Hscr;\",\"8460\":\"Poincareplane;\",\"8461\":\"quaternions;\",\"8462\":\"planckh;\",\"8463\":\"plankv;\",\"8464\":\"Iscr;\",\"8465\":\"imagpart;\",\"8466\":\"Lscr;\",\"8467\":\"ell;\",\"8469\":\"Nopf;\",\"8470\":\"numero;\",\"8471\":\"copysr;\",\"8472\":\"wp;\",\"8473\":\"primes;\",\"8474\":\"rationals;\",\"8475\":\"Rscr;\",\"8476\":\"Rfr;\",\"8477\":\"Ropf;\",\"8478\":\"rx;\",\"8482\":\"trade;\",\"8484\":\"Zopf;\",\"8487\":\"mho;\",\"8488\":\"Zfr;\",\"8489\":\"iiota;\",\"8492\":\"Bscr;\",\"8493\":\"Cfr;\",\"8495\":\"escr;\",\"8496\":\"expectation;\",\"8497\":\"Fscr;\",\"8499\":\"phmmat;\",\"8500\":\"oscr;\",\"8501\":\"aleph;\",\"8502\":\"beth;\",\"8503\":\"gimel;\",\"8504\":\"daleth;\",\"8517\":\"DD;\",\"8518\":\"DifferentialD;\",\"8519\":\"exponentiale;\",\"8520\":\"ImaginaryI;\",\"8531\":\"frac13;\",\"8532\":\"frac23;\",\"8533\":\"frac15;\",\"8534\":\"frac25;\",\"8535\":\"frac35;\",\"8536\":\"frac45;\",\"8537\":\"frac16;\",\"8538\":\"frac56;\",\"8539\":\"frac18;\",\"8540\":\"frac38;\",\"8541\":\"frac58;\",\"8542\":\"frac78;\",\"8592\":\"slarr;\",\"8593\":\"uparrow;\",\"8594\":\"srarr;\",\"8595\":\"ShortDownArrow;\",\"8596\":\"leftrightarrow;\",\"8597\":\"varr;\",\"8598\":\"UpperLeftArrow;\",\"8599\":\"UpperRightArrow;\",\"8600\":\"searrow;\",\"8601\":\"swarrow;\",\"8602\":\"nleftarrow;\",\"8603\":\"nrightarrow;\",\"8605\":\"rightsquigarrow;\",\"8606\":\"twoheadleftarrow;\",\"8607\":\"Uarr;\",\"8608\":\"twoheadrightarrow;\",\"8609\":\"Darr;\",\"8610\":\"leftarrowtail;\",\"8611\":\"rightarrowtail;\",\"8612\":\"mapstoleft;\",\"8613\":\"UpTeeArrow;\",\"8614\":\"RightTeeArrow;\",\"8615\":\"mapstodown;\",\"8617\":\"larrhk;\",\"8618\":\"rarrhk;\",\"8619\":\"looparrowleft;\",\"8620\":\"rarrlp;\",\"8621\":\"leftrightsquigarrow;\",\"8622\":\"nleftrightarrow;\",\"8624\":\"lsh;\",\"8625\":\"rsh;\",\"8626\":\"ldsh;\",\"8627\":\"rdsh;\",\"8629\":\"crarr;\",\"8630\":\"curvearrowleft;\",\"8631\":\"curvearrowright;\",\"8634\":\"olarr;\",\"8635\":\"orarr;\",\"8636\":\"lharu;\",\"8637\":\"lhard;\",\"8638\":\"upharpoonright;\",\"8639\":\"upharpoonleft;\",\"8640\":\"RightVector;\",\"8641\":\"rightharpoondown;\",\"8642\":\"RightDownVector;\",\"8643\":\"LeftDownVector;\",\"8644\":\"rlarr;\",\"8645\":\"UpArrowDownArrow;\",\"8646\":\"lrarr;\",\"8647\":\"llarr;\",\"8648\":\"uuarr;\",\"8649\":\"rrarr;\",\"8650\":\"downdownarrows;\",\"8651\":\"ReverseEquilibrium;\",\"8652\":\"rlhar;\",\"8653\":\"nLeftarrow;\",\"8654\":\"nLeftrightarrow;\",\"8655\":\"nRightarrow;\",\"8656\":\"Leftarrow;\",\"8657\":\"Uparrow;\",\"8658\":\"Rightarrow;\",\"8659\":\"Downarrow;\",\"8660\":\"Leftrightarrow;\",\"8661\":\"vArr;\",\"8662\":\"nwArr;\",\"8663\":\"neArr;\",\"8664\":\"seArr;\",\"8665\":\"swArr;\",\"8666\":\"Lleftarrow;\",\"8667\":\"Rrightarrow;\",\"8669\":\"zigrarr;\",\"8676\":\"LeftArrowBar;\",\"8677\":\"RightArrowBar;\",\"8693\":\"duarr;\",\"8701\":\"loarr;\",\"8702\":\"roarr;\",\"8703\":\"hoarr;\",\"8704\":\"forall;\",\"8705\":\"complement;\",\"8706\":\"PartialD;\",\"8707\":\"Exists;\",\"8708\":\"NotExists;\",\"8709\":\"varnothing;\",\"8711\":\"nabla;\",\"8712\":\"isinv;\",\"8713\":\"notinva;\",\"8715\":\"SuchThat;\",\"8716\":\"NotReverseElement;\",\"8719\":\"Product;\",\"8720\":\"Coproduct;\",\"8721\":\"sum;\",\"8722\":\"minus;\",\"8723\":\"mp;\",\"8724\":\"plusdo;\",\"8726\":\"ssetmn;\",\"8727\":\"lowast;\",\"8728\":\"SmallCircle;\",\"8730\":\"Sqrt;\",\"8733\":\"vprop;\",\"8734\":\"infin;\",\"8735\":\"angrt;\",\"8736\":\"angle;\",\"8737\":\"measuredangle;\",\"8738\":\"angsph;\",\"8739\":\"VerticalBar;\",\"8740\":\"nsmid;\",\"8741\":\"spar;\",\"8742\":\"nspar;\",\"8743\":\"wedge;\",\"8744\":\"vee;\",\"8745\":\"cap;\",\"8746\":\"cup;\",\"8747\":\"Integral;\",\"8748\":\"Int;\",\"8749\":\"tint;\",\"8750\":\"oint;\",\"8751\":\"DoubleContourIntegral;\",\"8752\":\"Cconint;\",\"8753\":\"cwint;\",\"8754\":\"cwconint;\",\"8755\":\"CounterClockwiseContourIntegral;\",\"8756\":\"therefore;\",\"8757\":\"because;\",\"8758\":\"ratio;\",\"8759\":\"Proportion;\",\"8760\":\"minusd;\",\"8762\":\"mDDot;\",\"8763\":\"homtht;\",\"8764\":\"Tilde;\",\"8765\":\"bsim;\",\"8766\":\"mstpos;\",\"8767\":\"acd;\",\"8768\":\"wreath;\",\"8769\":\"nsim;\",\"8770\":\"esim;\",\"8771\":\"TildeEqual;\",\"8772\":\"nsimeq;\",\"8773\":\"TildeFullEqual;\",\"8774\":\"simne;\",\"8775\":\"NotTildeFullEqual;\",\"8776\":\"TildeTilde;\",\"8777\":\"NotTildeTilde;\",\"8778\":\"approxeq;\",\"8779\":\"apid;\",\"8780\":\"bcong;\",\"8781\":\"CupCap;\",\"8782\":\"HumpDownHump;\",\"8783\":\"HumpEqual;\",\"8784\":\"esdot;\",\"8785\":\"eDot;\",\"8786\":\"fallingdotseq;\",\"8787\":\"risingdotseq;\",\"8788\":\"coloneq;\",\"8789\":\"eqcolon;\",\"8790\":\"eqcirc;\",\"8791\":\"cire;\",\"8793\":\"wedgeq;\",\"8794\":\"veeeq;\",\"8796\":\"trie;\",\"8799\":\"questeq;\",\"8800\":\"NotEqual;\",\"8801\":\"equiv;\",\"8802\":\"NotCongruent;\",\"8804\":\"leq;\",\"8805\":\"GreaterEqual;\",\"8806\":\"LessFullEqual;\",\"8807\":\"GreaterFullEqual;\",\"8808\":\"lneqq;\",\"8809\":\"gneqq;\",\"8810\":\"NestedLessLess;\",\"8811\":\"NestedGreaterGreater;\",\"8812\":\"twixt;\",\"8813\":\"NotCupCap;\",\"8814\":\"NotLess;\",\"8815\":\"NotGreater;\",\"8816\":\"NotLessEqual;\",\"8817\":\"NotGreaterEqual;\",\"8818\":\"lsim;\",\"8819\":\"gtrsim;\",\"8820\":\"NotLessTilde;\",\"8821\":\"NotGreaterTilde;\",\"8822\":\"lg;\",\"8823\":\"gtrless;\",\"8824\":\"ntlg;\",\"8825\":\"ntgl;\",\"8826\":\"Precedes;\",\"8827\":\"Succeeds;\",\"8828\":\"PrecedesSlantEqual;\",\"8829\":\"SucceedsSlantEqual;\",\"8830\":\"prsim;\",\"8831\":\"succsim;\",\"8832\":\"nprec;\",\"8833\":\"nsucc;\",\"8834\":\"subset;\",\"8835\":\"supset;\",\"8836\":\"nsub;\",\"8837\":\"nsup;\",\"8838\":\"SubsetEqual;\",\"8839\":\"supseteq;\",\"8840\":\"nsubseteq;\",\"8841\":\"nsupseteq;\",\"8842\":\"subsetneq;\",\"8843\":\"supsetneq;\",\"8845\":\"cupdot;\",\"8846\":\"uplus;\",\"8847\":\"SquareSubset;\",\"8848\":\"SquareSuperset;\",\"8849\":\"SquareSubsetEqual;\",\"8850\":\"SquareSupersetEqual;\",\"8851\":\"SquareIntersection;\",\"8852\":\"SquareUnion;\",\"8853\":\"oplus;\",\"8854\":\"ominus;\",\"8855\":\"otimes;\",\"8856\":\"osol;\",\"8857\":\"odot;\",\"8858\":\"ocir;\",\"8859\":\"oast;\",\"8861\":\"odash;\",\"8862\":\"plusb;\",\"8863\":\"minusb;\",\"8864\":\"timesb;\",\"8865\":\"sdotb;\",\"8866\":\"vdash;\",\"8867\":\"LeftTee;\",\"8868\":\"top;\",\"8869\":\"UpTee;\",\"8871\":\"models;\",\"8872\":\"vDash;\",\"8873\":\"Vdash;\",\"8874\":\"Vvdash;\",\"8875\":\"VDash;\",\"8876\":\"nvdash;\",\"8877\":\"nvDash;\",\"8878\":\"nVdash;\",\"8879\":\"nVDash;\",\"8880\":\"prurel;\",\"8882\":\"vltri;\",\"8883\":\"vrtri;\",\"8884\":\"trianglelefteq;\",\"8885\":\"trianglerighteq;\",\"8886\":\"origof;\",\"8887\":\"imof;\",\"8888\":\"mumap;\",\"8889\":\"hercon;\",\"8890\":\"intercal;\",\"8891\":\"veebar;\",\"8893\":\"barvee;\",\"8894\":\"angrtvb;\",\"8895\":\"lrtri;\",\"8896\":\"xwedge;\",\"8897\":\"xvee;\",\"8898\":\"xcap;\",\"8899\":\"xcup;\",\"8900\":\"diamond;\",\"8901\":\"sdot;\",\"8902\":\"Star;\",\"8903\":\"divonx;\",\"8904\":\"bowtie;\",\"8905\":\"ltimes;\",\"8906\":\"rtimes;\",\"8907\":\"lthree;\",\"8908\":\"rthree;\",\"8909\":\"bsime;\",\"8910\":\"cuvee;\",\"8911\":\"cuwed;\",\"8912\":\"Subset;\",\"8913\":\"Supset;\",\"8914\":\"Cap;\",\"8915\":\"Cup;\",\"8916\":\"pitchfork;\",\"8917\":\"epar;\",\"8918\":\"ltdot;\",\"8919\":\"gtrdot;\",\"8920\":\"Ll;\",\"8921\":\"ggg;\",\"8922\":\"LessEqualGreater;\",\"8923\":\"gtreqless;\",\"8926\":\"curlyeqprec;\",\"8927\":\"curlyeqsucc;\",\"8928\":\"nprcue;\",\"8929\":\"nsccue;\",\"8930\":\"nsqsube;\",\"8931\":\"nsqsupe;\",\"8934\":\"lnsim;\",\"8935\":\"gnsim;\",\"8936\":\"prnsim;\",\"8937\":\"succnsim;\",\"8938\":\"ntriangleleft;\",\"8939\":\"ntriangleright;\",\"8940\":\"ntrianglelefteq;\",\"8941\":\"ntrianglerighteq;\",\"8942\":\"vellip;\",\"8943\":\"ctdot;\",\"8944\":\"utdot;\",\"8945\":\"dtdot;\",\"8946\":\"disin;\",\"8947\":\"isinsv;\",\"8948\":\"isins;\",\"8949\":\"isindot;\",\"8950\":\"notinvc;\",\"8951\":\"notinvb;\",\"8953\":\"isinE;\",\"8954\":\"nisd;\",\"8955\":\"xnis;\",\"8956\":\"nis;\",\"8957\":\"notnivc;\",\"8958\":\"notnivb;\",\"8965\":\"barwedge;\",\"8966\":\"doublebarwedge;\",\"8968\":\"LeftCeiling;\",\"8969\":\"RightCeiling;\",\"8970\":\"lfloor;\",\"8971\":\"RightFloor;\",\"8972\":\"drcrop;\",\"8973\":\"dlcrop;\",\"8974\":\"urcrop;\",\"8975\":\"ulcrop;\",\"8976\":\"bnot;\",\"8978\":\"profline;\",\"8979\":\"profsurf;\",\"8981\":\"telrec;\",\"8982\":\"target;\",\"8988\":\"ulcorner;\",\"8989\":\"urcorner;\",\"8990\":\"llcorner;\",\"8991\":\"lrcorner;\",\"8994\":\"sfrown;\",\"8995\":\"ssmile;\",\"9005\":\"cylcty;\",\"9006\":\"profalar;\",\"9014\":\"topbot;\",\"9021\":\"ovbar;\",\"9023\":\"solbar;\",\"9084\":\"angzarr;\",\"9136\":\"lmoustache;\",\"9137\":\"rmoustache;\",\"9140\":\"tbrk;\",\"9141\":\"UnderBracket;\",\"9142\":\"bbrktbrk;\",\"9180\":\"OverParenthesis;\",\"9181\":\"UnderParenthesis;\",\"9182\":\"OverBrace;\",\"9183\":\"UnderBrace;\",\"9186\":\"trpezium;\",\"9191\":\"elinters;\",\"9251\":\"blank;\",\"9416\":\"oS;\",\"9472\":\"HorizontalLine;\",\"9474\":\"boxv;\",\"9484\":\"boxdr;\",\"9488\":\"boxdl;\",\"9492\":\"boxur;\",\"9496\":\"boxul;\",\"9500\":\"boxvr;\",\"9508\":\"boxvl;\",\"9516\":\"boxhd;\",\"9524\":\"boxhu;\",\"9532\":\"boxvh;\",\"9552\":\"boxH;\",\"9553\":\"boxV;\",\"9554\":\"boxdR;\",\"9555\":\"boxDr;\",\"9556\":\"boxDR;\",\"9557\":\"boxdL;\",\"9558\":\"boxDl;\",\"9559\":\"boxDL;\",\"9560\":\"boxuR;\",\"9561\":\"boxUr;\",\"9562\":\"boxUR;\",\"9563\":\"boxuL;\",\"9564\":\"boxUl;\",\"9565\":\"boxUL;\",\"9566\":\"boxvR;\",\"9567\":\"boxVr;\",\"9568\":\"boxVR;\",\"9569\":\"boxvL;\",\"9570\":\"boxVl;\",\"9571\":\"boxVL;\",\"9572\":\"boxHd;\",\"9573\":\"boxhD;\",\"9574\":\"boxHD;\",\"9575\":\"boxHu;\",\"9576\":\"boxhU;\",\"9577\":\"boxHU;\",\"9578\":\"boxvH;\",\"9579\":\"boxVh;\",\"9580\":\"boxVH;\",\"9600\":\"uhblk;\",\"9604\":\"lhblk;\",\"9608\":\"block;\",\"9617\":\"blk14;\",\"9618\":\"blk12;\",\"9619\":\"blk34;\",\"9633\":\"square;\",\"9642\":\"squf;\",\"9643\":\"EmptyVerySmallSquare;\",\"9645\":\"rect;\",\"9646\":\"marker;\",\"9649\":\"fltns;\",\"9651\":\"xutri;\",\"9652\":\"utrif;\",\"9653\":\"utri;\",\"9656\":\"rtrif;\",\"9657\":\"triangleright;\",\"9661\":\"xdtri;\",\"9662\":\"dtrif;\",\"9663\":\"triangledown;\",\"9666\":\"ltrif;\",\"9667\":\"triangleleft;\",\"9674\":\"lozenge;\",\"9675\":\"cir;\",\"9708\":\"tridot;\",\"9711\":\"xcirc;\",\"9720\":\"ultri;\",\"9721\":\"urtri;\",\"9722\":\"lltri;\",\"9723\":\"EmptySmallSquare;\",\"9724\":\"FilledSmallSquare;\",\"9733\":\"starf;\",\"9734\":\"star;\",\"9742\":\"phone;\",\"9792\":\"female;\",\"9794\":\"male;\",\"9824\":\"spadesuit;\",\"9827\":\"clubsuit;\",\"9829\":\"heartsuit;\",\"9830\":\"diams;\",\"9834\":\"sung;\",\"9837\":\"flat;\",\"9838\":\"natural;\",\"9839\":\"sharp;\",\"10003\":\"checkmark;\",\"10007\":\"cross;\",\"10016\":\"maltese;\",\"10038\":\"sext;\",\"10072\":\"VerticalSeparator;\",\"10098\":\"lbbrk;\",\"10099\":\"rbbrk;\",\"10184\":\"bsolhsub;\",\"10185\":\"suphsol;\",\"10214\":\"lobrk;\",\"10215\":\"robrk;\",\"10216\":\"LeftAngleBracket;\",\"10217\":\"RightAngleBracket;\",\"10218\":\"Lang;\",\"10219\":\"Rang;\",\"10220\":\"loang;\",\"10221\":\"roang;\",\"10229\":\"xlarr;\",\"10230\":\"xrarr;\",\"10231\":\"xharr;\",\"10232\":\"xlArr;\",\"10233\":\"xrArr;\",\"10234\":\"xhArr;\",\"10236\":\"xmap;\",\"10239\":\"dzigrarr;\",\"10498\":\"nvlArr;\",\"10499\":\"nvrArr;\",\"10500\":\"nvHarr;\",\"10501\":\"Map;\",\"10508\":\"lbarr;\",\"10509\":\"rbarr;\",\"10510\":\"lBarr;\",\"10511\":\"rBarr;\",\"10512\":\"RBarr;\",\"10513\":\"DDotrahd;\",\"10514\":\"UpArrowBar;\",\"10515\":\"DownArrowBar;\",\"10518\":\"Rarrtl;\",\"10521\":\"latail;\",\"10522\":\"ratail;\",\"10523\":\"lAtail;\",\"10524\":\"rAtail;\",\"10525\":\"larrfs;\",\"10526\":\"rarrfs;\",\"10527\":\"larrbfs;\",\"10528\":\"rarrbfs;\",\"10531\":\"nwarhk;\",\"10532\":\"nearhk;\",\"10533\":\"searhk;\",\"10534\":\"swarhk;\",\"10535\":\"nwnear;\",\"10536\":\"toea;\",\"10537\":\"tosa;\",\"10538\":\"swnwar;\",\"10547\":\"rarrc;\",\"10549\":\"cudarrr;\",\"10550\":\"ldca;\",\"10551\":\"rdca;\",\"10552\":\"cudarrl;\",\"10553\":\"larrpl;\",\"10556\":\"curarrm;\",\"10557\":\"cularrp;\",\"10565\":\"rarrpl;\",\"10568\":\"harrcir;\",\"10569\":\"Uarrocir;\",\"10570\":\"lurdshar;\",\"10571\":\"ldrushar;\",\"10574\":\"LeftRightVector;\",\"10575\":\"RightUpDownVector;\",\"10576\":\"DownLeftRightVector;\",\"10577\":\"LeftUpDownVector;\",\"10578\":\"LeftVectorBar;\",\"10579\":\"RightVectorBar;\",\"10580\":\"RightUpVectorBar;\",\"10581\":\"RightDownVectorBar;\",\"10582\":\"DownLeftVectorBar;\",\"10583\":\"DownRightVectorBar;\",\"10584\":\"LeftUpVectorBar;\",\"10585\":\"LeftDownVectorBar;\",\"10586\":\"LeftTeeVector;\",\"10587\":\"RightTeeVector;\",\"10588\":\"RightUpTeeVector;\",\"10589\":\"RightDownTeeVector;\",\"10590\":\"DownLeftTeeVector;\",\"10591\":\"DownRightTeeVector;\",\"10592\":\"LeftUpTeeVector;\",\"10593\":\"LeftDownTeeVector;\",\"10594\":\"lHar;\",\"10595\":\"uHar;\",\"10596\":\"rHar;\",\"10597\":\"dHar;\",\"10598\":\"luruhar;\",\"10599\":\"ldrdhar;\",\"10600\":\"ruluhar;\",\"10601\":\"rdldhar;\",\"10602\":\"lharul;\",\"10603\":\"llhard;\",\"10604\":\"rharul;\",\"10605\":\"lrhard;\",\"10606\":\"UpEquilibrium;\",\"10607\":\"ReverseUpEquilibrium;\",\"10608\":\"RoundImplies;\",\"10609\":\"erarr;\",\"10610\":\"simrarr;\",\"10611\":\"larrsim;\",\"10612\":\"rarrsim;\",\"10613\":\"rarrap;\",\"10614\":\"ltlarr;\",\"10616\":\"gtrarr;\",\"10617\":\"subrarr;\",\"10619\":\"suplarr;\",\"10620\":\"lfisht;\",\"10621\":\"rfisht;\",\"10622\":\"ufisht;\",\"10623\":\"dfisht;\",\"10629\":\"lopar;\",\"10630\":\"ropar;\",\"10635\":\"lbrke;\",\"10636\":\"rbrke;\",\"10637\":\"lbrkslu;\",\"10638\":\"rbrksld;\",\"10639\":\"lbrksld;\",\"10640\":\"rbrkslu;\",\"10641\":\"langd;\",\"10642\":\"rangd;\",\"10643\":\"lparlt;\",\"10644\":\"rpargt;\",\"10645\":\"gtlPar;\",\"10646\":\"ltrPar;\",\"10650\":\"vzigzag;\",\"10652\":\"vangrt;\",\"10653\":\"angrtvbd;\",\"10660\":\"ange;\",\"10661\":\"range;\",\"10662\":\"dwangle;\",\"10663\":\"uwangle;\",\"10664\":\"angmsdaa;\",\"10665\":\"angmsdab;\",\"10666\":\"angmsdac;\",\"10667\":\"angmsdad;\",\"10668\":\"angmsdae;\",\"10669\":\"angmsdaf;\",\"10670\":\"angmsdag;\",\"10671\":\"angmsdah;\",\"10672\":\"bemptyv;\",\"10673\":\"demptyv;\",\"10674\":\"cemptyv;\",\"10675\":\"raemptyv;\",\"10676\":\"laemptyv;\",\"10677\":\"ohbar;\",\"10678\":\"omid;\",\"10679\":\"opar;\",\"10681\":\"operp;\",\"10683\":\"olcross;\",\"10684\":\"odsold;\",\"10686\":\"olcir;\",\"10687\":\"ofcir;\",\"10688\":\"olt;\",\"10689\":\"ogt;\",\"10690\":\"cirscir;\",\"10691\":\"cirE;\",\"10692\":\"solb;\",\"10693\":\"bsolb;\",\"10697\":\"boxbox;\",\"10701\":\"trisb;\",\"10702\":\"rtriltri;\",\"10703\":\"LeftTriangleBar;\",\"10704\":\"RightTriangleBar;\",\"10716\":\"iinfin;\",\"10717\":\"infintie;\",\"10718\":\"nvinfin;\",\"10723\":\"eparsl;\",\"10724\":\"smeparsl;\",\"10725\":\"eqvparsl;\",\"10731\":\"lozf;\",\"10740\":\"RuleDelayed;\",\"10742\":\"dsol;\",\"10752\":\"xodot;\",\"10753\":\"xoplus;\",\"10754\":\"xotime;\",\"10756\":\"xuplus;\",\"10758\":\"xsqcup;\",\"10764\":\"qint;\",\"10765\":\"fpartint;\",\"10768\":\"cirfnint;\",\"10769\":\"awint;\",\"10770\":\"rppolint;\",\"10771\":\"scpolint;\",\"10772\":\"npolint;\",\"10773\":\"pointint;\",\"10774\":\"quatint;\",\"10775\":\"intlarhk;\",\"10786\":\"pluscir;\",\"10787\":\"plusacir;\",\"10788\":\"simplus;\",\"10789\":\"plusdu;\",\"10790\":\"plussim;\",\"10791\":\"plustwo;\",\"10793\":\"mcomma;\",\"10794\":\"minusdu;\",\"10797\":\"loplus;\",\"10798\":\"roplus;\",\"10799\":\"Cross;\",\"10800\":\"timesd;\",\"10801\":\"timesbar;\",\"10803\":\"smashp;\",\"10804\":\"lotimes;\",\"10805\":\"rotimes;\",\"10806\":\"otimesas;\",\"10807\":\"Otimes;\",\"10808\":\"odiv;\",\"10809\":\"triplus;\",\"10810\":\"triminus;\",\"10811\":\"tritime;\",\"10812\":\"iprod;\",\"10815\":\"amalg;\",\"10816\":\"capdot;\",\"10818\":\"ncup;\",\"10819\":\"ncap;\",\"10820\":\"capand;\",\"10821\":\"cupor;\",\"10822\":\"cupcap;\",\"10823\":\"capcup;\",\"10824\":\"cupbrcap;\",\"10825\":\"capbrcup;\",\"10826\":\"cupcup;\",\"10827\":\"capcap;\",\"10828\":\"ccups;\",\"10829\":\"ccaps;\",\"10832\":\"ccupssm;\",\"10835\":\"And;\",\"10836\":\"Or;\",\"10837\":\"andand;\",\"10838\":\"oror;\",\"10839\":\"orslope;\",\"10840\":\"andslope;\",\"10842\":\"andv;\",\"10843\":\"orv;\",\"10844\":\"andd;\",\"10845\":\"ord;\",\"10847\":\"wedbar;\",\"10854\":\"sdote;\",\"10858\":\"simdot;\",\"10861\":\"congdot;\",\"10862\":\"easter;\",\"10863\":\"apacir;\",\"10864\":\"apE;\",\"10865\":\"eplus;\",\"10866\":\"pluse;\",\"10867\":\"Esim;\",\"10868\":\"Colone;\",\"10869\":\"Equal;\",\"10871\":\"eDDot;\",\"10872\":\"equivDD;\",\"10873\":\"ltcir;\",\"10874\":\"gtcir;\",\"10875\":\"ltquest;\",\"10876\":\"gtquest;\",\"10877\":\"LessSlantEqual;\",\"10878\":\"GreaterSlantEqual;\",\"10879\":\"lesdot;\",\"10880\":\"gesdot;\",\"10881\":\"lesdoto;\",\"10882\":\"gesdoto;\",\"10883\":\"lesdotor;\",\"10884\":\"gesdotol;\",\"10885\":\"lessapprox;\",\"10886\":\"gtrapprox;\",\"10887\":\"lneq;\",\"10888\":\"gneq;\",\"10889\":\"lnapprox;\",\"10890\":\"gnapprox;\",\"10891\":\"lesseqqgtr;\",\"10892\":\"gtreqqless;\",\"10893\":\"lsime;\",\"10894\":\"gsime;\",\"10895\":\"lsimg;\",\"10896\":\"gsiml;\",\"10897\":\"lgE;\",\"10898\":\"glE;\",\"10899\":\"lesges;\",\"10900\":\"gesles;\",\"10901\":\"eqslantless;\",\"10902\":\"eqslantgtr;\",\"10903\":\"elsdot;\",\"10904\":\"egsdot;\",\"10905\":\"el;\",\"10906\":\"eg;\",\"10909\":\"siml;\",\"10910\":\"simg;\",\"10911\":\"simlE;\",\"10912\":\"simgE;\",\"10913\":\"LessLess;\",\"10914\":\"GreaterGreater;\",\"10916\":\"glj;\",\"10917\":\"gla;\",\"10918\":\"ltcc;\",\"10919\":\"gtcc;\",\"10920\":\"lescc;\",\"10921\":\"gescc;\",\"10922\":\"smt;\",\"10923\":\"lat;\",\"10924\":\"smte;\",\"10925\":\"late;\",\"10926\":\"bumpE;\",\"10927\":\"preceq;\",\"10928\":\"succeq;\",\"10931\":\"prE;\",\"10932\":\"scE;\",\"10933\":\"prnE;\",\"10934\":\"succneqq;\",\"10935\":\"precapprox;\",\"10936\":\"succapprox;\",\"10937\":\"prnap;\",\"10938\":\"succnapprox;\",\"10939\":\"Pr;\",\"10940\":\"Sc;\",\"10941\":\"subdot;\",\"10942\":\"supdot;\",\"10943\":\"subplus;\",\"10944\":\"supplus;\",\"10945\":\"submult;\",\"10946\":\"supmult;\",\"10947\":\"subedot;\",\"10948\":\"supedot;\",\"10949\":\"subseteqq;\",\"10950\":\"supseteqq;\",\"10951\":\"subsim;\",\"10952\":\"supsim;\",\"10955\":\"subsetneqq;\",\"10956\":\"supsetneqq;\",\"10959\":\"csub;\",\"10960\":\"csup;\",\"10961\":\"csube;\",\"10962\":\"csupe;\",\"10963\":\"subsup;\",\"10964\":\"supsub;\",\"10965\":\"subsub;\",\"10966\":\"supsup;\",\"10967\":\"suphsub;\",\"10968\":\"supdsub;\",\"10969\":\"forkv;\",\"10970\":\"topfork;\",\"10971\":\"mlcp;\",\"10980\":\"DoubleLeftTee;\",\"10982\":\"Vdashl;\",\"10983\":\"Barv;\",\"10984\":\"vBar;\",\"10985\":\"vBarv;\",\"10987\":\"Vbar;\",\"10988\":\"Not;\",\"10989\":\"bNot;\",\"10990\":\"rnmid;\",\"10991\":\"cirmid;\",\"10992\":\"midcir;\",\"10993\":\"topcir;\",\"10994\":\"nhpar;\",\"10995\":\"parsim;\",\"11005\":\"parsl;\",\"64256\":\"fflig;\",\"64257\":\"filig;\",\"64258\":\"fllig;\",\"64259\":\"ffilig;\",\"64260\":\"ffllig;\"}");
 
 /***/ }),
-/* 169 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var punycode = __webpack_require__(46);
-var entities = __webpack_require__(170);
+var entities = __webpack_require__(172);
 
 module.exports = decode;
 
@@ -31730,13 +32046,13 @@ function decode (str) {
 
 
 /***/ }),
-/* 170 */
+/* 172 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"Aacute;\":\"Á\",\"Aacute\":\"Á\",\"aacute;\":\"á\",\"aacute\":\"á\",\"Abreve;\":\"Ă\",\"abreve;\":\"ă\",\"ac;\":\"∾\",\"acd;\":\"∿\",\"acE;\":\"∾̳\",\"Acirc;\":\"Â\",\"Acirc\":\"Â\",\"acirc;\":\"â\",\"acirc\":\"â\",\"acute;\":\"´\",\"acute\":\"´\",\"Acy;\":\"А\",\"acy;\":\"а\",\"AElig;\":\"Æ\",\"AElig\":\"Æ\",\"aelig;\":\"æ\",\"aelig\":\"æ\",\"af;\":\"⁡\",\"Afr;\":\"𝔄\",\"afr;\":\"𝔞\",\"Agrave;\":\"À\",\"Agrave\":\"À\",\"agrave;\":\"à\",\"agrave\":\"à\",\"alefsym;\":\"ℵ\",\"aleph;\":\"ℵ\",\"Alpha;\":\"Α\",\"alpha;\":\"α\",\"Amacr;\":\"Ā\",\"amacr;\":\"ā\",\"amalg;\":\"⨿\",\"AMP;\":\"&\",\"AMP\":\"&\",\"amp;\":\"&\",\"amp\":\"&\",\"And;\":\"⩓\",\"and;\":\"∧\",\"andand;\":\"⩕\",\"andd;\":\"⩜\",\"andslope;\":\"⩘\",\"andv;\":\"⩚\",\"ang;\":\"∠\",\"ange;\":\"⦤\",\"angle;\":\"∠\",\"angmsd;\":\"∡\",\"angmsdaa;\":\"⦨\",\"angmsdab;\":\"⦩\",\"angmsdac;\":\"⦪\",\"angmsdad;\":\"⦫\",\"angmsdae;\":\"⦬\",\"angmsdaf;\":\"⦭\",\"angmsdag;\":\"⦮\",\"angmsdah;\":\"⦯\",\"angrt;\":\"∟\",\"angrtvb;\":\"⊾\",\"angrtvbd;\":\"⦝\",\"angsph;\":\"∢\",\"angst;\":\"Å\",\"angzarr;\":\"⍼\",\"Aogon;\":\"Ą\",\"aogon;\":\"ą\",\"Aopf;\":\"𝔸\",\"aopf;\":\"𝕒\",\"ap;\":\"≈\",\"apacir;\":\"⩯\",\"apE;\":\"⩰\",\"ape;\":\"≊\",\"apid;\":\"≋\",\"apos;\":\"'\",\"ApplyFunction;\":\"⁡\",\"approx;\":\"≈\",\"approxeq;\":\"≊\",\"Aring;\":\"Å\",\"Aring\":\"Å\",\"aring;\":\"å\",\"aring\":\"å\",\"Ascr;\":\"𝒜\",\"ascr;\":\"𝒶\",\"Assign;\":\"≔\",\"ast;\":\"*\",\"asymp;\":\"≈\",\"asympeq;\":\"≍\",\"Atilde;\":\"Ã\",\"Atilde\":\"Ã\",\"atilde;\":\"ã\",\"atilde\":\"ã\",\"Auml;\":\"Ä\",\"Auml\":\"Ä\",\"auml;\":\"ä\",\"auml\":\"ä\",\"awconint;\":\"∳\",\"awint;\":\"⨑\",\"backcong;\":\"≌\",\"backepsilon;\":\"϶\",\"backprime;\":\"‵\",\"backsim;\":\"∽\",\"backsimeq;\":\"⋍\",\"Backslash;\":\"∖\",\"Barv;\":\"⫧\",\"barvee;\":\"⊽\",\"Barwed;\":\"⌆\",\"barwed;\":\"⌅\",\"barwedge;\":\"⌅\",\"bbrk;\":\"⎵\",\"bbrktbrk;\":\"⎶\",\"bcong;\":\"≌\",\"Bcy;\":\"Б\",\"bcy;\":\"б\",\"bdquo;\":\"„\",\"becaus;\":\"∵\",\"Because;\":\"∵\",\"because;\":\"∵\",\"bemptyv;\":\"⦰\",\"bepsi;\":\"϶\",\"bernou;\":\"ℬ\",\"Bernoullis;\":\"ℬ\",\"Beta;\":\"Β\",\"beta;\":\"β\",\"beth;\":\"ℶ\",\"between;\":\"≬\",\"Bfr;\":\"𝔅\",\"bfr;\":\"𝔟\",\"bigcap;\":\"⋂\",\"bigcirc;\":\"◯\",\"bigcup;\":\"⋃\",\"bigodot;\":\"⨀\",\"bigoplus;\":\"⨁\",\"bigotimes;\":\"⨂\",\"bigsqcup;\":\"⨆\",\"bigstar;\":\"★\",\"bigtriangledown;\":\"▽\",\"bigtriangleup;\":\"△\",\"biguplus;\":\"⨄\",\"bigvee;\":\"⋁\",\"bigwedge;\":\"⋀\",\"bkarow;\":\"⤍\",\"blacklozenge;\":\"⧫\",\"blacksquare;\":\"▪\",\"blacktriangle;\":\"▴\",\"blacktriangledown;\":\"▾\",\"blacktriangleleft;\":\"◂\",\"blacktriangleright;\":\"▸\",\"blank;\":\"␣\",\"blk12;\":\"▒\",\"blk14;\":\"░\",\"blk34;\":\"▓\",\"block;\":\"█\",\"bne;\":\"=⃥\",\"bnequiv;\":\"≡⃥\",\"bNot;\":\"⫭\",\"bnot;\":\"⌐\",\"Bopf;\":\"𝔹\",\"bopf;\":\"𝕓\",\"bot;\":\"⊥\",\"bottom;\":\"⊥\",\"bowtie;\":\"⋈\",\"boxbox;\":\"⧉\",\"boxDL;\":\"╗\",\"boxDl;\":\"╖\",\"boxdL;\":\"╕\",\"boxdl;\":\"┐\",\"boxDR;\":\"╔\",\"boxDr;\":\"╓\",\"boxdR;\":\"╒\",\"boxdr;\":\"┌\",\"boxH;\":\"═\",\"boxh;\":\"─\",\"boxHD;\":\"╦\",\"boxHd;\":\"╤\",\"boxhD;\":\"╥\",\"boxhd;\":\"┬\",\"boxHU;\":\"╩\",\"boxHu;\":\"╧\",\"boxhU;\":\"╨\",\"boxhu;\":\"┴\",\"boxminus;\":\"⊟\",\"boxplus;\":\"⊞\",\"boxtimes;\":\"⊠\",\"boxUL;\":\"╝\",\"boxUl;\":\"╜\",\"boxuL;\":\"╛\",\"boxul;\":\"┘\",\"boxUR;\":\"╚\",\"boxUr;\":\"╙\",\"boxuR;\":\"╘\",\"boxur;\":\"└\",\"boxV;\":\"║\",\"boxv;\":\"│\",\"boxVH;\":\"╬\",\"boxVh;\":\"╫\",\"boxvH;\":\"╪\",\"boxvh;\":\"┼\",\"boxVL;\":\"╣\",\"boxVl;\":\"╢\",\"boxvL;\":\"╡\",\"boxvl;\":\"┤\",\"boxVR;\":\"╠\",\"boxVr;\":\"╟\",\"boxvR;\":\"╞\",\"boxvr;\":\"├\",\"bprime;\":\"‵\",\"Breve;\":\"˘\",\"breve;\":\"˘\",\"brvbar;\":\"¦\",\"brvbar\":\"¦\",\"Bscr;\":\"ℬ\",\"bscr;\":\"𝒷\",\"bsemi;\":\"⁏\",\"bsim;\":\"∽\",\"bsime;\":\"⋍\",\"bsol;\":\"\\\\\",\"bsolb;\":\"⧅\",\"bsolhsub;\":\"⟈\",\"bull;\":\"•\",\"bullet;\":\"•\",\"bump;\":\"≎\",\"bumpE;\":\"⪮\",\"bumpe;\":\"≏\",\"Bumpeq;\":\"≎\",\"bumpeq;\":\"≏\",\"Cacute;\":\"Ć\",\"cacute;\":\"ć\",\"Cap;\":\"⋒\",\"cap;\":\"∩\",\"capand;\":\"⩄\",\"capbrcup;\":\"⩉\",\"capcap;\":\"⩋\",\"capcup;\":\"⩇\",\"capdot;\":\"⩀\",\"CapitalDifferentialD;\":\"ⅅ\",\"caps;\":\"∩︀\",\"caret;\":\"⁁\",\"caron;\":\"ˇ\",\"Cayleys;\":\"ℭ\",\"ccaps;\":\"⩍\",\"Ccaron;\":\"Č\",\"ccaron;\":\"č\",\"Ccedil;\":\"Ç\",\"Ccedil\":\"Ç\",\"ccedil;\":\"ç\",\"ccedil\":\"ç\",\"Ccirc;\":\"Ĉ\",\"ccirc;\":\"ĉ\",\"Cconint;\":\"∰\",\"ccups;\":\"⩌\",\"ccupssm;\":\"⩐\",\"Cdot;\":\"Ċ\",\"cdot;\":\"ċ\",\"cedil;\":\"¸\",\"cedil\":\"¸\",\"Cedilla;\":\"¸\",\"cemptyv;\":\"⦲\",\"cent;\":\"¢\",\"cent\":\"¢\",\"CenterDot;\":\"·\",\"centerdot;\":\"·\",\"Cfr;\":\"ℭ\",\"cfr;\":\"𝔠\",\"CHcy;\":\"Ч\",\"chcy;\":\"ч\",\"check;\":\"✓\",\"checkmark;\":\"✓\",\"Chi;\":\"Χ\",\"chi;\":\"χ\",\"cir;\":\"○\",\"circ;\":\"ˆ\",\"circeq;\":\"≗\",\"circlearrowleft;\":\"↺\",\"circlearrowright;\":\"↻\",\"circledast;\":\"⊛\",\"circledcirc;\":\"⊚\",\"circleddash;\":\"⊝\",\"CircleDot;\":\"⊙\",\"circledR;\":\"®\",\"circledS;\":\"Ⓢ\",\"CircleMinus;\":\"⊖\",\"CirclePlus;\":\"⊕\",\"CircleTimes;\":\"⊗\",\"cirE;\":\"⧃\",\"cire;\":\"≗\",\"cirfnint;\":\"⨐\",\"cirmid;\":\"⫯\",\"cirscir;\":\"⧂\",\"ClockwiseContourIntegral;\":\"∲\",\"CloseCurlyDoubleQuote;\":\"”\",\"CloseCurlyQuote;\":\"’\",\"clubs;\":\"♣\",\"clubsuit;\":\"♣\",\"Colon;\":\"∷\",\"colon;\":\":\",\"Colone;\":\"⩴\",\"colone;\":\"≔\",\"coloneq;\":\"≔\",\"comma;\":\",\",\"commat;\":\"@\",\"comp;\":\"∁\",\"compfn;\":\"∘\",\"complement;\":\"∁\",\"complexes;\":\"ℂ\",\"cong;\":\"≅\",\"congdot;\":\"⩭\",\"Congruent;\":\"≡\",\"Conint;\":\"∯\",\"conint;\":\"∮\",\"ContourIntegral;\":\"∮\",\"Copf;\":\"ℂ\",\"copf;\":\"𝕔\",\"coprod;\":\"∐\",\"Coproduct;\":\"∐\",\"COPY;\":\"©\",\"COPY\":\"©\",\"copy;\":\"©\",\"copy\":\"©\",\"copysr;\":\"℗\",\"CounterClockwiseContourIntegral;\":\"∳\",\"crarr;\":\"↵\",\"Cross;\":\"⨯\",\"cross;\":\"✗\",\"Cscr;\":\"𝒞\",\"cscr;\":\"𝒸\",\"csub;\":\"⫏\",\"csube;\":\"⫑\",\"csup;\":\"⫐\",\"csupe;\":\"⫒\",\"ctdot;\":\"⋯\",\"cudarrl;\":\"⤸\",\"cudarrr;\":\"⤵\",\"cuepr;\":\"⋞\",\"cuesc;\":\"⋟\",\"cularr;\":\"↶\",\"cularrp;\":\"⤽\",\"Cup;\":\"⋓\",\"cup;\":\"∪\",\"cupbrcap;\":\"⩈\",\"CupCap;\":\"≍\",\"cupcap;\":\"⩆\",\"cupcup;\":\"⩊\",\"cupdot;\":\"⊍\",\"cupor;\":\"⩅\",\"cups;\":\"∪︀\",\"curarr;\":\"↷\",\"curarrm;\":\"⤼\",\"curlyeqprec;\":\"⋞\",\"curlyeqsucc;\":\"⋟\",\"curlyvee;\":\"⋎\",\"curlywedge;\":\"⋏\",\"curren;\":\"¤\",\"curren\":\"¤\",\"curvearrowleft;\":\"↶\",\"curvearrowright;\":\"↷\",\"cuvee;\":\"⋎\",\"cuwed;\":\"⋏\",\"cwconint;\":\"∲\",\"cwint;\":\"∱\",\"cylcty;\":\"⌭\",\"Dagger;\":\"‡\",\"dagger;\":\"†\",\"daleth;\":\"ℸ\",\"Darr;\":\"↡\",\"dArr;\":\"⇓\",\"darr;\":\"↓\",\"dash;\":\"‐\",\"Dashv;\":\"⫤\",\"dashv;\":\"⊣\",\"dbkarow;\":\"⤏\",\"dblac;\":\"˝\",\"Dcaron;\":\"Ď\",\"dcaron;\":\"ď\",\"Dcy;\":\"Д\",\"dcy;\":\"д\",\"DD;\":\"ⅅ\",\"dd;\":\"ⅆ\",\"ddagger;\":\"‡\",\"ddarr;\":\"⇊\",\"DDotrahd;\":\"⤑\",\"ddotseq;\":\"⩷\",\"deg;\":\"°\",\"deg\":\"°\",\"Del;\":\"∇\",\"Delta;\":\"Δ\",\"delta;\":\"δ\",\"demptyv;\":\"⦱\",\"dfisht;\":\"⥿\",\"Dfr;\":\"𝔇\",\"dfr;\":\"𝔡\",\"dHar;\":\"⥥\",\"dharl;\":\"⇃\",\"dharr;\":\"⇂\",\"DiacriticalAcute;\":\"´\",\"DiacriticalDot;\":\"˙\",\"DiacriticalDoubleAcute;\":\"˝\",\"DiacriticalGrave;\":\"`\",\"DiacriticalTilde;\":\"˜\",\"diam;\":\"⋄\",\"Diamond;\":\"⋄\",\"diamond;\":\"⋄\",\"diamondsuit;\":\"♦\",\"diams;\":\"♦\",\"die;\":\"¨\",\"DifferentialD;\":\"ⅆ\",\"digamma;\":\"ϝ\",\"disin;\":\"⋲\",\"div;\":\"÷\",\"divide;\":\"÷\",\"divide\":\"÷\",\"divideontimes;\":\"⋇\",\"divonx;\":\"⋇\",\"DJcy;\":\"Ђ\",\"djcy;\":\"ђ\",\"dlcorn;\":\"⌞\",\"dlcrop;\":\"⌍\",\"dollar;\":\"$\",\"Dopf;\":\"𝔻\",\"dopf;\":\"𝕕\",\"Dot;\":\"¨\",\"dot;\":\"˙\",\"DotDot;\":\"⃜\",\"doteq;\":\"≐\",\"doteqdot;\":\"≑\",\"DotEqual;\":\"≐\",\"dotminus;\":\"∸\",\"dotplus;\":\"∔\",\"dotsquare;\":\"⊡\",\"doublebarwedge;\":\"⌆\",\"DoubleContourIntegral;\":\"∯\",\"DoubleDot;\":\"¨\",\"DoubleDownArrow;\":\"⇓\",\"DoubleLeftArrow;\":\"⇐\",\"DoubleLeftRightArrow;\":\"⇔\",\"DoubleLeftTee;\":\"⫤\",\"DoubleLongLeftArrow;\":\"⟸\",\"DoubleLongLeftRightArrow;\":\"⟺\",\"DoubleLongRightArrow;\":\"⟹\",\"DoubleRightArrow;\":\"⇒\",\"DoubleRightTee;\":\"⊨\",\"DoubleUpArrow;\":\"⇑\",\"DoubleUpDownArrow;\":\"⇕\",\"DoubleVerticalBar;\":\"∥\",\"DownArrow;\":\"↓\",\"Downarrow;\":\"⇓\",\"downarrow;\":\"↓\",\"DownArrowBar;\":\"⤓\",\"DownArrowUpArrow;\":\"⇵\",\"DownBreve;\":\"̑\",\"downdownarrows;\":\"⇊\",\"downharpoonleft;\":\"⇃\",\"downharpoonright;\":\"⇂\",\"DownLeftRightVector;\":\"⥐\",\"DownLeftTeeVector;\":\"⥞\",\"DownLeftVector;\":\"↽\",\"DownLeftVectorBar;\":\"⥖\",\"DownRightTeeVector;\":\"⥟\",\"DownRightVector;\":\"⇁\",\"DownRightVectorBar;\":\"⥗\",\"DownTee;\":\"⊤\",\"DownTeeArrow;\":\"↧\",\"drbkarow;\":\"⤐\",\"drcorn;\":\"⌟\",\"drcrop;\":\"⌌\",\"Dscr;\":\"𝒟\",\"dscr;\":\"𝒹\",\"DScy;\":\"Ѕ\",\"dscy;\":\"ѕ\",\"dsol;\":\"⧶\",\"Dstrok;\":\"Đ\",\"dstrok;\":\"đ\",\"dtdot;\":\"⋱\",\"dtri;\":\"▿\",\"dtrif;\":\"▾\",\"duarr;\":\"⇵\",\"duhar;\":\"⥯\",\"dwangle;\":\"⦦\",\"DZcy;\":\"Џ\",\"dzcy;\":\"џ\",\"dzigrarr;\":\"⟿\",\"Eacute;\":\"É\",\"Eacute\":\"É\",\"eacute;\":\"é\",\"eacute\":\"é\",\"easter;\":\"⩮\",\"Ecaron;\":\"Ě\",\"ecaron;\":\"ě\",\"ecir;\":\"≖\",\"Ecirc;\":\"Ê\",\"Ecirc\":\"Ê\",\"ecirc;\":\"ê\",\"ecirc\":\"ê\",\"ecolon;\":\"≕\",\"Ecy;\":\"Э\",\"ecy;\":\"э\",\"eDDot;\":\"⩷\",\"Edot;\":\"Ė\",\"eDot;\":\"≑\",\"edot;\":\"ė\",\"ee;\":\"ⅇ\",\"efDot;\":\"≒\",\"Efr;\":\"𝔈\",\"efr;\":\"𝔢\",\"eg;\":\"⪚\",\"Egrave;\":\"È\",\"Egrave\":\"È\",\"egrave;\":\"è\",\"egrave\":\"è\",\"egs;\":\"⪖\",\"egsdot;\":\"⪘\",\"el;\":\"⪙\",\"Element;\":\"∈\",\"elinters;\":\"⏧\",\"ell;\":\"ℓ\",\"els;\":\"⪕\",\"elsdot;\":\"⪗\",\"Emacr;\":\"Ē\",\"emacr;\":\"ē\",\"empty;\":\"∅\",\"emptyset;\":\"∅\",\"EmptySmallSquare;\":\"◻\",\"emptyv;\":\"∅\",\"EmptyVerySmallSquare;\":\"▫\",\"emsp;\":\" \",\"emsp13;\":\" \",\"emsp14;\":\" \",\"ENG;\":\"Ŋ\",\"eng;\":\"ŋ\",\"ensp;\":\" \",\"Eogon;\":\"Ę\",\"eogon;\":\"ę\",\"Eopf;\":\"𝔼\",\"eopf;\":\"𝕖\",\"epar;\":\"⋕\",\"eparsl;\":\"⧣\",\"eplus;\":\"⩱\",\"epsi;\":\"ε\",\"Epsilon;\":\"Ε\",\"epsilon;\":\"ε\",\"epsiv;\":\"ϵ\",\"eqcirc;\":\"≖\",\"eqcolon;\":\"≕\",\"eqsim;\":\"≂\",\"eqslantgtr;\":\"⪖\",\"eqslantless;\":\"⪕\",\"Equal;\":\"⩵\",\"equals;\":\"=\",\"EqualTilde;\":\"≂\",\"equest;\":\"≟\",\"Equilibrium;\":\"⇌\",\"equiv;\":\"≡\",\"equivDD;\":\"⩸\",\"eqvparsl;\":\"⧥\",\"erarr;\":\"⥱\",\"erDot;\":\"≓\",\"Escr;\":\"ℰ\",\"escr;\":\"ℯ\",\"esdot;\":\"≐\",\"Esim;\":\"⩳\",\"esim;\":\"≂\",\"Eta;\":\"Η\",\"eta;\":\"η\",\"ETH;\":\"Ð\",\"ETH\":\"Ð\",\"eth;\":\"ð\",\"eth\":\"ð\",\"Euml;\":\"Ë\",\"Euml\":\"Ë\",\"euml;\":\"ë\",\"euml\":\"ë\",\"euro;\":\"€\",\"excl;\":\"!\",\"exist;\":\"∃\",\"Exists;\":\"∃\",\"expectation;\":\"ℰ\",\"ExponentialE;\":\"ⅇ\",\"exponentiale;\":\"ⅇ\",\"fallingdotseq;\":\"≒\",\"Fcy;\":\"Ф\",\"fcy;\":\"ф\",\"female;\":\"♀\",\"ffilig;\":\"ﬃ\",\"fflig;\":\"ﬀ\",\"ffllig;\":\"ﬄ\",\"Ffr;\":\"𝔉\",\"ffr;\":\"𝔣\",\"filig;\":\"ﬁ\",\"FilledSmallSquare;\":\"◼\",\"FilledVerySmallSquare;\":\"▪\",\"fjlig;\":\"fj\",\"flat;\":\"♭\",\"fllig;\":\"ﬂ\",\"fltns;\":\"▱\",\"fnof;\":\"ƒ\",\"Fopf;\":\"𝔽\",\"fopf;\":\"𝕗\",\"ForAll;\":\"∀\",\"forall;\":\"∀\",\"fork;\":\"⋔\",\"forkv;\":\"⫙\",\"Fouriertrf;\":\"ℱ\",\"fpartint;\":\"⨍\",\"frac12;\":\"½\",\"frac12\":\"½\",\"frac13;\":\"⅓\",\"frac14;\":\"¼\",\"frac14\":\"¼\",\"frac15;\":\"⅕\",\"frac16;\":\"⅙\",\"frac18;\":\"⅛\",\"frac23;\":\"⅔\",\"frac25;\":\"⅖\",\"frac34;\":\"¾\",\"frac34\":\"¾\",\"frac35;\":\"⅗\",\"frac38;\":\"⅜\",\"frac45;\":\"⅘\",\"frac56;\":\"⅚\",\"frac58;\":\"⅝\",\"frac78;\":\"⅞\",\"frasl;\":\"⁄\",\"frown;\":\"⌢\",\"Fscr;\":\"ℱ\",\"fscr;\":\"𝒻\",\"gacute;\":\"ǵ\",\"Gamma;\":\"Γ\",\"gamma;\":\"γ\",\"Gammad;\":\"Ϝ\",\"gammad;\":\"ϝ\",\"gap;\":\"⪆\",\"Gbreve;\":\"Ğ\",\"gbreve;\":\"ğ\",\"Gcedil;\":\"Ģ\",\"Gcirc;\":\"Ĝ\",\"gcirc;\":\"ĝ\",\"Gcy;\":\"Г\",\"gcy;\":\"г\",\"Gdot;\":\"Ġ\",\"gdot;\":\"ġ\",\"gE;\":\"≧\",\"ge;\":\"≥\",\"gEl;\":\"⪌\",\"gel;\":\"⋛\",\"geq;\":\"≥\",\"geqq;\":\"≧\",\"geqslant;\":\"⩾\",\"ges;\":\"⩾\",\"gescc;\":\"⪩\",\"gesdot;\":\"⪀\",\"gesdoto;\":\"⪂\",\"gesdotol;\":\"⪄\",\"gesl;\":\"⋛︀\",\"gesles;\":\"⪔\",\"Gfr;\":\"𝔊\",\"gfr;\":\"𝔤\",\"Gg;\":\"⋙\",\"gg;\":\"≫\",\"ggg;\":\"⋙\",\"gimel;\":\"ℷ\",\"GJcy;\":\"Ѓ\",\"gjcy;\":\"ѓ\",\"gl;\":\"≷\",\"gla;\":\"⪥\",\"glE;\":\"⪒\",\"glj;\":\"⪤\",\"gnap;\":\"⪊\",\"gnapprox;\":\"⪊\",\"gnE;\":\"≩\",\"gne;\":\"⪈\",\"gneq;\":\"⪈\",\"gneqq;\":\"≩\",\"gnsim;\":\"⋧\",\"Gopf;\":\"𝔾\",\"gopf;\":\"𝕘\",\"grave;\":\"`\",\"GreaterEqual;\":\"≥\",\"GreaterEqualLess;\":\"⋛\",\"GreaterFullEqual;\":\"≧\",\"GreaterGreater;\":\"⪢\",\"GreaterLess;\":\"≷\",\"GreaterSlantEqual;\":\"⩾\",\"GreaterTilde;\":\"≳\",\"Gscr;\":\"𝒢\",\"gscr;\":\"ℊ\",\"gsim;\":\"≳\",\"gsime;\":\"⪎\",\"gsiml;\":\"⪐\",\"GT;\":\">\",\"GT\":\">\",\"Gt;\":\"≫\",\"gt;\":\">\",\"gt\":\">\",\"gtcc;\":\"⪧\",\"gtcir;\":\"⩺\",\"gtdot;\":\"⋗\",\"gtlPar;\":\"⦕\",\"gtquest;\":\"⩼\",\"gtrapprox;\":\"⪆\",\"gtrarr;\":\"⥸\",\"gtrdot;\":\"⋗\",\"gtreqless;\":\"⋛\",\"gtreqqless;\":\"⪌\",\"gtrless;\":\"≷\",\"gtrsim;\":\"≳\",\"gvertneqq;\":\"≩︀\",\"gvnE;\":\"≩︀\",\"Hacek;\":\"ˇ\",\"hairsp;\":\" \",\"half;\":\"½\",\"hamilt;\":\"ℋ\",\"HARDcy;\":\"Ъ\",\"hardcy;\":\"ъ\",\"hArr;\":\"⇔\",\"harr;\":\"↔\",\"harrcir;\":\"⥈\",\"harrw;\":\"↭\",\"Hat;\":\"^\",\"hbar;\":\"ℏ\",\"Hcirc;\":\"Ĥ\",\"hcirc;\":\"ĥ\",\"hearts;\":\"♥\",\"heartsuit;\":\"♥\",\"hellip;\":\"…\",\"hercon;\":\"⊹\",\"Hfr;\":\"ℌ\",\"hfr;\":\"𝔥\",\"HilbertSpace;\":\"ℋ\",\"hksearow;\":\"⤥\",\"hkswarow;\":\"⤦\",\"hoarr;\":\"⇿\",\"homtht;\":\"∻\",\"hookleftarrow;\":\"↩\",\"hookrightarrow;\":\"↪\",\"Hopf;\":\"ℍ\",\"hopf;\":\"𝕙\",\"horbar;\":\"―\",\"HorizontalLine;\":\"─\",\"Hscr;\":\"ℋ\",\"hscr;\":\"𝒽\",\"hslash;\":\"ℏ\",\"Hstrok;\":\"Ħ\",\"hstrok;\":\"ħ\",\"HumpDownHump;\":\"≎\",\"HumpEqual;\":\"≏\",\"hybull;\":\"⁃\",\"hyphen;\":\"‐\",\"Iacute;\":\"Í\",\"Iacute\":\"Í\",\"iacute;\":\"í\",\"iacute\":\"í\",\"ic;\":\"⁣\",\"Icirc;\":\"Î\",\"Icirc\":\"Î\",\"icirc;\":\"î\",\"icirc\":\"î\",\"Icy;\":\"И\",\"icy;\":\"и\",\"Idot;\":\"İ\",\"IEcy;\":\"Е\",\"iecy;\":\"е\",\"iexcl;\":\"¡\",\"iexcl\":\"¡\",\"iff;\":\"⇔\",\"Ifr;\":\"ℑ\",\"ifr;\":\"𝔦\",\"Igrave;\":\"Ì\",\"Igrave\":\"Ì\",\"igrave;\":\"ì\",\"igrave\":\"ì\",\"ii;\":\"ⅈ\",\"iiiint;\":\"⨌\",\"iiint;\":\"∭\",\"iinfin;\":\"⧜\",\"iiota;\":\"℩\",\"IJlig;\":\"Ĳ\",\"ijlig;\":\"ĳ\",\"Im;\":\"ℑ\",\"Imacr;\":\"Ī\",\"imacr;\":\"ī\",\"image;\":\"ℑ\",\"ImaginaryI;\":\"ⅈ\",\"imagline;\":\"ℐ\",\"imagpart;\":\"ℑ\",\"imath;\":\"ı\",\"imof;\":\"⊷\",\"imped;\":\"Ƶ\",\"Implies;\":\"⇒\",\"in;\":\"∈\",\"incare;\":\"℅\",\"infin;\":\"∞\",\"infintie;\":\"⧝\",\"inodot;\":\"ı\",\"Int;\":\"∬\",\"int;\":\"∫\",\"intcal;\":\"⊺\",\"integers;\":\"ℤ\",\"Integral;\":\"∫\",\"intercal;\":\"⊺\",\"Intersection;\":\"⋂\",\"intlarhk;\":\"⨗\",\"intprod;\":\"⨼\",\"InvisibleComma;\":\"⁣\",\"InvisibleTimes;\":\"⁢\",\"IOcy;\":\"Ё\",\"iocy;\":\"ё\",\"Iogon;\":\"Į\",\"iogon;\":\"į\",\"Iopf;\":\"𝕀\",\"iopf;\":\"𝕚\",\"Iota;\":\"Ι\",\"iota;\":\"ι\",\"iprod;\":\"⨼\",\"iquest;\":\"¿\",\"iquest\":\"¿\",\"Iscr;\":\"ℐ\",\"iscr;\":\"𝒾\",\"isin;\":\"∈\",\"isindot;\":\"⋵\",\"isinE;\":\"⋹\",\"isins;\":\"⋴\",\"isinsv;\":\"⋳\",\"isinv;\":\"∈\",\"it;\":\"⁢\",\"Itilde;\":\"Ĩ\",\"itilde;\":\"ĩ\",\"Iukcy;\":\"І\",\"iukcy;\":\"і\",\"Iuml;\":\"Ï\",\"Iuml\":\"Ï\",\"iuml;\":\"ï\",\"iuml\":\"ï\",\"Jcirc;\":\"Ĵ\",\"jcirc;\":\"ĵ\",\"Jcy;\":\"Й\",\"jcy;\":\"й\",\"Jfr;\":\"𝔍\",\"jfr;\":\"𝔧\",\"jmath;\":\"ȷ\",\"Jopf;\":\"𝕁\",\"jopf;\":\"𝕛\",\"Jscr;\":\"𝒥\",\"jscr;\":\"𝒿\",\"Jsercy;\":\"Ј\",\"jsercy;\":\"ј\",\"Jukcy;\":\"Є\",\"jukcy;\":\"є\",\"Kappa;\":\"Κ\",\"kappa;\":\"κ\",\"kappav;\":\"ϰ\",\"Kcedil;\":\"Ķ\",\"kcedil;\":\"ķ\",\"Kcy;\":\"К\",\"kcy;\":\"к\",\"Kfr;\":\"𝔎\",\"kfr;\":\"𝔨\",\"kgreen;\":\"ĸ\",\"KHcy;\":\"Х\",\"khcy;\":\"х\",\"KJcy;\":\"Ќ\",\"kjcy;\":\"ќ\",\"Kopf;\":\"𝕂\",\"kopf;\":\"𝕜\",\"Kscr;\":\"𝒦\",\"kscr;\":\"𝓀\",\"lAarr;\":\"⇚\",\"Lacute;\":\"Ĺ\",\"lacute;\":\"ĺ\",\"laemptyv;\":\"⦴\",\"lagran;\":\"ℒ\",\"Lambda;\":\"Λ\",\"lambda;\":\"λ\",\"Lang;\":\"⟪\",\"lang;\":\"⟨\",\"langd;\":\"⦑\",\"langle;\":\"⟨\",\"lap;\":\"⪅\",\"Laplacetrf;\":\"ℒ\",\"laquo;\":\"«\",\"laquo\":\"«\",\"Larr;\":\"↞\",\"lArr;\":\"⇐\",\"larr;\":\"←\",\"larrb;\":\"⇤\",\"larrbfs;\":\"⤟\",\"larrfs;\":\"⤝\",\"larrhk;\":\"↩\",\"larrlp;\":\"↫\",\"larrpl;\":\"⤹\",\"larrsim;\":\"⥳\",\"larrtl;\":\"↢\",\"lat;\":\"⪫\",\"lAtail;\":\"⤛\",\"latail;\":\"⤙\",\"late;\":\"⪭\",\"lates;\":\"⪭︀\",\"lBarr;\":\"⤎\",\"lbarr;\":\"⤌\",\"lbbrk;\":\"❲\",\"lbrace;\":\"{\",\"lbrack;\":\"[\",\"lbrke;\":\"⦋\",\"lbrksld;\":\"⦏\",\"lbrkslu;\":\"⦍\",\"Lcaron;\":\"Ľ\",\"lcaron;\":\"ľ\",\"Lcedil;\":\"Ļ\",\"lcedil;\":\"ļ\",\"lceil;\":\"⌈\",\"lcub;\":\"{\",\"Lcy;\":\"Л\",\"lcy;\":\"л\",\"ldca;\":\"⤶\",\"ldquo;\":\"“\",\"ldquor;\":\"„\",\"ldrdhar;\":\"⥧\",\"ldrushar;\":\"⥋\",\"ldsh;\":\"↲\",\"lE;\":\"≦\",\"le;\":\"≤\",\"LeftAngleBracket;\":\"⟨\",\"LeftArrow;\":\"←\",\"Leftarrow;\":\"⇐\",\"leftarrow;\":\"←\",\"LeftArrowBar;\":\"⇤\",\"LeftArrowRightArrow;\":\"⇆\",\"leftarrowtail;\":\"↢\",\"LeftCeiling;\":\"⌈\",\"LeftDoubleBracket;\":\"⟦\",\"LeftDownTeeVector;\":\"⥡\",\"LeftDownVector;\":\"⇃\",\"LeftDownVectorBar;\":\"⥙\",\"LeftFloor;\":\"⌊\",\"leftharpoondown;\":\"↽\",\"leftharpoonup;\":\"↼\",\"leftleftarrows;\":\"⇇\",\"LeftRightArrow;\":\"↔\",\"Leftrightarrow;\":\"⇔\",\"leftrightarrow;\":\"↔\",\"leftrightarrows;\":\"⇆\",\"leftrightharpoons;\":\"⇋\",\"leftrightsquigarrow;\":\"↭\",\"LeftRightVector;\":\"⥎\",\"LeftTee;\":\"⊣\",\"LeftTeeArrow;\":\"↤\",\"LeftTeeVector;\":\"⥚\",\"leftthreetimes;\":\"⋋\",\"LeftTriangle;\":\"⊲\",\"LeftTriangleBar;\":\"⧏\",\"LeftTriangleEqual;\":\"⊴\",\"LeftUpDownVector;\":\"⥑\",\"LeftUpTeeVector;\":\"⥠\",\"LeftUpVector;\":\"↿\",\"LeftUpVectorBar;\":\"⥘\",\"LeftVector;\":\"↼\",\"LeftVectorBar;\":\"⥒\",\"lEg;\":\"⪋\",\"leg;\":\"⋚\",\"leq;\":\"≤\",\"leqq;\":\"≦\",\"leqslant;\":\"⩽\",\"les;\":\"⩽\",\"lescc;\":\"⪨\",\"lesdot;\":\"⩿\",\"lesdoto;\":\"⪁\",\"lesdotor;\":\"⪃\",\"lesg;\":\"⋚︀\",\"lesges;\":\"⪓\",\"lessapprox;\":\"⪅\",\"lessdot;\":\"⋖\",\"lesseqgtr;\":\"⋚\",\"lesseqqgtr;\":\"⪋\",\"LessEqualGreater;\":\"⋚\",\"LessFullEqual;\":\"≦\",\"LessGreater;\":\"≶\",\"lessgtr;\":\"≶\",\"LessLess;\":\"⪡\",\"lesssim;\":\"≲\",\"LessSlantEqual;\":\"⩽\",\"LessTilde;\":\"≲\",\"lfisht;\":\"⥼\",\"lfloor;\":\"⌊\",\"Lfr;\":\"𝔏\",\"lfr;\":\"𝔩\",\"lg;\":\"≶\",\"lgE;\":\"⪑\",\"lHar;\":\"⥢\",\"lhard;\":\"↽\",\"lharu;\":\"↼\",\"lharul;\":\"⥪\",\"lhblk;\":\"▄\",\"LJcy;\":\"Љ\",\"ljcy;\":\"љ\",\"Ll;\":\"⋘\",\"ll;\":\"≪\",\"llarr;\":\"⇇\",\"llcorner;\":\"⌞\",\"Lleftarrow;\":\"⇚\",\"llhard;\":\"⥫\",\"lltri;\":\"◺\",\"Lmidot;\":\"Ŀ\",\"lmidot;\":\"ŀ\",\"lmoust;\":\"⎰\",\"lmoustache;\":\"⎰\",\"lnap;\":\"⪉\",\"lnapprox;\":\"⪉\",\"lnE;\":\"≨\",\"lne;\":\"⪇\",\"lneq;\":\"⪇\",\"lneqq;\":\"≨\",\"lnsim;\":\"⋦\",\"loang;\":\"⟬\",\"loarr;\":\"⇽\",\"lobrk;\":\"⟦\",\"LongLeftArrow;\":\"⟵\",\"Longleftarrow;\":\"⟸\",\"longleftarrow;\":\"⟵\",\"LongLeftRightArrow;\":\"⟷\",\"Longleftrightarrow;\":\"⟺\",\"longleftrightarrow;\":\"⟷\",\"longmapsto;\":\"⟼\",\"LongRightArrow;\":\"⟶\",\"Longrightarrow;\":\"⟹\",\"longrightarrow;\":\"⟶\",\"looparrowleft;\":\"↫\",\"looparrowright;\":\"↬\",\"lopar;\":\"⦅\",\"Lopf;\":\"𝕃\",\"lopf;\":\"𝕝\",\"loplus;\":\"⨭\",\"lotimes;\":\"⨴\",\"lowast;\":\"∗\",\"lowbar;\":\"_\",\"LowerLeftArrow;\":\"↙\",\"LowerRightArrow;\":\"↘\",\"loz;\":\"◊\",\"lozenge;\":\"◊\",\"lozf;\":\"⧫\",\"lpar;\":\"(\",\"lparlt;\":\"⦓\",\"lrarr;\":\"⇆\",\"lrcorner;\":\"⌟\",\"lrhar;\":\"⇋\",\"lrhard;\":\"⥭\",\"lrm;\":\"‎\",\"lrtri;\":\"⊿\",\"lsaquo;\":\"‹\",\"Lscr;\":\"ℒ\",\"lscr;\":\"𝓁\",\"Lsh;\":\"↰\",\"lsh;\":\"↰\",\"lsim;\":\"≲\",\"lsime;\":\"⪍\",\"lsimg;\":\"⪏\",\"lsqb;\":\"[\",\"lsquo;\":\"‘\",\"lsquor;\":\"‚\",\"Lstrok;\":\"Ł\",\"lstrok;\":\"ł\",\"LT;\":\"<\",\"LT\":\"<\",\"Lt;\":\"≪\",\"lt;\":\"<\",\"lt\":\"<\",\"ltcc;\":\"⪦\",\"ltcir;\":\"⩹\",\"ltdot;\":\"⋖\",\"lthree;\":\"⋋\",\"ltimes;\":\"⋉\",\"ltlarr;\":\"⥶\",\"ltquest;\":\"⩻\",\"ltri;\":\"◃\",\"ltrie;\":\"⊴\",\"ltrif;\":\"◂\",\"ltrPar;\":\"⦖\",\"lurdshar;\":\"⥊\",\"luruhar;\":\"⥦\",\"lvertneqq;\":\"≨︀\",\"lvnE;\":\"≨︀\",\"macr;\":\"¯\",\"macr\":\"¯\",\"male;\":\"♂\",\"malt;\":\"✠\",\"maltese;\":\"✠\",\"Map;\":\"⤅\",\"map;\":\"↦\",\"mapsto;\":\"↦\",\"mapstodown;\":\"↧\",\"mapstoleft;\":\"↤\",\"mapstoup;\":\"↥\",\"marker;\":\"▮\",\"mcomma;\":\"⨩\",\"Mcy;\":\"М\",\"mcy;\":\"м\",\"mdash;\":\"—\",\"mDDot;\":\"∺\",\"measuredangle;\":\"∡\",\"MediumSpace;\":\" \",\"Mellintrf;\":\"ℳ\",\"Mfr;\":\"𝔐\",\"mfr;\":\"𝔪\",\"mho;\":\"℧\",\"micro;\":\"µ\",\"micro\":\"µ\",\"mid;\":\"∣\",\"midast;\":\"*\",\"midcir;\":\"⫰\",\"middot;\":\"·\",\"middot\":\"·\",\"minus;\":\"−\",\"minusb;\":\"⊟\",\"minusd;\":\"∸\",\"minusdu;\":\"⨪\",\"MinusPlus;\":\"∓\",\"mlcp;\":\"⫛\",\"mldr;\":\"…\",\"mnplus;\":\"∓\",\"models;\":\"⊧\",\"Mopf;\":\"𝕄\",\"mopf;\":\"𝕞\",\"mp;\":\"∓\",\"Mscr;\":\"ℳ\",\"mscr;\":\"𝓂\",\"mstpos;\":\"∾\",\"Mu;\":\"Μ\",\"mu;\":\"μ\",\"multimap;\":\"⊸\",\"mumap;\":\"⊸\",\"nabla;\":\"∇\",\"Nacute;\":\"Ń\",\"nacute;\":\"ń\",\"nang;\":\"∠⃒\",\"nap;\":\"≉\",\"napE;\":\"⩰̸\",\"napid;\":\"≋̸\",\"napos;\":\"ŉ\",\"napprox;\":\"≉\",\"natur;\":\"♮\",\"natural;\":\"♮\",\"naturals;\":\"ℕ\",\"nbsp;\":\" \",\"nbsp\":\" \",\"nbump;\":\"≎̸\",\"nbumpe;\":\"≏̸\",\"ncap;\":\"⩃\",\"Ncaron;\":\"Ň\",\"ncaron;\":\"ň\",\"Ncedil;\":\"Ņ\",\"ncedil;\":\"ņ\",\"ncong;\":\"≇\",\"ncongdot;\":\"⩭̸\",\"ncup;\":\"⩂\",\"Ncy;\":\"Н\",\"ncy;\":\"н\",\"ndash;\":\"–\",\"ne;\":\"≠\",\"nearhk;\":\"⤤\",\"neArr;\":\"⇗\",\"nearr;\":\"↗\",\"nearrow;\":\"↗\",\"nedot;\":\"≐̸\",\"NegativeMediumSpace;\":\"​\",\"NegativeThickSpace;\":\"​\",\"NegativeThinSpace;\":\"​\",\"NegativeVeryThinSpace;\":\"​\",\"nequiv;\":\"≢\",\"nesear;\":\"⤨\",\"nesim;\":\"≂̸\",\"NestedGreaterGreater;\":\"≫\",\"NestedLessLess;\":\"≪\",\"NewLine;\":\"\\n\",\"nexist;\":\"∄\",\"nexists;\":\"∄\",\"Nfr;\":\"𝔑\",\"nfr;\":\"𝔫\",\"ngE;\":\"≧̸\",\"nge;\":\"≱\",\"ngeq;\":\"≱\",\"ngeqq;\":\"≧̸\",\"ngeqslant;\":\"⩾̸\",\"nges;\":\"⩾̸\",\"nGg;\":\"⋙̸\",\"ngsim;\":\"≵\",\"nGt;\":\"≫⃒\",\"ngt;\":\"≯\",\"ngtr;\":\"≯\",\"nGtv;\":\"≫̸\",\"nhArr;\":\"⇎\",\"nharr;\":\"↮\",\"nhpar;\":\"⫲\",\"ni;\":\"∋\",\"nis;\":\"⋼\",\"nisd;\":\"⋺\",\"niv;\":\"∋\",\"NJcy;\":\"Њ\",\"njcy;\":\"њ\",\"nlArr;\":\"⇍\",\"nlarr;\":\"↚\",\"nldr;\":\"‥\",\"nlE;\":\"≦̸\",\"nle;\":\"≰\",\"nLeftarrow;\":\"⇍\",\"nleftarrow;\":\"↚\",\"nLeftrightarrow;\":\"⇎\",\"nleftrightarrow;\":\"↮\",\"nleq;\":\"≰\",\"nleqq;\":\"≦̸\",\"nleqslant;\":\"⩽̸\",\"nles;\":\"⩽̸\",\"nless;\":\"≮\",\"nLl;\":\"⋘̸\",\"nlsim;\":\"≴\",\"nLt;\":\"≪⃒\",\"nlt;\":\"≮\",\"nltri;\":\"⋪\",\"nltrie;\":\"⋬\",\"nLtv;\":\"≪̸\",\"nmid;\":\"∤\",\"NoBreak;\":\"⁠\",\"NonBreakingSpace;\":\" \",\"Nopf;\":\"ℕ\",\"nopf;\":\"𝕟\",\"Not;\":\"⫬\",\"not;\":\"¬\",\"not\":\"¬\",\"NotCongruent;\":\"≢\",\"NotCupCap;\":\"≭\",\"NotDoubleVerticalBar;\":\"∦\",\"NotElement;\":\"∉\",\"NotEqual;\":\"≠\",\"NotEqualTilde;\":\"≂̸\",\"NotExists;\":\"∄\",\"NotGreater;\":\"≯\",\"NotGreaterEqual;\":\"≱\",\"NotGreaterFullEqual;\":\"≧̸\",\"NotGreaterGreater;\":\"≫̸\",\"NotGreaterLess;\":\"≹\",\"NotGreaterSlantEqual;\":\"⩾̸\",\"NotGreaterTilde;\":\"≵\",\"NotHumpDownHump;\":\"≎̸\",\"NotHumpEqual;\":\"≏̸\",\"notin;\":\"∉\",\"notindot;\":\"⋵̸\",\"notinE;\":\"⋹̸\",\"notinva;\":\"∉\",\"notinvb;\":\"⋷\",\"notinvc;\":\"⋶\",\"NotLeftTriangle;\":\"⋪\",\"NotLeftTriangleBar;\":\"⧏̸\",\"NotLeftTriangleEqual;\":\"⋬\",\"NotLess;\":\"≮\",\"NotLessEqual;\":\"≰\",\"NotLessGreater;\":\"≸\",\"NotLessLess;\":\"≪̸\",\"NotLessSlantEqual;\":\"⩽̸\",\"NotLessTilde;\":\"≴\",\"NotNestedGreaterGreater;\":\"⪢̸\",\"NotNestedLessLess;\":\"⪡̸\",\"notni;\":\"∌\",\"notniva;\":\"∌\",\"notnivb;\":\"⋾\",\"notnivc;\":\"⋽\",\"NotPrecedes;\":\"⊀\",\"NotPrecedesEqual;\":\"⪯̸\",\"NotPrecedesSlantEqual;\":\"⋠\",\"NotReverseElement;\":\"∌\",\"NotRightTriangle;\":\"⋫\",\"NotRightTriangleBar;\":\"⧐̸\",\"NotRightTriangleEqual;\":\"⋭\",\"NotSquareSubset;\":\"⊏̸\",\"NotSquareSubsetEqual;\":\"⋢\",\"NotSquareSuperset;\":\"⊐̸\",\"NotSquareSupersetEqual;\":\"⋣\",\"NotSubset;\":\"⊂⃒\",\"NotSubsetEqual;\":\"⊈\",\"NotSucceeds;\":\"⊁\",\"NotSucceedsEqual;\":\"⪰̸\",\"NotSucceedsSlantEqual;\":\"⋡\",\"NotSucceedsTilde;\":\"≿̸\",\"NotSuperset;\":\"⊃⃒\",\"NotSupersetEqual;\":\"⊉\",\"NotTilde;\":\"≁\",\"NotTildeEqual;\":\"≄\",\"NotTildeFullEqual;\":\"≇\",\"NotTildeTilde;\":\"≉\",\"NotVerticalBar;\":\"∤\",\"npar;\":\"∦\",\"nparallel;\":\"∦\",\"nparsl;\":\"⫽⃥\",\"npart;\":\"∂̸\",\"npolint;\":\"⨔\",\"npr;\":\"⊀\",\"nprcue;\":\"⋠\",\"npre;\":\"⪯̸\",\"nprec;\":\"⊀\",\"npreceq;\":\"⪯̸\",\"nrArr;\":\"⇏\",\"nrarr;\":\"↛\",\"nrarrc;\":\"⤳̸\",\"nrarrw;\":\"↝̸\",\"nRightarrow;\":\"⇏\",\"nrightarrow;\":\"↛\",\"nrtri;\":\"⋫\",\"nrtrie;\":\"⋭\",\"nsc;\":\"⊁\",\"nsccue;\":\"⋡\",\"nsce;\":\"⪰̸\",\"Nscr;\":\"𝒩\",\"nscr;\":\"𝓃\",\"nshortmid;\":\"∤\",\"nshortparallel;\":\"∦\",\"nsim;\":\"≁\",\"nsime;\":\"≄\",\"nsimeq;\":\"≄\",\"nsmid;\":\"∤\",\"nspar;\":\"∦\",\"nsqsube;\":\"⋢\",\"nsqsupe;\":\"⋣\",\"nsub;\":\"⊄\",\"nsubE;\":\"⫅̸\",\"nsube;\":\"⊈\",\"nsubset;\":\"⊂⃒\",\"nsubseteq;\":\"⊈\",\"nsubseteqq;\":\"⫅̸\",\"nsucc;\":\"⊁\",\"nsucceq;\":\"⪰̸\",\"nsup;\":\"⊅\",\"nsupE;\":\"⫆̸\",\"nsupe;\":\"⊉\",\"nsupset;\":\"⊃⃒\",\"nsupseteq;\":\"⊉\",\"nsupseteqq;\":\"⫆̸\",\"ntgl;\":\"≹\",\"Ntilde;\":\"Ñ\",\"Ntilde\":\"Ñ\",\"ntilde;\":\"ñ\",\"ntilde\":\"ñ\",\"ntlg;\":\"≸\",\"ntriangleleft;\":\"⋪\",\"ntrianglelefteq;\":\"⋬\",\"ntriangleright;\":\"⋫\",\"ntrianglerighteq;\":\"⋭\",\"Nu;\":\"Ν\",\"nu;\":\"ν\",\"num;\":\"#\",\"numero;\":\"№\",\"numsp;\":\" \",\"nvap;\":\"≍⃒\",\"nVDash;\":\"⊯\",\"nVdash;\":\"⊮\",\"nvDash;\":\"⊭\",\"nvdash;\":\"⊬\",\"nvge;\":\"≥⃒\",\"nvgt;\":\">⃒\",\"nvHarr;\":\"⤄\",\"nvinfin;\":\"⧞\",\"nvlArr;\":\"⤂\",\"nvle;\":\"≤⃒\",\"nvlt;\":\"<⃒\",\"nvltrie;\":\"⊴⃒\",\"nvrArr;\":\"⤃\",\"nvrtrie;\":\"⊵⃒\",\"nvsim;\":\"∼⃒\",\"nwarhk;\":\"⤣\",\"nwArr;\":\"⇖\",\"nwarr;\":\"↖\",\"nwarrow;\":\"↖\",\"nwnear;\":\"⤧\",\"Oacute;\":\"Ó\",\"Oacute\":\"Ó\",\"oacute;\":\"ó\",\"oacute\":\"ó\",\"oast;\":\"⊛\",\"ocir;\":\"⊚\",\"Ocirc;\":\"Ô\",\"Ocirc\":\"Ô\",\"ocirc;\":\"ô\",\"ocirc\":\"ô\",\"Ocy;\":\"О\",\"ocy;\":\"о\",\"odash;\":\"⊝\",\"Odblac;\":\"Ő\",\"odblac;\":\"ő\",\"odiv;\":\"⨸\",\"odot;\":\"⊙\",\"odsold;\":\"⦼\",\"OElig;\":\"Œ\",\"oelig;\":\"œ\",\"ofcir;\":\"⦿\",\"Ofr;\":\"𝔒\",\"ofr;\":\"𝔬\",\"ogon;\":\"˛\",\"Ograve;\":\"Ò\",\"Ograve\":\"Ò\",\"ograve;\":\"ò\",\"ograve\":\"ò\",\"ogt;\":\"⧁\",\"ohbar;\":\"⦵\",\"ohm;\":\"Ω\",\"oint;\":\"∮\",\"olarr;\":\"↺\",\"olcir;\":\"⦾\",\"olcross;\":\"⦻\",\"oline;\":\"‾\",\"olt;\":\"⧀\",\"Omacr;\":\"Ō\",\"omacr;\":\"ō\",\"Omega;\":\"Ω\",\"omega;\":\"ω\",\"Omicron;\":\"Ο\",\"omicron;\":\"ο\",\"omid;\":\"⦶\",\"ominus;\":\"⊖\",\"Oopf;\":\"𝕆\",\"oopf;\":\"𝕠\",\"opar;\":\"⦷\",\"OpenCurlyDoubleQuote;\":\"“\",\"OpenCurlyQuote;\":\"‘\",\"operp;\":\"⦹\",\"oplus;\":\"⊕\",\"Or;\":\"⩔\",\"or;\":\"∨\",\"orarr;\":\"↻\",\"ord;\":\"⩝\",\"order;\":\"ℴ\",\"orderof;\":\"ℴ\",\"ordf;\":\"ª\",\"ordf\":\"ª\",\"ordm;\":\"º\",\"ordm\":\"º\",\"origof;\":\"⊶\",\"oror;\":\"⩖\",\"orslope;\":\"⩗\",\"orv;\":\"⩛\",\"oS;\":\"Ⓢ\",\"Oscr;\":\"𝒪\",\"oscr;\":\"ℴ\",\"Oslash;\":\"Ø\",\"Oslash\":\"Ø\",\"oslash;\":\"ø\",\"oslash\":\"ø\",\"osol;\":\"⊘\",\"Otilde;\":\"Õ\",\"Otilde\":\"Õ\",\"otilde;\":\"õ\",\"otilde\":\"õ\",\"Otimes;\":\"⨷\",\"otimes;\":\"⊗\",\"otimesas;\":\"⨶\",\"Ouml;\":\"Ö\",\"Ouml\":\"Ö\",\"ouml;\":\"ö\",\"ouml\":\"ö\",\"ovbar;\":\"⌽\",\"OverBar;\":\"‾\",\"OverBrace;\":\"⏞\",\"OverBracket;\":\"⎴\",\"OverParenthesis;\":\"⏜\",\"par;\":\"∥\",\"para;\":\"¶\",\"para\":\"¶\",\"parallel;\":\"∥\",\"parsim;\":\"⫳\",\"parsl;\":\"⫽\",\"part;\":\"∂\",\"PartialD;\":\"∂\",\"Pcy;\":\"П\",\"pcy;\":\"п\",\"percnt;\":\"%\",\"period;\":\".\",\"permil;\":\"‰\",\"perp;\":\"⊥\",\"pertenk;\":\"‱\",\"Pfr;\":\"𝔓\",\"pfr;\":\"𝔭\",\"Phi;\":\"Φ\",\"phi;\":\"φ\",\"phiv;\":\"ϕ\",\"phmmat;\":\"ℳ\",\"phone;\":\"☎\",\"Pi;\":\"Π\",\"pi;\":\"π\",\"pitchfork;\":\"⋔\",\"piv;\":\"ϖ\",\"planck;\":\"ℏ\",\"planckh;\":\"ℎ\",\"plankv;\":\"ℏ\",\"plus;\":\"+\",\"plusacir;\":\"⨣\",\"plusb;\":\"⊞\",\"pluscir;\":\"⨢\",\"plusdo;\":\"∔\",\"plusdu;\":\"⨥\",\"pluse;\":\"⩲\",\"PlusMinus;\":\"±\",\"plusmn;\":\"±\",\"plusmn\":\"±\",\"plussim;\":\"⨦\",\"plustwo;\":\"⨧\",\"pm;\":\"±\",\"Poincareplane;\":\"ℌ\",\"pointint;\":\"⨕\",\"Popf;\":\"ℙ\",\"popf;\":\"𝕡\",\"pound;\":\"£\",\"pound\":\"£\",\"Pr;\":\"⪻\",\"pr;\":\"≺\",\"prap;\":\"⪷\",\"prcue;\":\"≼\",\"prE;\":\"⪳\",\"pre;\":\"⪯\",\"prec;\":\"≺\",\"precapprox;\":\"⪷\",\"preccurlyeq;\":\"≼\",\"Precedes;\":\"≺\",\"PrecedesEqual;\":\"⪯\",\"PrecedesSlantEqual;\":\"≼\",\"PrecedesTilde;\":\"≾\",\"preceq;\":\"⪯\",\"precnapprox;\":\"⪹\",\"precneqq;\":\"⪵\",\"precnsim;\":\"⋨\",\"precsim;\":\"≾\",\"Prime;\":\"″\",\"prime;\":\"′\",\"primes;\":\"ℙ\",\"prnap;\":\"⪹\",\"prnE;\":\"⪵\",\"prnsim;\":\"⋨\",\"prod;\":\"∏\",\"Product;\":\"∏\",\"profalar;\":\"⌮\",\"profline;\":\"⌒\",\"profsurf;\":\"⌓\",\"prop;\":\"∝\",\"Proportion;\":\"∷\",\"Proportional;\":\"∝\",\"propto;\":\"∝\",\"prsim;\":\"≾\",\"prurel;\":\"⊰\",\"Pscr;\":\"𝒫\",\"pscr;\":\"𝓅\",\"Psi;\":\"Ψ\",\"psi;\":\"ψ\",\"puncsp;\":\" \",\"Qfr;\":\"𝔔\",\"qfr;\":\"𝔮\",\"qint;\":\"⨌\",\"Qopf;\":\"ℚ\",\"qopf;\":\"𝕢\",\"qprime;\":\"⁗\",\"Qscr;\":\"𝒬\",\"qscr;\":\"𝓆\",\"quaternions;\":\"ℍ\",\"quatint;\":\"⨖\",\"quest;\":\"?\",\"questeq;\":\"≟\",\"QUOT;\":\"\\\"\",\"QUOT\":\"\\\"\",\"quot;\":\"\\\"\",\"quot\":\"\\\"\",\"rAarr;\":\"⇛\",\"race;\":\"∽̱\",\"Racute;\":\"Ŕ\",\"racute;\":\"ŕ\",\"radic;\":\"√\",\"raemptyv;\":\"⦳\",\"Rang;\":\"⟫\",\"rang;\":\"⟩\",\"rangd;\":\"⦒\",\"range;\":\"⦥\",\"rangle;\":\"⟩\",\"raquo;\":\"»\",\"raquo\":\"»\",\"Rarr;\":\"↠\",\"rArr;\":\"⇒\",\"rarr;\":\"→\",\"rarrap;\":\"⥵\",\"rarrb;\":\"⇥\",\"rarrbfs;\":\"⤠\",\"rarrc;\":\"⤳\",\"rarrfs;\":\"⤞\",\"rarrhk;\":\"↪\",\"rarrlp;\":\"↬\",\"rarrpl;\":\"⥅\",\"rarrsim;\":\"⥴\",\"Rarrtl;\":\"⤖\",\"rarrtl;\":\"↣\",\"rarrw;\":\"↝\",\"rAtail;\":\"⤜\",\"ratail;\":\"⤚\",\"ratio;\":\"∶\",\"rationals;\":\"ℚ\",\"RBarr;\":\"⤐\",\"rBarr;\":\"⤏\",\"rbarr;\":\"⤍\",\"rbbrk;\":\"❳\",\"rbrace;\":\"}\",\"rbrack;\":\"]\",\"rbrke;\":\"⦌\",\"rbrksld;\":\"⦎\",\"rbrkslu;\":\"⦐\",\"Rcaron;\":\"Ř\",\"rcaron;\":\"ř\",\"Rcedil;\":\"Ŗ\",\"rcedil;\":\"ŗ\",\"rceil;\":\"⌉\",\"rcub;\":\"}\",\"Rcy;\":\"Р\",\"rcy;\":\"р\",\"rdca;\":\"⤷\",\"rdldhar;\":\"⥩\",\"rdquo;\":\"”\",\"rdquor;\":\"”\",\"rdsh;\":\"↳\",\"Re;\":\"ℜ\",\"real;\":\"ℜ\",\"realine;\":\"ℛ\",\"realpart;\":\"ℜ\",\"reals;\":\"ℝ\",\"rect;\":\"▭\",\"REG;\":\"®\",\"REG\":\"®\",\"reg;\":\"®\",\"reg\":\"®\",\"ReverseElement;\":\"∋\",\"ReverseEquilibrium;\":\"⇋\",\"ReverseUpEquilibrium;\":\"⥯\",\"rfisht;\":\"⥽\",\"rfloor;\":\"⌋\",\"Rfr;\":\"ℜ\",\"rfr;\":\"𝔯\",\"rHar;\":\"⥤\",\"rhard;\":\"⇁\",\"rharu;\":\"⇀\",\"rharul;\":\"⥬\",\"Rho;\":\"Ρ\",\"rho;\":\"ρ\",\"rhov;\":\"ϱ\",\"RightAngleBracket;\":\"⟩\",\"RightArrow;\":\"→\",\"Rightarrow;\":\"⇒\",\"rightarrow;\":\"→\",\"RightArrowBar;\":\"⇥\",\"RightArrowLeftArrow;\":\"⇄\",\"rightarrowtail;\":\"↣\",\"RightCeiling;\":\"⌉\",\"RightDoubleBracket;\":\"⟧\",\"RightDownTeeVector;\":\"⥝\",\"RightDownVector;\":\"⇂\",\"RightDownVectorBar;\":\"⥕\",\"RightFloor;\":\"⌋\",\"rightharpoondown;\":\"⇁\",\"rightharpoonup;\":\"⇀\",\"rightleftarrows;\":\"⇄\",\"rightleftharpoons;\":\"⇌\",\"rightrightarrows;\":\"⇉\",\"rightsquigarrow;\":\"↝\",\"RightTee;\":\"⊢\",\"RightTeeArrow;\":\"↦\",\"RightTeeVector;\":\"⥛\",\"rightthreetimes;\":\"⋌\",\"RightTriangle;\":\"⊳\",\"RightTriangleBar;\":\"⧐\",\"RightTriangleEqual;\":\"⊵\",\"RightUpDownVector;\":\"⥏\",\"RightUpTeeVector;\":\"⥜\",\"RightUpVector;\":\"↾\",\"RightUpVectorBar;\":\"⥔\",\"RightVector;\":\"⇀\",\"RightVectorBar;\":\"⥓\",\"ring;\":\"˚\",\"risingdotseq;\":\"≓\",\"rlarr;\":\"⇄\",\"rlhar;\":\"⇌\",\"rlm;\":\"‏\",\"rmoust;\":\"⎱\",\"rmoustache;\":\"⎱\",\"rnmid;\":\"⫮\",\"roang;\":\"⟭\",\"roarr;\":\"⇾\",\"robrk;\":\"⟧\",\"ropar;\":\"⦆\",\"Ropf;\":\"ℝ\",\"ropf;\":\"𝕣\",\"roplus;\":\"⨮\",\"rotimes;\":\"⨵\",\"RoundImplies;\":\"⥰\",\"rpar;\":\")\",\"rpargt;\":\"⦔\",\"rppolint;\":\"⨒\",\"rrarr;\":\"⇉\",\"Rrightarrow;\":\"⇛\",\"rsaquo;\":\"›\",\"Rscr;\":\"ℛ\",\"rscr;\":\"𝓇\",\"Rsh;\":\"↱\",\"rsh;\":\"↱\",\"rsqb;\":\"]\",\"rsquo;\":\"’\",\"rsquor;\":\"’\",\"rthree;\":\"⋌\",\"rtimes;\":\"⋊\",\"rtri;\":\"▹\",\"rtrie;\":\"⊵\",\"rtrif;\":\"▸\",\"rtriltri;\":\"⧎\",\"RuleDelayed;\":\"⧴\",\"ruluhar;\":\"⥨\",\"rx;\":\"℞\",\"Sacute;\":\"Ś\",\"sacute;\":\"ś\",\"sbquo;\":\"‚\",\"Sc;\":\"⪼\",\"sc;\":\"≻\",\"scap;\":\"⪸\",\"Scaron;\":\"Š\",\"scaron;\":\"š\",\"sccue;\":\"≽\",\"scE;\":\"⪴\",\"sce;\":\"⪰\",\"Scedil;\":\"Ş\",\"scedil;\":\"ş\",\"Scirc;\":\"Ŝ\",\"scirc;\":\"ŝ\",\"scnap;\":\"⪺\",\"scnE;\":\"⪶\",\"scnsim;\":\"⋩\",\"scpolint;\":\"⨓\",\"scsim;\":\"≿\",\"Scy;\":\"С\",\"scy;\":\"с\",\"sdot;\":\"⋅\",\"sdotb;\":\"⊡\",\"sdote;\":\"⩦\",\"searhk;\":\"⤥\",\"seArr;\":\"⇘\",\"searr;\":\"↘\",\"searrow;\":\"↘\",\"sect;\":\"§\",\"sect\":\"§\",\"semi;\":\";\",\"seswar;\":\"⤩\",\"setminus;\":\"∖\",\"setmn;\":\"∖\",\"sext;\":\"✶\",\"Sfr;\":\"𝔖\",\"sfr;\":\"𝔰\",\"sfrown;\":\"⌢\",\"sharp;\":\"♯\",\"SHCHcy;\":\"Щ\",\"shchcy;\":\"щ\",\"SHcy;\":\"Ш\",\"shcy;\":\"ш\",\"ShortDownArrow;\":\"↓\",\"ShortLeftArrow;\":\"←\",\"shortmid;\":\"∣\",\"shortparallel;\":\"∥\",\"ShortRightArrow;\":\"→\",\"ShortUpArrow;\":\"↑\",\"shy;\":\"­\",\"shy\":\"­\",\"Sigma;\":\"Σ\",\"sigma;\":\"σ\",\"sigmaf;\":\"ς\",\"sigmav;\":\"ς\",\"sim;\":\"∼\",\"simdot;\":\"⩪\",\"sime;\":\"≃\",\"simeq;\":\"≃\",\"simg;\":\"⪞\",\"simgE;\":\"⪠\",\"siml;\":\"⪝\",\"simlE;\":\"⪟\",\"simne;\":\"≆\",\"simplus;\":\"⨤\",\"simrarr;\":\"⥲\",\"slarr;\":\"←\",\"SmallCircle;\":\"∘\",\"smallsetminus;\":\"∖\",\"smashp;\":\"⨳\",\"smeparsl;\":\"⧤\",\"smid;\":\"∣\",\"smile;\":\"⌣\",\"smt;\":\"⪪\",\"smte;\":\"⪬\",\"smtes;\":\"⪬︀\",\"SOFTcy;\":\"Ь\",\"softcy;\":\"ь\",\"sol;\":\"/\",\"solb;\":\"⧄\",\"solbar;\":\"⌿\",\"Sopf;\":\"𝕊\",\"sopf;\":\"𝕤\",\"spades;\":\"♠\",\"spadesuit;\":\"♠\",\"spar;\":\"∥\",\"sqcap;\":\"⊓\",\"sqcaps;\":\"⊓︀\",\"sqcup;\":\"⊔\",\"sqcups;\":\"⊔︀\",\"Sqrt;\":\"√\",\"sqsub;\":\"⊏\",\"sqsube;\":\"⊑\",\"sqsubset;\":\"⊏\",\"sqsubseteq;\":\"⊑\",\"sqsup;\":\"⊐\",\"sqsupe;\":\"⊒\",\"sqsupset;\":\"⊐\",\"sqsupseteq;\":\"⊒\",\"squ;\":\"□\",\"Square;\":\"□\",\"square;\":\"□\",\"SquareIntersection;\":\"⊓\",\"SquareSubset;\":\"⊏\",\"SquareSubsetEqual;\":\"⊑\",\"SquareSuperset;\":\"⊐\",\"SquareSupersetEqual;\":\"⊒\",\"SquareUnion;\":\"⊔\",\"squarf;\":\"▪\",\"squf;\":\"▪\",\"srarr;\":\"→\",\"Sscr;\":\"𝒮\",\"sscr;\":\"𝓈\",\"ssetmn;\":\"∖\",\"ssmile;\":\"⌣\",\"sstarf;\":\"⋆\",\"Star;\":\"⋆\",\"star;\":\"☆\",\"starf;\":\"★\",\"straightepsilon;\":\"ϵ\",\"straightphi;\":\"ϕ\",\"strns;\":\"¯\",\"Sub;\":\"⋐\",\"sub;\":\"⊂\",\"subdot;\":\"⪽\",\"subE;\":\"⫅\",\"sube;\":\"⊆\",\"subedot;\":\"⫃\",\"submult;\":\"⫁\",\"subnE;\":\"⫋\",\"subne;\":\"⊊\",\"subplus;\":\"⪿\",\"subrarr;\":\"⥹\",\"Subset;\":\"⋐\",\"subset;\":\"⊂\",\"subseteq;\":\"⊆\",\"subseteqq;\":\"⫅\",\"SubsetEqual;\":\"⊆\",\"subsetneq;\":\"⊊\",\"subsetneqq;\":\"⫋\",\"subsim;\":\"⫇\",\"subsub;\":\"⫕\",\"subsup;\":\"⫓\",\"succ;\":\"≻\",\"succapprox;\":\"⪸\",\"succcurlyeq;\":\"≽\",\"Succeeds;\":\"≻\",\"SucceedsEqual;\":\"⪰\",\"SucceedsSlantEqual;\":\"≽\",\"SucceedsTilde;\":\"≿\",\"succeq;\":\"⪰\",\"succnapprox;\":\"⪺\",\"succneqq;\":\"⪶\",\"succnsim;\":\"⋩\",\"succsim;\":\"≿\",\"SuchThat;\":\"∋\",\"Sum;\":\"∑\",\"sum;\":\"∑\",\"sung;\":\"♪\",\"Sup;\":\"⋑\",\"sup;\":\"⊃\",\"sup1;\":\"¹\",\"sup1\":\"¹\",\"sup2;\":\"²\",\"sup2\":\"²\",\"sup3;\":\"³\",\"sup3\":\"³\",\"supdot;\":\"⪾\",\"supdsub;\":\"⫘\",\"supE;\":\"⫆\",\"supe;\":\"⊇\",\"supedot;\":\"⫄\",\"Superset;\":\"⊃\",\"SupersetEqual;\":\"⊇\",\"suphsol;\":\"⟉\",\"suphsub;\":\"⫗\",\"suplarr;\":\"⥻\",\"supmult;\":\"⫂\",\"supnE;\":\"⫌\",\"supne;\":\"⊋\",\"supplus;\":\"⫀\",\"Supset;\":\"⋑\",\"supset;\":\"⊃\",\"supseteq;\":\"⊇\",\"supseteqq;\":\"⫆\",\"supsetneq;\":\"⊋\",\"supsetneqq;\":\"⫌\",\"supsim;\":\"⫈\",\"supsub;\":\"⫔\",\"supsup;\":\"⫖\",\"swarhk;\":\"⤦\",\"swArr;\":\"⇙\",\"swarr;\":\"↙\",\"swarrow;\":\"↙\",\"swnwar;\":\"⤪\",\"szlig;\":\"ß\",\"szlig\":\"ß\",\"Tab;\":\"\\t\",\"target;\":\"⌖\",\"Tau;\":\"Τ\",\"tau;\":\"τ\",\"tbrk;\":\"⎴\",\"Tcaron;\":\"Ť\",\"tcaron;\":\"ť\",\"Tcedil;\":\"Ţ\",\"tcedil;\":\"ţ\",\"Tcy;\":\"Т\",\"tcy;\":\"т\",\"tdot;\":\"⃛\",\"telrec;\":\"⌕\",\"Tfr;\":\"𝔗\",\"tfr;\":\"𝔱\",\"there4;\":\"∴\",\"Therefore;\":\"∴\",\"therefore;\":\"∴\",\"Theta;\":\"Θ\",\"theta;\":\"θ\",\"thetasym;\":\"ϑ\",\"thetav;\":\"ϑ\",\"thickapprox;\":\"≈\",\"thicksim;\":\"∼\",\"ThickSpace;\":\"  \",\"thinsp;\":\" \",\"ThinSpace;\":\" \",\"thkap;\":\"≈\",\"thksim;\":\"∼\",\"THORN;\":\"Þ\",\"THORN\":\"Þ\",\"thorn;\":\"þ\",\"thorn\":\"þ\",\"Tilde;\":\"∼\",\"tilde;\":\"˜\",\"TildeEqual;\":\"≃\",\"TildeFullEqual;\":\"≅\",\"TildeTilde;\":\"≈\",\"times;\":\"×\",\"times\":\"×\",\"timesb;\":\"⊠\",\"timesbar;\":\"⨱\",\"timesd;\":\"⨰\",\"tint;\":\"∭\",\"toea;\":\"⤨\",\"top;\":\"⊤\",\"topbot;\":\"⌶\",\"topcir;\":\"⫱\",\"Topf;\":\"𝕋\",\"topf;\":\"𝕥\",\"topfork;\":\"⫚\",\"tosa;\":\"⤩\",\"tprime;\":\"‴\",\"TRADE;\":\"™\",\"trade;\":\"™\",\"triangle;\":\"▵\",\"triangledown;\":\"▿\",\"triangleleft;\":\"◃\",\"trianglelefteq;\":\"⊴\",\"triangleq;\":\"≜\",\"triangleright;\":\"▹\",\"trianglerighteq;\":\"⊵\",\"tridot;\":\"◬\",\"trie;\":\"≜\",\"triminus;\":\"⨺\",\"TripleDot;\":\"⃛\",\"triplus;\":\"⨹\",\"trisb;\":\"⧍\",\"tritime;\":\"⨻\",\"trpezium;\":\"⏢\",\"Tscr;\":\"𝒯\",\"tscr;\":\"𝓉\",\"TScy;\":\"Ц\",\"tscy;\":\"ц\",\"TSHcy;\":\"Ћ\",\"tshcy;\":\"ћ\",\"Tstrok;\":\"Ŧ\",\"tstrok;\":\"ŧ\",\"twixt;\":\"≬\",\"twoheadleftarrow;\":\"↞\",\"twoheadrightarrow;\":\"↠\",\"Uacute;\":\"Ú\",\"Uacute\":\"Ú\",\"uacute;\":\"ú\",\"uacute\":\"ú\",\"Uarr;\":\"↟\",\"uArr;\":\"⇑\",\"uarr;\":\"↑\",\"Uarrocir;\":\"⥉\",\"Ubrcy;\":\"Ў\",\"ubrcy;\":\"ў\",\"Ubreve;\":\"Ŭ\",\"ubreve;\":\"ŭ\",\"Ucirc;\":\"Û\",\"Ucirc\":\"Û\",\"ucirc;\":\"û\",\"ucirc\":\"û\",\"Ucy;\":\"У\",\"ucy;\":\"у\",\"udarr;\":\"⇅\",\"Udblac;\":\"Ű\",\"udblac;\":\"ű\",\"udhar;\":\"⥮\",\"ufisht;\":\"⥾\",\"Ufr;\":\"𝔘\",\"ufr;\":\"𝔲\",\"Ugrave;\":\"Ù\",\"Ugrave\":\"Ù\",\"ugrave;\":\"ù\",\"ugrave\":\"ù\",\"uHar;\":\"⥣\",\"uharl;\":\"↿\",\"uharr;\":\"↾\",\"uhblk;\":\"▀\",\"ulcorn;\":\"⌜\",\"ulcorner;\":\"⌜\",\"ulcrop;\":\"⌏\",\"ultri;\":\"◸\",\"Umacr;\":\"Ū\",\"umacr;\":\"ū\",\"uml;\":\"¨\",\"uml\":\"¨\",\"UnderBar;\":\"_\",\"UnderBrace;\":\"⏟\",\"UnderBracket;\":\"⎵\",\"UnderParenthesis;\":\"⏝\",\"Union;\":\"⋃\",\"UnionPlus;\":\"⊎\",\"Uogon;\":\"Ų\",\"uogon;\":\"ų\",\"Uopf;\":\"𝕌\",\"uopf;\":\"𝕦\",\"UpArrow;\":\"↑\",\"Uparrow;\":\"⇑\",\"uparrow;\":\"↑\",\"UpArrowBar;\":\"⤒\",\"UpArrowDownArrow;\":\"⇅\",\"UpDownArrow;\":\"↕\",\"Updownarrow;\":\"⇕\",\"updownarrow;\":\"↕\",\"UpEquilibrium;\":\"⥮\",\"upharpoonleft;\":\"↿\",\"upharpoonright;\":\"↾\",\"uplus;\":\"⊎\",\"UpperLeftArrow;\":\"↖\",\"UpperRightArrow;\":\"↗\",\"Upsi;\":\"ϒ\",\"upsi;\":\"υ\",\"upsih;\":\"ϒ\",\"Upsilon;\":\"Υ\",\"upsilon;\":\"υ\",\"UpTee;\":\"⊥\",\"UpTeeArrow;\":\"↥\",\"upuparrows;\":\"⇈\",\"urcorn;\":\"⌝\",\"urcorner;\":\"⌝\",\"urcrop;\":\"⌎\",\"Uring;\":\"Ů\",\"uring;\":\"ů\",\"urtri;\":\"◹\",\"Uscr;\":\"𝒰\",\"uscr;\":\"𝓊\",\"utdot;\":\"⋰\",\"Utilde;\":\"Ũ\",\"utilde;\":\"ũ\",\"utri;\":\"▵\",\"utrif;\":\"▴\",\"uuarr;\":\"⇈\",\"Uuml;\":\"Ü\",\"Uuml\":\"Ü\",\"uuml;\":\"ü\",\"uuml\":\"ü\",\"uwangle;\":\"⦧\",\"vangrt;\":\"⦜\",\"varepsilon;\":\"ϵ\",\"varkappa;\":\"ϰ\",\"varnothing;\":\"∅\",\"varphi;\":\"ϕ\",\"varpi;\":\"ϖ\",\"varpropto;\":\"∝\",\"vArr;\":\"⇕\",\"varr;\":\"↕\",\"varrho;\":\"ϱ\",\"varsigma;\":\"ς\",\"varsubsetneq;\":\"⊊︀\",\"varsubsetneqq;\":\"⫋︀\",\"varsupsetneq;\":\"⊋︀\",\"varsupsetneqq;\":\"⫌︀\",\"vartheta;\":\"ϑ\",\"vartriangleleft;\":\"⊲\",\"vartriangleright;\":\"⊳\",\"Vbar;\":\"⫫\",\"vBar;\":\"⫨\",\"vBarv;\":\"⫩\",\"Vcy;\":\"В\",\"vcy;\":\"в\",\"VDash;\":\"⊫\",\"Vdash;\":\"⊩\",\"vDash;\":\"⊨\",\"vdash;\":\"⊢\",\"Vdashl;\":\"⫦\",\"Vee;\":\"⋁\",\"vee;\":\"∨\",\"veebar;\":\"⊻\",\"veeeq;\":\"≚\",\"vellip;\":\"⋮\",\"Verbar;\":\"‖\",\"verbar;\":\"|\",\"Vert;\":\"‖\",\"vert;\":\"|\",\"VerticalBar;\":\"∣\",\"VerticalLine;\":\"|\",\"VerticalSeparator;\":\"❘\",\"VerticalTilde;\":\"≀\",\"VeryThinSpace;\":\" \",\"Vfr;\":\"𝔙\",\"vfr;\":\"𝔳\",\"vltri;\":\"⊲\",\"vnsub;\":\"⊂⃒\",\"vnsup;\":\"⊃⃒\",\"Vopf;\":\"𝕍\",\"vopf;\":\"𝕧\",\"vprop;\":\"∝\",\"vrtri;\":\"⊳\",\"Vscr;\":\"𝒱\",\"vscr;\":\"𝓋\",\"vsubnE;\":\"⫋︀\",\"vsubne;\":\"⊊︀\",\"vsupnE;\":\"⫌︀\",\"vsupne;\":\"⊋︀\",\"Vvdash;\":\"⊪\",\"vzigzag;\":\"⦚\",\"Wcirc;\":\"Ŵ\",\"wcirc;\":\"ŵ\",\"wedbar;\":\"⩟\",\"Wedge;\":\"⋀\",\"wedge;\":\"∧\",\"wedgeq;\":\"≙\",\"weierp;\":\"℘\",\"Wfr;\":\"𝔚\",\"wfr;\":\"𝔴\",\"Wopf;\":\"𝕎\",\"wopf;\":\"𝕨\",\"wp;\":\"℘\",\"wr;\":\"≀\",\"wreath;\":\"≀\",\"Wscr;\":\"𝒲\",\"wscr;\":\"𝓌\",\"xcap;\":\"⋂\",\"xcirc;\":\"◯\",\"xcup;\":\"⋃\",\"xdtri;\":\"▽\",\"Xfr;\":\"𝔛\",\"xfr;\":\"𝔵\",\"xhArr;\":\"⟺\",\"xharr;\":\"⟷\",\"Xi;\":\"Ξ\",\"xi;\":\"ξ\",\"xlArr;\":\"⟸\",\"xlarr;\":\"⟵\",\"xmap;\":\"⟼\",\"xnis;\":\"⋻\",\"xodot;\":\"⨀\",\"Xopf;\":\"𝕏\",\"xopf;\":\"𝕩\",\"xoplus;\":\"⨁\",\"xotime;\":\"⨂\",\"xrArr;\":\"⟹\",\"xrarr;\":\"⟶\",\"Xscr;\":\"𝒳\",\"xscr;\":\"𝓍\",\"xsqcup;\":\"⨆\",\"xuplus;\":\"⨄\",\"xutri;\":\"△\",\"xvee;\":\"⋁\",\"xwedge;\":\"⋀\",\"Yacute;\":\"Ý\",\"Yacute\":\"Ý\",\"yacute;\":\"ý\",\"yacute\":\"ý\",\"YAcy;\":\"Я\",\"yacy;\":\"я\",\"Ycirc;\":\"Ŷ\",\"ycirc;\":\"ŷ\",\"Ycy;\":\"Ы\",\"ycy;\":\"ы\",\"yen;\":\"¥\",\"yen\":\"¥\",\"Yfr;\":\"𝔜\",\"yfr;\":\"𝔶\",\"YIcy;\":\"Ї\",\"yicy;\":\"ї\",\"Yopf;\":\"𝕐\",\"yopf;\":\"𝕪\",\"Yscr;\":\"𝒴\",\"yscr;\":\"𝓎\",\"YUcy;\":\"Ю\",\"yucy;\":\"ю\",\"Yuml;\":\"Ÿ\",\"yuml;\":\"ÿ\",\"yuml\":\"ÿ\",\"Zacute;\":\"Ź\",\"zacute;\":\"ź\",\"Zcaron;\":\"Ž\",\"zcaron;\":\"ž\",\"Zcy;\":\"З\",\"zcy;\":\"з\",\"Zdot;\":\"Ż\",\"zdot;\":\"ż\",\"zeetrf;\":\"ℨ\",\"ZeroWidthSpace;\":\"​\",\"Zeta;\":\"Ζ\",\"zeta;\":\"ζ\",\"Zfr;\":\"ℨ\",\"zfr;\":\"𝔷\",\"ZHcy;\":\"Ж\",\"zhcy;\":\"ж\",\"zigrarr;\":\"⇝\",\"Zopf;\":\"ℤ\",\"zopf;\":\"𝕫\",\"Zscr;\":\"𝒵\",\"zscr;\":\"𝓏\",\"zwj;\":\"‍\",\"zwnj;\":\"‌\"}");
 
 /***/ }),
-/* 171 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31755,13 +32071,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-const googleauth_1 = __webpack_require__(172);
+const googleauth_1 = __webpack_require__(174);
 exports.GoogleAuth = googleauth_1.GoogleAuth;
 var computeclient_1 = __webpack_require__(81);
 exports.Compute = computeclient_1.Compute;
 var envDetect_1 = __webpack_require__(84);
 exports.GCPEnv = envDetect_1.GCPEnv;
-var iam_1 = __webpack_require__(193);
+var iam_1 = __webpack_require__(195);
 exports.IAMAuth = iam_1.IAMAuth;
 var idtokenclient_1 = __webpack_require__(83);
 exports.IdTokenClient = idtokenclient_1.IdTokenClient;
@@ -31783,7 +32099,7 @@ exports.auth = auth;
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 172 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32388,7 +32704,7 @@ GoogleAuth.DefaultTransporter = transporters_1.DefaultTransporter;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),
-/* 173 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32415,7 +32731,7 @@ const querystring_1 = __importDefault(__webpack_require__(10));
 const is_stream_1 = __importDefault(__webpack_require__(76));
 const url_1 = __importDefault(__webpack_require__(38));
 const common_1 = __webpack_require__(77);
-const retry_1 = __webpack_require__(177);
+const retry_1 = __webpack_require__(179);
 // tslint:disable no-any
 const URL = hasURL() ? window.URL : url_1.default.URL;
 const fetch = hasFetch() ? window.fetch : node_fetch_1.default;
@@ -32619,7 +32935,7 @@ exports.Gaxios = Gaxios;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),
-/* 174 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32710,7 +33026,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 175 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32802,7 +33118,7 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 176 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32825,7 +33141,7 @@ module.exports = {
 
 
 /***/ }),
-/* 177 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32963,7 +33279,7 @@ function getConfig(err) {
 //# sourceMappingURL=retry.js.map
 
 /***/ }),
-/* 178 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var BigNumber = __webpack_require__(79);
@@ -33352,7 +33668,7 @@ var JSON = module.exports;
 
 
 /***/ }),
-/* 179 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var BigNumber = null;
@@ -33742,7 +34058,7 @@ module.exports = json_parse;
 
 
 /***/ }),
-/* 180 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33841,7 +34157,7 @@ exports.BrowserCrypto = BrowserCrypto;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),
-/* 181 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33895,7 +34211,7 @@ exports.NodeCrypto = NodeCrypto;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1).Buffer))
 
 /***/ }),
-/* 182 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33936,13 +34252,13 @@ exports.validate = validate;
 //# sourceMappingURL=options.js.map
 
 /***/ }),
-/* 183 */
+/* 185 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_from\":\"google-auth-library@^5.5.0\",\"_id\":\"google-auth-library@5.10.1\",\"_inBundle\":false,\"_integrity\":\"sha512-rOlaok5vlpV9rSiUu5EpR0vVpc+PhN62oF4RyX/6++DG1VsaulAFEMlDYBLjJDDPI6OcNOCGAKy9UVB/3NIDXg==\",\"_location\":\"/@google-cloud/common/google-auth-library\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"range\",\"registry\":true,\"raw\":\"google-auth-library@^5.5.0\",\"name\":\"google-auth-library\",\"escapedName\":\"google-auth-library\",\"rawSpec\":\"^5.5.0\",\"saveSpec\":null,\"fetchSpec\":\"^5.5.0\"},\"_requiredBy\":[\"/@google-cloud/common\"],\"_resolved\":\"https://registry.npmjs.org/google-auth-library/-/google-auth-library-5.10.1.tgz\",\"_shasum\":\"504ec75487ad140e68dd577c21affa363c87ddff\",\"_spec\":\"google-auth-library@^5.5.0\",\"_where\":\"C:\\\\_proj\\\\nodejs-speech-kiosk-usercase\\\\node_modules\\\\@google-cloud\\\\common\",\"author\":{\"name\":\"Google Inc.\"},\"bugs\":{\"url\":\"https://github.com/googleapis/google-auth-library-nodejs/issues\"},\"bundleDependencies\":false,\"dependencies\":{\"arrify\":\"^2.0.0\",\"base64-js\":\"^1.3.0\",\"ecdsa-sig-formatter\":\"^1.0.11\",\"fast-text-encoding\":\"^1.0.0\",\"gaxios\":\"^2.1.0\",\"gcp-metadata\":\"^3.4.0\",\"gtoken\":\"^4.1.0\",\"jws\":\"^4.0.0\",\"lru-cache\":\"^5.0.0\"},\"deprecated\":false,\"description\":\"Google APIs Authentication Client Library for Node.js\",\"devDependencies\":{\"@compodoc/compodoc\":\"^1.1.7\",\"@types/base64-js\":\"^1.2.5\",\"@types/chai\":\"^4.1.7\",\"@types/jws\":\"^3.1.0\",\"@types/lru-cache\":\"^5.0.0\",\"@types/mocha\":\"^7.0.0\",\"@types/mv\":\"^2.1.0\",\"@types/ncp\":\"^2.0.1\",\"@types/node\":\"^10.5.1\",\"@types/sinon\":\"^7.0.0\",\"@types/tmp\":\"^0.1.0\",\"assert-rejects\":\"^1.0.0\",\"c8\":\"^7.0.0\",\"chai\":\"^4.2.0\",\"codecov\":\"^3.0.2\",\"eslint\":\"^6.0.0\",\"eslint-config-prettier\":\"^6.0.0\",\"eslint-plugin-node\":\"^11.0.0\",\"eslint-plugin-prettier\":\"^3.0.0\",\"execa\":\"^4.0.0\",\"gts\":\"^1.1.2\",\"is-docker\":\"^2.0.0\",\"js-green-licenses\":\"^1.0.0\",\"karma\":\"^4.0.0\",\"karma-chrome-launcher\":\"^3.0.0\",\"karma-coverage\":\"^2.0.0\",\"karma-firefox-launcher\":\"^1.1.0\",\"karma-mocha\":\"^1.3.0\",\"karma-remap-coverage\":\"^0.1.5\",\"karma-sourcemap-loader\":\"^0.3.7\",\"karma-webpack\":\"^4.0.0\",\"keypair\":\"^1.0.1\",\"linkinator\":\"^2.0.0\",\"mocha\":\"^7.0.0\",\"mv\":\"^2.1.1\",\"ncp\":\"^2.0.0\",\"nock\":\"^12.0.0\",\"null-loader\":\"^3.0.0\",\"prettier\":\"^1.13.4\",\"puppeteer\":\"^2.0.0\",\"sinon\":\"^9.0.0\",\"tmp\":\"^0.1.0\",\"ts-loader\":\"^6.0.0\",\"typescript\":\"3.6.4\",\"webpack\":\"^4.20.2\",\"webpack-cli\":\"^3.1.1\"},\"engines\":{\"node\":\">=8.10.0\"},\"files\":[\"build/src\",\"!build/src/**/*.map\"],\"homepage\":\"https://github.com/googleapis/google-auth-library-nodejs#readme\",\"keywords\":[\"google\",\"api\",\"google apis\",\"client\",\"client library\"],\"license\":\"Apache-2.0\",\"main\":\"./build/src/index.js\",\"name\":\"google-auth-library\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/googleapis/google-auth-library-nodejs.git\"},\"scripts\":{\"browser-test\":\"karma start\",\"clean\":\"gts clean\",\"compile\":\"tsc -p .\",\"docs\":\"compodoc src/\",\"docs-test\":\"linkinator docs\",\"fix\":\"gts fix && eslint --fix '**/*.js'\",\"license-check\":\"jsgl --local .\",\"lint\":\"gts check && eslint '**/*.js' && jsgl --local .\",\"predocs-test\":\"npm run docs\",\"prelint\":\"cd samples; npm link ../; npm i\",\"prepare\":\"npm run compile\",\"presystem-test\":\"npm run compile\",\"pretest\":\"npm run compile\",\"samples-test\":\"cd samples/ && npm link ../ && npm test && cd ../\",\"system-test\":\"mocha build/system-test --timeout 60000\",\"test\":\"c8 mocha build/test\",\"webpack\":\"webpack\"},\"types\":\"./build/src/index.d.ts\",\"version\":\"5.10.1\"}");
+module.exports = JSON.parse("{\"_args\":[[\"google-auth-library@5.10.1\",\"C:\\\\_Dmitry\\\\_proj\\\\nodejs-speech-kiosk-usercase\"]],\"_from\":\"google-auth-library@5.10.1\",\"_id\":\"google-auth-library@5.10.1\",\"_inBundle\":false,\"_integrity\":\"sha512-rOlaok5vlpV9rSiUu5EpR0vVpc+PhN62oF4RyX/6++DG1VsaulAFEMlDYBLjJDDPI6OcNOCGAKy9UVB/3NIDXg==\",\"_location\":\"/@google-cloud/common/google-auth-library\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"google-auth-library@5.10.1\",\"name\":\"google-auth-library\",\"escapedName\":\"google-auth-library\",\"rawSpec\":\"5.10.1\",\"saveSpec\":null,\"fetchSpec\":\"5.10.1\"},\"_requiredBy\":[\"/@google-cloud/common\"],\"_resolved\":\"https://registry.npmjs.org/google-auth-library/-/google-auth-library-5.10.1.tgz\",\"_spec\":\"5.10.1\",\"_where\":\"C:\\\\_Dmitry\\\\_proj\\\\nodejs-speech-kiosk-usercase\",\"author\":{\"name\":\"Google Inc.\"},\"bugs\":{\"url\":\"https://github.com/googleapis/google-auth-library-nodejs/issues\"},\"dependencies\":{\"arrify\":\"^2.0.0\",\"base64-js\":\"^1.3.0\",\"ecdsa-sig-formatter\":\"^1.0.11\",\"fast-text-encoding\":\"^1.0.0\",\"gaxios\":\"^2.1.0\",\"gcp-metadata\":\"^3.4.0\",\"gtoken\":\"^4.1.0\",\"jws\":\"^4.0.0\",\"lru-cache\":\"^5.0.0\"},\"description\":\"Google APIs Authentication Client Library for Node.js\",\"devDependencies\":{\"@compodoc/compodoc\":\"^1.1.7\",\"@types/base64-js\":\"^1.2.5\",\"@types/chai\":\"^4.1.7\",\"@types/jws\":\"^3.1.0\",\"@types/lru-cache\":\"^5.0.0\",\"@types/mocha\":\"^7.0.0\",\"@types/mv\":\"^2.1.0\",\"@types/ncp\":\"^2.0.1\",\"@types/node\":\"^10.5.1\",\"@types/sinon\":\"^7.0.0\",\"@types/tmp\":\"^0.1.0\",\"assert-rejects\":\"^1.0.0\",\"c8\":\"^7.0.0\",\"chai\":\"^4.2.0\",\"codecov\":\"^3.0.2\",\"eslint\":\"^6.0.0\",\"eslint-config-prettier\":\"^6.0.0\",\"eslint-plugin-node\":\"^11.0.0\",\"eslint-plugin-prettier\":\"^3.0.0\",\"execa\":\"^4.0.0\",\"gts\":\"^1.1.2\",\"is-docker\":\"^2.0.0\",\"js-green-licenses\":\"^1.0.0\",\"karma\":\"^4.0.0\",\"karma-chrome-launcher\":\"^3.0.0\",\"karma-coverage\":\"^2.0.0\",\"karma-firefox-launcher\":\"^1.1.0\",\"karma-mocha\":\"^1.3.0\",\"karma-remap-coverage\":\"^0.1.5\",\"karma-sourcemap-loader\":\"^0.3.7\",\"karma-webpack\":\"^4.0.0\",\"keypair\":\"^1.0.1\",\"linkinator\":\"^2.0.0\",\"mocha\":\"^7.0.0\",\"mv\":\"^2.1.1\",\"ncp\":\"^2.0.0\",\"nock\":\"^12.0.0\",\"null-loader\":\"^3.0.0\",\"prettier\":\"^1.13.4\",\"puppeteer\":\"^2.0.0\",\"sinon\":\"^9.0.0\",\"tmp\":\"^0.1.0\",\"ts-loader\":\"^6.0.0\",\"typescript\":\"3.6.4\",\"webpack\":\"^4.20.2\",\"webpack-cli\":\"^3.1.1\"},\"engines\":{\"node\":\">=8.10.0\"},\"files\":[\"build/src\",\"!build/src/**/*.map\"],\"homepage\":\"https://github.com/googleapis/google-auth-library-nodejs#readme\",\"keywords\":[\"google\",\"api\",\"google apis\",\"client\",\"client library\"],\"license\":\"Apache-2.0\",\"main\":\"./build/src/index.js\",\"name\":\"google-auth-library\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/googleapis/google-auth-library-nodejs.git\"},\"scripts\":{\"browser-test\":\"karma start\",\"clean\":\"gts clean\",\"compile\":\"tsc -p .\",\"docs\":\"compodoc src/\",\"docs-test\":\"linkinator docs\",\"fix\":\"gts fix && eslint --fix '**/*.js'\",\"license-check\":\"jsgl --local .\",\"lint\":\"gts check && eslint '**/*.js' && jsgl --local .\",\"predocs-test\":\"npm run docs\",\"prelint\":\"cd samples; npm link ../; npm i\",\"prepare\":\"npm run compile\",\"presystem-test\":\"npm run compile\",\"pretest\":\"npm run compile\",\"samples-test\":\"cd samples/ && npm link ../ && npm test && cd ../\",\"system-test\":\"mocha build/system-test --timeout 60000\",\"test\":\"c8 mocha build/test\",\"webpack\":\"webpack\"},\"types\":\"./build/src/index.d.ts\",\"version\":\"5.10.1\"}");
 
 /***/ }),
-/* 184 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33972,7 +34288,7 @@ module.exports = getParamBytesForAlg;
 
 
 /***/ }),
-/* 185 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34028,7 +34344,7 @@ exports.AuthClient = AuthClient;
 //# sourceMappingURL=authclient.js.map
 
 /***/ }),
-/* 186 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global module*/
@@ -34112,7 +34428,7 @@ module.exports = SignStream;
 
 
 /***/ }),
-/* 187 */
+/* 189 */
 /***/ (function(module, exports) {
 
 module.exports = function isBuffer(arg) {
@@ -34123,7 +34439,7 @@ module.exports = function isBuffer(arg) {
 }
 
 /***/ }),
-/* 188 */
+/* 190 */
 /***/ (function(module, exports) {
 
 if (typeof Object.create === 'function') {
@@ -34152,7 +34468,7 @@ if (typeof Object.create === 'function') {
 
 
 /***/ }),
-/* 189 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34200,7 +34516,7 @@ bufferEq.restore = function() {
 
 
 /***/ }),
-/* 190 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global module*/
@@ -34326,7 +34642,7 @@ module.exports = VerifyStream;
 
 
 /***/ }),
-/* 191 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34754,12 +35070,12 @@ function Node (value, prev, next, list) {
 
 try {
   // add if support for Symbol.iterator is present
-  __webpack_require__(192)(Yallist)
+  __webpack_require__(194)(Yallist)
 } catch (er) {}
 
 
 /***/ }),
-/* 192 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34774,7 +35090,7 @@ module.exports = function (Yallist) {
 
 
 /***/ }),
-/* 193 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34844,7 +35160,7 @@ exports.IAMAuth = IAMAuth;
 //# sourceMappingURL=iam.js.map
 
 /***/ }),
-/* 194 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34891,8 +35207,8 @@ var __assign = (this && this.__assign) || function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_fetch_1 = __webpack_require__(37);
 var stream_1 = __webpack_require__(5);
-var uuid = __webpack_require__(287);
-var agents_1 = __webpack_require__(195);
+var uuid = __webpack_require__(289);
+var agents_1 = __webpack_require__(197);
 var streamEvents = __webpack_require__(96);
 var RequestError = /** @class */ (function (_super) {
     __extends(RequestError, _super);
@@ -35102,7 +35418,7 @@ teenyRequest.defaults = function (defaults) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 195 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35124,7 +35440,7 @@ teenyRequest.defaults = function (defaults) {
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var http_1 = __webpack_require__(93);
-var https_1 = __webpack_require__(200);
+var https_1 = __webpack_require__(202);
 var pool = new Map();
 /**
  * Returns a custom request Agent if one is found, otherwise returns undefined
@@ -35144,7 +35460,7 @@ function getAgent(uri, reqOpts) {
     if (proxy) {
         // tslint:disable-next-line variable-name
         var Agent = isHttp
-            ? __webpack_require__(201)
+            ? __webpack_require__(203)
             : __webpack_require__(48);
         return new Agent(proxy);
     }
@@ -35164,14 +35480,14 @@ exports.getAgent = getAgent;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),
-/* 196 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer, global, process) {var capability = __webpack_require__(94)
 var inherits = __webpack_require__(4)
 var response = __webpack_require__(95)
 var stream = __webpack_require__(16)
-var toArrayBuffer = __webpack_require__(197)
+var toArrayBuffer = __webpack_require__(199)
 
 var IncomingMessage = response.IncomingMessage
 var rStates = response.readyStates
@@ -35498,7 +35814,7 @@ var unsafeHeaders = [
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1).Buffer, __webpack_require__(2), __webpack_require__(0)))
 
 /***/ }),
-/* 197 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Buffer = __webpack_require__(1).Buffer
@@ -35531,7 +35847,7 @@ module.exports = function (buf) {
 
 
 /***/ }),
-/* 198 */
+/* 200 */
 /***/ (function(module, exports) {
 
 module.exports = extend
@@ -35556,7 +35872,7 @@ function extend() {
 
 
 /***/ }),
-/* 199 */
+/* 201 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -35626,7 +35942,7 @@ module.exports = {
 
 
 /***/ }),
-/* 200 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var http = __webpack_require__(93)
@@ -35663,13 +35979,13 @@ function validateParams (params) {
 
 
 /***/ }),
-/* 201 */
+/* 203 */
 /***/ (function(module, exports) {
 
 
 
 /***/ }),
-/* 202 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35711,7 +36027,7 @@ module.exports = function stubs(obj, method, cfg, stub) {
 
 
 /***/ }),
-/* 203 */
+/* 205 */
 /***/ (function(module, exports) {
 
 // Returns a wrapper function that returns a wrapped callback
@@ -35750,7 +36066,7 @@ function wrappy (fn, cb) {
 
 
 /***/ }),
-/* 204 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35911,12 +36227,12 @@ exports.Service = Service;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),
-/* 205 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var pump = __webpack_require__(206)
+var pump = __webpack_require__(208)
 var inherits = __webpack_require__(4)
-var Duplexify = __webpack_require__(208)
+var Duplexify = __webpack_require__(210)
 
 var toArray = function(args) {
   if (!args.length) return []
@@ -35977,12 +36293,12 @@ module.exports.ctor = define
 
 
 /***/ }),
-/* 206 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {var once = __webpack_require__(98)
 var eos = __webpack_require__(54)
-var fs = __webpack_require__(207) // we only need fs to get the ReadStream and WriteStream prototypes
+var fs = __webpack_require__(209) // we only need fs to get the ReadStream and WriteStream prototypes
 
 var noop = function () {}
 var ancient = /^v?\.0/.test(process.version)
@@ -36066,16 +36382,16 @@ module.exports = pump
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),
-/* 207 */
+/* 209 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 208 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer, process) {var stream = __webpack_require__(209)
+/* WEBPACK VAR INJECTION */(function(Buffer, process) {var stream = __webpack_require__(211)
 var eos = __webpack_require__(54)
 var inherits = __webpack_require__(4)
 var shift = __webpack_require__(99)
@@ -36317,7 +36633,7 @@ module.exports = Duplexify
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1).Buffer, __webpack_require__(0)))
 
 /***/ }),
-/* 209 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(100);
@@ -36326,19 +36642,19 @@ exports.Readable = exports;
 exports.Writable = __webpack_require__(104);
 exports.Duplex = __webpack_require__(22);
 exports.Transform = __webpack_require__(105);
-exports.PassThrough = __webpack_require__(215);
+exports.PassThrough = __webpack_require__(217);
 exports.finished = __webpack_require__(55);
-exports.pipeline = __webpack_require__(216);
+exports.pipeline = __webpack_require__(218);
 
 
 /***/ }),
-/* 210 */
+/* 212 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 211 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36359,7 +36675,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 var _require = __webpack_require__(1),
     Buffer = _require.Buffer;
 
-var _require2 = __webpack_require__(212),
+var _require2 = __webpack_require__(214),
     inspect = _require2.inspect;
 
 var custom = inspect && inspect.custom || 'inspect';
@@ -36554,13 +36870,13 @@ function () {
 }();
 
 /***/ }),
-/* 212 */
+/* 214 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 213 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36774,7 +37090,7 @@ module.exports = createReadableStreamAsyncIterator;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),
-/* 214 */
+/* 216 */
 /***/ (function(module, exports) {
 
 module.exports = function () {
@@ -36783,7 +37099,7 @@ module.exports = function () {
 
 
 /***/ }),
-/* 215 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36828,7 +37144,7 @@ PassThrough.prototype._transform = function (chunk, encoding, cb) {
 };
 
 /***/ }),
-/* 216 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36931,7 +37247,7 @@ function pipeline() {
 module.exports = pipeline;
 
 /***/ }),
-/* 217 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36954,12 +37270,12 @@ module.exports = pipeline;
 // ** https://github.com/googleapis/gapic-generator-typescript **
 // ** All changes to this file may be overwritten. **
 Object.defineProperty(exports, "__esModule", { value: true });
-var speech_client_1 = __webpack_require__(218);
+var speech_client_1 = __webpack_require__(220);
 exports.SpeechClient = speech_client_1.SpeechClient;
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 218 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36984,7 +37300,7 @@ exports.SpeechClient = speech_client_1.SpeechClient;
 Object.defineProperty(exports, "__esModule", { value: true });
 const gax = __webpack_require__(106);
 const path = __webpack_require__(19);
-const gapicConfig = __webpack_require__(271);
+const gapicConfig = __webpack_require__(273);
 const version = __webpack_require__(134).version;
 /**
  *  Service that implements Google Cloud Speech API.
@@ -37264,31 +37580,31 @@ exports.SpeechClient = SpeechClient;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0), "/"))
 
 /***/ }),
-/* 219 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var protobuf = module.exports = __webpack_require__(220);
+var protobuf = module.exports = __webpack_require__(222);
 
 protobuf.build = "full";
 
 // Parser
 protobuf.tokenize         = __webpack_require__(117);
-protobuf.parse            = __webpack_require__(234);
-protobuf.common           = __webpack_require__(235);
+protobuf.parse            = __webpack_require__(236);
+protobuf.common           = __webpack_require__(237);
 
 // Configure parser
 protobuf.Root._configure(protobuf.Type, protobuf.parse, protobuf.common);
 
 
 /***/ }),
-/* 220 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var protobuf = module.exports = __webpack_require__(221);
+var protobuf = module.exports = __webpack_require__(223);
 
 protobuf.build = "light";
 
@@ -37394,7 +37710,7 @@ protobuf.Field._configure(protobuf.Type);
 
 
 /***/ }),
-/* 221 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37411,9 +37727,9 @@ protobuf.build = "minimal";
 
 // Serialization
 protobuf.Writer       = __webpack_require__(56);
-protobuf.BufferWriter = __webpack_require__(228);
+protobuf.BufferWriter = __webpack_require__(230);
 protobuf.Reader       = __webpack_require__(57);
-protobuf.BufferReader = __webpack_require__(229);
+protobuf.BufferReader = __webpack_require__(231);
 
 // Utility
 protobuf.util         = __webpack_require__(9);
@@ -37437,7 +37753,7 @@ configure();
 
 
 /***/ }),
-/* 222 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37583,7 +37899,7 @@ base64.test = function test(string) {
 
 
 /***/ }),
-/* 223 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37666,7 +37982,7 @@ EventEmitter.prototype.emit = function emit(evt) {
 
 
 /***/ }),
-/* 224 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38008,7 +38324,7 @@ function readUintBE(buf, pos) {
 
 
 /***/ }),
-/* 225 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38120,7 +38436,7 @@ utf8.write = function utf8_write(string, buffer, offset) {
 
 
 /***/ }),
-/* 226 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38175,7 +38491,7 @@ function pool(alloc, slice, size) {
 
 
 /***/ }),
-/* 227 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38382,7 +38698,7 @@ LongBits.prototype.length = function length() {
 
 
 /***/ }),
-/* 228 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38474,7 +38790,7 @@ BufferWriter._configure();
 
 
 /***/ }),
-/* 229 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38532,7 +38848,7 @@ BufferReader._configure();
 
 
 /***/ }),
-/* 230 */
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38681,7 +38997,7 @@ Service.prototype.end = function end(endedByRPC) {
 
 
 /***/ }),
-/* 231 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38787,7 +39103,7 @@ codegen.verbose = false;
 
 
 /***/ }),
-/* 232 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38909,7 +39225,7 @@ fetch.xhr = function fetch_xhr(filename, options, callback) {
 
 
 /***/ }),
-/* 233 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38981,7 +39297,7 @@ path.resolve = function resolve(originPath, includePath, alreadyNormalized) {
 
 
 /***/ }),
-/* 234 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39749,7 +40065,7 @@ function parse(source, root, options) {
 
 
 /***/ }),
-/* 235 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40155,7 +40471,7 @@ common.get = function get(file) {
 
 
 /***/ }),
-/* 236 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40198,7 +40514,7 @@ exports.fromParams = fromParams;
 //# sourceMappingURL=routingHeader.js.map
 
 /***/ }),
-/* 237 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40218,7 +40534,7 @@ module.exports.default = AbortController
 
 
 /***/ }),
-/* 238 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40237,13 +40553,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-const googleauth_1 = __webpack_require__(239);
+const googleauth_1 = __webpack_require__(241);
 exports.GoogleAuth = googleauth_1.GoogleAuth;
 var computeclient_1 = __webpack_require__(119);
 exports.Compute = computeclient_1.Compute;
 var envDetect_1 = __webpack_require__(122);
 exports.GCPEnv = envDetect_1.GCPEnv;
-var iam_1 = __webpack_require__(245);
+var iam_1 = __webpack_require__(247);
 exports.IAMAuth = iam_1.IAMAuth;
 var idtokenclient_1 = __webpack_require__(121);
 exports.IdTokenClient = idtokenclient_1.IdTokenClient;
@@ -40265,7 +40581,7 @@ exports.auth = auth;
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 239 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40870,7 +41186,7 @@ GoogleAuth.DefaultTransporter = transporters_1.DefaultTransporter;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),
-/* 240 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40969,7 +41285,7 @@ exports.BrowserCrypto = BrowserCrypto;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),
-/* 241 */
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41023,7 +41339,7 @@ exports.NodeCrypto = NodeCrypto;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1).Buffer))
 
 /***/ }),
-/* 242 */
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41064,13 +41380,13 @@ exports.validate = validate;
 //# sourceMappingURL=options.js.map
 
 /***/ }),
-/* 243 */
+/* 245 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_from\":\"google-auth-library@^5.0.0\",\"_id\":\"google-auth-library@5.10.1\",\"_inBundle\":false,\"_integrity\":\"sha512-rOlaok5vlpV9rSiUu5EpR0vVpc+PhN62oF4RyX/6++DG1VsaulAFEMlDYBLjJDDPI6OcNOCGAKy9UVB/3NIDXg==\",\"_location\":\"/google-gax/google-auth-library\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"range\",\"registry\":true,\"raw\":\"google-auth-library@^5.0.0\",\"name\":\"google-auth-library\",\"escapedName\":\"google-auth-library\",\"rawSpec\":\"^5.0.0\",\"saveSpec\":null,\"fetchSpec\":\"^5.0.0\"},\"_requiredBy\":[\"/google-gax\"],\"_resolved\":\"https://registry.npmjs.org/google-auth-library/-/google-auth-library-5.10.1.tgz\",\"_shasum\":\"504ec75487ad140e68dd577c21affa363c87ddff\",\"_spec\":\"google-auth-library@^5.0.0\",\"_where\":\"C:\\\\_proj\\\\nodejs-speech-kiosk-usercase\\\\node_modules\\\\google-gax\",\"author\":{\"name\":\"Google Inc.\"},\"bugs\":{\"url\":\"https://github.com/googleapis/google-auth-library-nodejs/issues\"},\"bundleDependencies\":false,\"dependencies\":{\"arrify\":\"^2.0.0\",\"base64-js\":\"^1.3.0\",\"ecdsa-sig-formatter\":\"^1.0.11\",\"fast-text-encoding\":\"^1.0.0\",\"gaxios\":\"^2.1.0\",\"gcp-metadata\":\"^3.4.0\",\"gtoken\":\"^4.1.0\",\"jws\":\"^4.0.0\",\"lru-cache\":\"^5.0.0\"},\"deprecated\":false,\"description\":\"Google APIs Authentication Client Library for Node.js\",\"devDependencies\":{\"@compodoc/compodoc\":\"^1.1.7\",\"@types/base64-js\":\"^1.2.5\",\"@types/chai\":\"^4.1.7\",\"@types/jws\":\"^3.1.0\",\"@types/lru-cache\":\"^5.0.0\",\"@types/mocha\":\"^7.0.0\",\"@types/mv\":\"^2.1.0\",\"@types/ncp\":\"^2.0.1\",\"@types/node\":\"^10.5.1\",\"@types/sinon\":\"^7.0.0\",\"@types/tmp\":\"^0.1.0\",\"assert-rejects\":\"^1.0.0\",\"c8\":\"^7.0.0\",\"chai\":\"^4.2.0\",\"codecov\":\"^3.0.2\",\"eslint\":\"^6.0.0\",\"eslint-config-prettier\":\"^6.0.0\",\"eslint-plugin-node\":\"^11.0.0\",\"eslint-plugin-prettier\":\"^3.0.0\",\"execa\":\"^4.0.0\",\"gts\":\"^1.1.2\",\"is-docker\":\"^2.0.0\",\"js-green-licenses\":\"^1.0.0\",\"karma\":\"^4.0.0\",\"karma-chrome-launcher\":\"^3.0.0\",\"karma-coverage\":\"^2.0.0\",\"karma-firefox-launcher\":\"^1.1.0\",\"karma-mocha\":\"^1.3.0\",\"karma-remap-coverage\":\"^0.1.5\",\"karma-sourcemap-loader\":\"^0.3.7\",\"karma-webpack\":\"^4.0.0\",\"keypair\":\"^1.0.1\",\"linkinator\":\"^2.0.0\",\"mocha\":\"^7.0.0\",\"mv\":\"^2.1.1\",\"ncp\":\"^2.0.0\",\"nock\":\"^12.0.0\",\"null-loader\":\"^3.0.0\",\"prettier\":\"^1.13.4\",\"puppeteer\":\"^2.0.0\",\"sinon\":\"^9.0.0\",\"tmp\":\"^0.1.0\",\"ts-loader\":\"^6.0.0\",\"typescript\":\"3.6.4\",\"webpack\":\"^4.20.2\",\"webpack-cli\":\"^3.1.1\"},\"engines\":{\"node\":\">=8.10.0\"},\"files\":[\"build/src\",\"!build/src/**/*.map\"],\"homepage\":\"https://github.com/googleapis/google-auth-library-nodejs#readme\",\"keywords\":[\"google\",\"api\",\"google apis\",\"client\",\"client library\"],\"license\":\"Apache-2.0\",\"main\":\"./build/src/index.js\",\"name\":\"google-auth-library\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/googleapis/google-auth-library-nodejs.git\"},\"scripts\":{\"browser-test\":\"karma start\",\"clean\":\"gts clean\",\"compile\":\"tsc -p .\",\"docs\":\"compodoc src/\",\"docs-test\":\"linkinator docs\",\"fix\":\"gts fix && eslint --fix '**/*.js'\",\"license-check\":\"jsgl --local .\",\"lint\":\"gts check && eslint '**/*.js' && jsgl --local .\",\"predocs-test\":\"npm run docs\",\"prelint\":\"cd samples; npm link ../; npm i\",\"prepare\":\"npm run compile\",\"presystem-test\":\"npm run compile\",\"pretest\":\"npm run compile\",\"samples-test\":\"cd samples/ && npm link ../ && npm test && cd ../\",\"system-test\":\"mocha build/system-test --timeout 60000\",\"test\":\"c8 mocha build/test\",\"webpack\":\"webpack\"},\"types\":\"./build/src/index.d.ts\",\"version\":\"5.10.1\"}");
+module.exports = JSON.parse("{\"_args\":[[\"google-auth-library@5.10.1\",\"C:\\\\_Dmitry\\\\_proj\\\\nodejs-speech-kiosk-usercase\"]],\"_from\":\"google-auth-library@5.10.1\",\"_id\":\"google-auth-library@5.10.1\",\"_inBundle\":false,\"_integrity\":\"sha512-rOlaok5vlpV9rSiUu5EpR0vVpc+PhN62oF4RyX/6++DG1VsaulAFEMlDYBLjJDDPI6OcNOCGAKy9UVB/3NIDXg==\",\"_location\":\"/@google-cloud/speech/google-auth-library\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"google-auth-library@5.10.1\",\"name\":\"google-auth-library\",\"escapedName\":\"google-auth-library\",\"rawSpec\":\"5.10.1\",\"saveSpec\":null,\"fetchSpec\":\"5.10.1\"},\"_requiredBy\":[\"/@google-cloud/speech/google-gax\"],\"_resolved\":\"https://registry.npmjs.org/google-auth-library/-/google-auth-library-5.10.1.tgz\",\"_spec\":\"5.10.1\",\"_where\":\"C:\\\\_Dmitry\\\\_proj\\\\nodejs-speech-kiosk-usercase\",\"author\":{\"name\":\"Google Inc.\"},\"bugs\":{\"url\":\"https://github.com/googleapis/google-auth-library-nodejs/issues\"},\"dependencies\":{\"arrify\":\"^2.0.0\",\"base64-js\":\"^1.3.0\",\"ecdsa-sig-formatter\":\"^1.0.11\",\"fast-text-encoding\":\"^1.0.0\",\"gaxios\":\"^2.1.0\",\"gcp-metadata\":\"^3.4.0\",\"gtoken\":\"^4.1.0\",\"jws\":\"^4.0.0\",\"lru-cache\":\"^5.0.0\"},\"description\":\"Google APIs Authentication Client Library for Node.js\",\"devDependencies\":{\"@compodoc/compodoc\":\"^1.1.7\",\"@types/base64-js\":\"^1.2.5\",\"@types/chai\":\"^4.1.7\",\"@types/jws\":\"^3.1.0\",\"@types/lru-cache\":\"^5.0.0\",\"@types/mocha\":\"^7.0.0\",\"@types/mv\":\"^2.1.0\",\"@types/ncp\":\"^2.0.1\",\"@types/node\":\"^10.5.1\",\"@types/sinon\":\"^7.0.0\",\"@types/tmp\":\"^0.1.0\",\"assert-rejects\":\"^1.0.0\",\"c8\":\"^7.0.0\",\"chai\":\"^4.2.0\",\"codecov\":\"^3.0.2\",\"eslint\":\"^6.0.0\",\"eslint-config-prettier\":\"^6.0.0\",\"eslint-plugin-node\":\"^11.0.0\",\"eslint-plugin-prettier\":\"^3.0.0\",\"execa\":\"^4.0.0\",\"gts\":\"^1.1.2\",\"is-docker\":\"^2.0.0\",\"js-green-licenses\":\"^1.0.0\",\"karma\":\"^4.0.0\",\"karma-chrome-launcher\":\"^3.0.0\",\"karma-coverage\":\"^2.0.0\",\"karma-firefox-launcher\":\"^1.1.0\",\"karma-mocha\":\"^1.3.0\",\"karma-remap-coverage\":\"^0.1.5\",\"karma-sourcemap-loader\":\"^0.3.7\",\"karma-webpack\":\"^4.0.0\",\"keypair\":\"^1.0.1\",\"linkinator\":\"^2.0.0\",\"mocha\":\"^7.0.0\",\"mv\":\"^2.1.1\",\"ncp\":\"^2.0.0\",\"nock\":\"^12.0.0\",\"null-loader\":\"^3.0.0\",\"prettier\":\"^1.13.4\",\"puppeteer\":\"^2.0.0\",\"sinon\":\"^9.0.0\",\"tmp\":\"^0.1.0\",\"ts-loader\":\"^6.0.0\",\"typescript\":\"3.6.4\",\"webpack\":\"^4.20.2\",\"webpack-cli\":\"^3.1.1\"},\"engines\":{\"node\":\">=8.10.0\"},\"files\":[\"build/src\",\"!build/src/**/*.map\"],\"homepage\":\"https://github.com/googleapis/google-auth-library-nodejs#readme\",\"keywords\":[\"google\",\"api\",\"google apis\",\"client\",\"client library\"],\"license\":\"Apache-2.0\",\"main\":\"./build/src/index.js\",\"name\":\"google-auth-library\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/googleapis/google-auth-library-nodejs.git\"},\"scripts\":{\"browser-test\":\"karma start\",\"clean\":\"gts clean\",\"compile\":\"tsc -p .\",\"docs\":\"compodoc src/\",\"docs-test\":\"linkinator docs\",\"fix\":\"gts fix && eslint --fix '**/*.js'\",\"license-check\":\"jsgl --local .\",\"lint\":\"gts check && eslint '**/*.js' && jsgl --local .\",\"predocs-test\":\"npm run docs\",\"prelint\":\"cd samples; npm link ../; npm i\",\"prepare\":\"npm run compile\",\"presystem-test\":\"npm run compile\",\"pretest\":\"npm run compile\",\"samples-test\":\"cd samples/ && npm link ../ && npm test && cd ../\",\"system-test\":\"mocha build/system-test --timeout 60000\",\"test\":\"c8 mocha build/test\",\"webpack\":\"webpack\"},\"types\":\"./build/src/index.d.ts\",\"version\":\"5.10.1\"}");
 
 /***/ }),
-/* 244 */
+/* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41126,7 +41442,7 @@ exports.AuthClient = AuthClient;
 //# sourceMappingURL=authclient.js.map
 
 /***/ }),
-/* 245 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41196,7 +41512,7 @@ exports.IAMAuth = IAMAuth;
 //# sourceMappingURL=iam.js.map
 
 /***/ }),
-/* 246 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41220,7 +41536,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const path = __webpack_require__(19);
 const createApiCall_1 = __webpack_require__(126);
 const descriptor_1 = __webpack_require__(128);
-const configData = __webpack_require__(264);
+const configData = __webpack_require__(266);
 exports.SERVICE_ADDRESS = 'longrunning.googleapis.com';
 const version = __webpack_require__(132).version;
 const DEFAULT_SERVICE_PORT = 443;
@@ -41557,7 +41873,7 @@ class OperationsClientBuilder {
         // tslint:disable-next-line no-any
         let operationsProtos; // loaded protos have any type
         if (gaxGrpc.fallback) {
-            const protoJson = __webpack_require__(265);
+            const protoJson = __webpack_require__(267);
             operationsProtos = gaxGrpc.loadProto(protoJson);
         }
         else {
@@ -41587,7 +41903,7 @@ exports.OperationsClientBuilder = OperationsClientBuilder;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0), "/"))
 
 /***/ }),
-/* 247 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41619,7 +41935,7 @@ exports.createAPICaller = createAPICaller;
 //# sourceMappingURL=apiCaller.js.map
 
 /***/ }),
-/* 248 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41757,7 +42073,7 @@ exports.retryable = retryable;
 //# sourceMappingURL=retries.js.map
 
 /***/ }),
-/* 249 */
+/* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41778,7 +42094,7 @@ exports.retryable = retryable;
  * limitations under the License.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const longRunningApiCaller_1 = __webpack_require__(250);
+const longRunningApiCaller_1 = __webpack_require__(252);
 /**
  * A descriptor for long-running operations.
  */
@@ -41796,7 +42112,7 @@ exports.LongRunningDescriptor = LongRunningDescriptor;
 //# sourceMappingURL=longRunningDescriptor.js.map
 
 /***/ }),
-/* 250 */
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41819,7 +42135,7 @@ exports.LongRunningDescriptor = LongRunningDescriptor;
 Object.defineProperty(exports, "__esModule", { value: true });
 const call_1 = __webpack_require__(41);
 const gax_1 = __webpack_require__(64);
-const longrunning_1 = __webpack_require__(251);
+const longrunning_1 = __webpack_require__(253);
 class LongrunningApiCaller {
     /**
      * Creates an API caller that performs polling on a long running operation.
@@ -41873,7 +42189,7 @@ exports.LongrunningApiCaller = LongrunningApiCaller;
 //# sourceMappingURL=longRunningApiCaller.js.map
 
 /***/ }),
-/* 251 */
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42152,7 +42468,7 @@ exports.operation = operation;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(15).setImmediate))
 
 /***/ }),
-/* 252 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42173,10 +42489,10 @@ exports.operation = operation;
  * limitations under the License.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const ended = __webpack_require__(253);
+const ended = __webpack_require__(255);
 const stream_1 = __webpack_require__(5);
 const normalApiCaller_1 = __webpack_require__(66);
-const pagedApiCaller_1 = __webpack_require__(254);
+const pagedApiCaller_1 = __webpack_require__(256);
 /**
  * A descriptor for methods that support pagination.
  */
@@ -42253,7 +42569,7 @@ exports.PageDescriptor = PageDescriptor;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(15).setImmediate))
 
 /***/ }),
-/* 253 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42273,7 +42589,7 @@ module.exports = function (stream) {
 
 
 /***/ }),
-/* 254 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42296,7 +42612,7 @@ module.exports = function (stream) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const call_1 = __webpack_require__(41);
 const googleError_1 = __webpack_require__(14);
-const resourceCollector_1 = __webpack_require__(255);
+const resourceCollector_1 = __webpack_require__(257);
 class PagedApiCaller {
     /**
      * Creates an API caller that returns a stream to performs page-streaming.
@@ -42419,7 +42735,7 @@ exports.PagedApiCaller = PagedApiCaller;
 //# sourceMappingURL=pagedApiCaller.js.map
 
 /***/ }),
-/* 255 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42492,7 +42808,7 @@ exports.ResourceCollector = ResourceCollector;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(15).setImmediate))
 
 /***/ }),
-/* 256 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42513,7 +42829,7 @@ exports.ResourceCollector = ResourceCollector;
  * limitations under the License.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const streamingApiCaller_1 = __webpack_require__(257);
+const streamingApiCaller_1 = __webpack_require__(259);
 /**
  * A descriptor for streaming calls.
  */
@@ -42535,7 +42851,7 @@ exports.StreamDescriptor = StreamDescriptor;
 //# sourceMappingURL=streamDescriptor.js.map
 
 /***/ }),
-/* 257 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42604,7 +42920,7 @@ exports.StreamingApiCaller = StreamingApiCaller;
 //# sourceMappingURL=streamingApiCaller.js.map
 
 /***/ }),
-/* 258 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42626,8 +42942,8 @@ exports.StreamingApiCaller = StreamingApiCaller;
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const normalApiCaller_1 = __webpack_require__(66);
-const bundleApiCaller_1 = __webpack_require__(259);
-const bundleExecutor_1 = __webpack_require__(260);
+const bundleApiCaller_1 = __webpack_require__(261);
+const bundleExecutor_1 = __webpack_require__(262);
 /**
  * A descriptor for calls that can be bundled into one call.
  */
@@ -42680,7 +42996,7 @@ exports.BundleDescriptor = BundleDescriptor;
 //# sourceMappingURL=bundleDescriptor.js.map
 
 /***/ }),
-/* 259 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42740,7 +43056,7 @@ exports.BundleApiCaller = BundleApiCaller;
 //# sourceMappingURL=bundleApiCaller.js.map
 
 /***/ }),
-/* 260 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42764,8 +43080,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const status_1 = __webpack_require__(25);
 const googleError_1 = __webpack_require__(14);
 const warnings_1 = __webpack_require__(129);
-const bundlingUtils_1 = __webpack_require__(261);
-const task_1 = __webpack_require__(263);
+const bundlingUtils_1 = __webpack_require__(263);
+const task_1 = __webpack_require__(265);
 function noop() { }
 /**
  * BundleExecutor stores several timers for each bundle (calls are bundled based
@@ -42939,7 +43255,7 @@ exports.BundleExecutor = BundleExecutor;
 //# sourceMappingURL=bundleExecutor.js.map
 
 /***/ }),
-/* 261 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42963,7 +43279,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Provides behavior that supports request bundling.
  */
-const at = __webpack_require__(262);
+const at = __webpack_require__(264);
 /**
  * Compute the identifier of the `obj`. The objects of the same ID
  * will be bundled together.
@@ -42997,7 +43313,7 @@ exports.computeBundleId = computeBundleId;
 //# sourceMappingURL=bundlingUtils.js.map
 
 /***/ }),
-/* 262 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -44210,7 +44526,7 @@ module.exports = at;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 263 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44442,19 +44758,19 @@ exports.Task = Task;
 //# sourceMappingURL=task.js.map
 
 /***/ }),
-/* 264 */
+/* 266 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"interfaces\":{\"google.longrunning.Operations\":{\"retry_codes\":{\"idempotent\":[\"DEADLINE_EXCEEDED\",\"UNAVAILABLE\"],\"non_idempotent\":[]},\"retry_params\":{\"default\":{\"initial_retry_delay_millis\":100,\"retry_delay_multiplier\":1.3,\"max_retry_delay_millis\":60000,\"initial_rpc_timeout_millis\":90000,\"rpc_timeout_multiplier\":1,\"max_rpc_timeout_millis\":90000,\"total_timeout_millis\":600000}},\"methods\":{\"GetOperation\":{\"timeout_millis\":60000,\"retry_codes_name\":\"idempotent\",\"retry_params_name\":\"default\"},\"ListOperations\":{\"timeout_millis\":60000,\"retry_codes_name\":\"idempotent\",\"retry_params_name\":\"default\"},\"CancelOperation\":{\"timeout_millis\":60000,\"retry_codes_name\":\"idempotent\",\"retry_params_name\":\"default\"},\"DeleteOperation\":{\"timeout_millis\":60000,\"retry_codes_name\":\"idempotent\",\"retry_params_name\":\"default\"}}}}}");
 
 /***/ }),
-/* 265 */
+/* 267 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"nested\":{\"google\":{\"nested\":{\"longrunning\":{\"options\":{\"cc_enable_arenas\":true,\"csharp_namespace\":\"Google.LongRunning\",\"go_package\":\"google.golang.org/genproto/googleapis/longrunning;longrunning\",\"java_multiple_files\":true,\"java_outer_classname\":\"OperationsProto\",\"java_package\":\"com.google.longrunning\",\"php_namespace\":\"Google\\\\LongRunning\"},\"nested\":{\"operationInfo\":{\"type\":\"google.longrunning.OperationInfo\",\"id\":1049,\"extend\":\"google.protobuf.MethodOptions\"},\"Operations\":{\"methods\":{\"ListOperations\":{\"requestType\":\"ListOperationsRequest\",\"responseType\":\"ListOperationsResponse\",\"options\":{\"(google.api.http).get\":\"/v1/{name=operations}\"}},\"GetOperation\":{\"requestType\":\"GetOperationRequest\",\"responseType\":\"Operation\",\"options\":{\"(google.api.http).get\":\"/v1/{name=operations/**}\"}},\"DeleteOperation\":{\"requestType\":\"DeleteOperationRequest\",\"responseType\":\"google.protobuf.Empty\",\"options\":{\"(google.api.http).delete\":\"/v1/{name=operations/**}\"}},\"CancelOperation\":{\"requestType\":\"CancelOperationRequest\",\"responseType\":\"google.protobuf.Empty\",\"options\":{\"(google.api.http).post\":\"/v1/{name=operations/**}:cancel\",\"(google.api.http).body\":\"*\"}},\"WaitOperation\":{\"requestType\":\"WaitOperationRequest\",\"responseType\":\"Operation\"}}},\"Operation\":{\"oneofs\":{\"result\":{\"oneof\":[\"error\",\"response\"]}},\"fields\":{\"name\":{\"type\":\"string\",\"id\":1},\"metadata\":{\"type\":\"google.protobuf.Any\",\"id\":2},\"done\":{\"type\":\"bool\",\"id\":3},\"error\":{\"type\":\"google.rpc.Status\",\"id\":4},\"response\":{\"type\":\"google.protobuf.Any\",\"id\":5}}},\"GetOperationRequest\":{\"fields\":{\"name\":{\"type\":\"string\",\"id\":1}}},\"ListOperationsRequest\":{\"fields\":{\"name\":{\"type\":\"string\",\"id\":4},\"filter\":{\"type\":\"string\",\"id\":1},\"pageSize\":{\"type\":\"int32\",\"id\":2},\"pageToken\":{\"type\":\"string\",\"id\":3}}},\"ListOperationsResponse\":{\"fields\":{\"operations\":{\"rule\":\"repeated\",\"type\":\"Operation\",\"id\":1},\"nextPageToken\":{\"type\":\"string\",\"id\":2}}},\"CancelOperationRequest\":{\"fields\":{\"name\":{\"type\":\"string\",\"id\":1}}},\"DeleteOperationRequest\":{\"fields\":{\"name\":{\"type\":\"string\",\"id\":1}}},\"WaitOperationRequest\":{\"fields\":{\"name\":{\"type\":\"string\",\"id\":1},\"timeout\":{\"type\":\"google.protobuf.Duration\",\"id\":2}}},\"OperationInfo\":{\"fields\":{\"responseType\":{\"type\":\"string\",\"id\":1},\"metadataType\":{\"type\":\"string\",\"id\":2}}}}},\"api\":{\"options\":{\"go_package\":\"google.golang.org/genproto/googleapis/api/annotations;annotations\",\"java_multiple_files\":true,\"java_outer_classname\":\"HttpProto\",\"java_package\":\"com.google.api\",\"objc_class_prefix\":\"GAPI\",\"cc_enable_arenas\":true},\"nested\":{\"http\":{\"type\":\"HttpRule\",\"id\":72295728,\"extend\":\"google.protobuf.MethodOptions\"},\"Http\":{\"fields\":{\"rules\":{\"rule\":\"repeated\",\"type\":\"HttpRule\",\"id\":1},\"fullyDecodeReservedExpansion\":{\"type\":\"bool\",\"id\":2}}},\"HttpRule\":{\"oneofs\":{\"pattern\":{\"oneof\":[\"get\",\"put\",\"post\",\"delete\",\"patch\",\"custom\"]}},\"fields\":{\"selector\":{\"type\":\"string\",\"id\":1},\"get\":{\"type\":\"string\",\"id\":2},\"put\":{\"type\":\"string\",\"id\":3},\"post\":{\"type\":\"string\",\"id\":4},\"delete\":{\"type\":\"string\",\"id\":5},\"patch\":{\"type\":\"string\",\"id\":6},\"custom\":{\"type\":\"CustomHttpPattern\",\"id\":8},\"body\":{\"type\":\"string\",\"id\":7},\"responseBody\":{\"type\":\"string\",\"id\":12},\"additionalBindings\":{\"rule\":\"repeated\",\"type\":\"HttpRule\",\"id\":11}}},\"CustomHttpPattern\":{\"fields\":{\"kind\":{\"type\":\"string\",\"id\":1},\"path\":{\"type\":\"string\",\"id\":2}}}}},\"protobuf\":{\"options\":{\"go_package\":\"github.com/golang/protobuf/protoc-gen-go/descriptor;descriptor\",\"java_package\":\"com.google.protobuf\",\"java_outer_classname\":\"DescriptorProtos\",\"csharp_namespace\":\"Google.Protobuf.Reflection\",\"objc_class_prefix\":\"GPB\",\"cc_enable_arenas\":true,\"optimize_for\":\"SPEED\"},\"nested\":{\"FileDescriptorSet\":{\"fields\":{\"file\":{\"rule\":\"repeated\",\"type\":\"FileDescriptorProto\",\"id\":1}}},\"FileDescriptorProto\":{\"fields\":{\"name\":{\"type\":\"string\",\"id\":1},\"package\":{\"type\":\"string\",\"id\":2},\"dependency\":{\"rule\":\"repeated\",\"type\":\"string\",\"id\":3},\"publicDependency\":{\"rule\":\"repeated\",\"type\":\"int32\",\"id\":10,\"options\":{\"packed\":false}},\"weakDependency\":{\"rule\":\"repeated\",\"type\":\"int32\",\"id\":11,\"options\":{\"packed\":false}},\"messageType\":{\"rule\":\"repeated\",\"type\":\"DescriptorProto\",\"id\":4},\"enumType\":{\"rule\":\"repeated\",\"type\":\"EnumDescriptorProto\",\"id\":5},\"service\":{\"rule\":\"repeated\",\"type\":\"ServiceDescriptorProto\",\"id\":6},\"extension\":{\"rule\":\"repeated\",\"type\":\"FieldDescriptorProto\",\"id\":7},\"options\":{\"type\":\"FileOptions\",\"id\":8},\"sourceCodeInfo\":{\"type\":\"SourceCodeInfo\",\"id\":9},\"syntax\":{\"type\":\"string\",\"id\":12}}},\"DescriptorProto\":{\"fields\":{\"name\":{\"type\":\"string\",\"id\":1},\"field\":{\"rule\":\"repeated\",\"type\":\"FieldDescriptorProto\",\"id\":2},\"extension\":{\"rule\":\"repeated\",\"type\":\"FieldDescriptorProto\",\"id\":6},\"nestedType\":{\"rule\":\"repeated\",\"type\":\"DescriptorProto\",\"id\":3},\"enumType\":{\"rule\":\"repeated\",\"type\":\"EnumDescriptorProto\",\"id\":4},\"extensionRange\":{\"rule\":\"repeated\",\"type\":\"ExtensionRange\",\"id\":5},\"oneofDecl\":{\"rule\":\"repeated\",\"type\":\"OneofDescriptorProto\",\"id\":8},\"options\":{\"type\":\"MessageOptions\",\"id\":7},\"reservedRange\":{\"rule\":\"repeated\",\"type\":\"ReservedRange\",\"id\":9},\"reservedName\":{\"rule\":\"repeated\",\"type\":\"string\",\"id\":10}},\"nested\":{\"ExtensionRange\":{\"fields\":{\"start\":{\"type\":\"int32\",\"id\":1},\"end\":{\"type\":\"int32\",\"id\":2},\"options\":{\"type\":\"ExtensionRangeOptions\",\"id\":3}}},\"ReservedRange\":{\"fields\":{\"start\":{\"type\":\"int32\",\"id\":1},\"end\":{\"type\":\"int32\",\"id\":2}}}}},\"ExtensionRangeOptions\":{\"fields\":{\"uninterpretedOption\":{\"rule\":\"repeated\",\"type\":\"UninterpretedOption\",\"id\":999}},\"extensions\":[[1000,536870911]]},\"FieldDescriptorProto\":{\"fields\":{\"name\":{\"type\":\"string\",\"id\":1},\"number\":{\"type\":\"int32\",\"id\":3},\"label\":{\"type\":\"Label\",\"id\":4},\"type\":{\"type\":\"Type\",\"id\":5},\"typeName\":{\"type\":\"string\",\"id\":6},\"extendee\":{\"type\":\"string\",\"id\":2},\"defaultValue\":{\"type\":\"string\",\"id\":7},\"oneofIndex\":{\"type\":\"int32\",\"id\":9},\"jsonName\":{\"type\":\"string\",\"id\":10},\"options\":{\"type\":\"FieldOptions\",\"id\":8}},\"nested\":{\"Type\":{\"values\":{\"TYPE_DOUBLE\":1,\"TYPE_FLOAT\":2,\"TYPE_INT64\":3,\"TYPE_UINT64\":4,\"TYPE_INT32\":5,\"TYPE_FIXED64\":6,\"TYPE_FIXED32\":7,\"TYPE_BOOL\":8,\"TYPE_STRING\":9,\"TYPE_GROUP\":10,\"TYPE_MESSAGE\":11,\"TYPE_BYTES\":12,\"TYPE_UINT32\":13,\"TYPE_ENUM\":14,\"TYPE_SFIXED32\":15,\"TYPE_SFIXED64\":16,\"TYPE_SINT32\":17,\"TYPE_SINT64\":18}},\"Label\":{\"values\":{\"LABEL_OPTIONAL\":1,\"LABEL_REQUIRED\":2,\"LABEL_REPEATED\":3}}}},\"OneofDescriptorProto\":{\"fields\":{\"name\":{\"type\":\"string\",\"id\":1},\"options\":{\"type\":\"OneofOptions\",\"id\":2}}},\"EnumDescriptorProto\":{\"fields\":{\"name\":{\"type\":\"string\",\"id\":1},\"value\":{\"rule\":\"repeated\",\"type\":\"EnumValueDescriptorProto\",\"id\":2},\"options\":{\"type\":\"EnumOptions\",\"id\":3},\"reservedRange\":{\"rule\":\"repeated\",\"type\":\"EnumReservedRange\",\"id\":4},\"reservedName\":{\"rule\":\"repeated\",\"type\":\"string\",\"id\":5}},\"nested\":{\"EnumReservedRange\":{\"fields\":{\"start\":{\"type\":\"int32\",\"id\":1},\"end\":{\"type\":\"int32\",\"id\":2}}}}},\"EnumValueDescriptorProto\":{\"fields\":{\"name\":{\"type\":\"string\",\"id\":1},\"number\":{\"type\":\"int32\",\"id\":2},\"options\":{\"type\":\"EnumValueOptions\",\"id\":3}}},\"ServiceDescriptorProto\":{\"fields\":{\"name\":{\"type\":\"string\",\"id\":1},\"method\":{\"rule\":\"repeated\",\"type\":\"MethodDescriptorProto\",\"id\":2},\"options\":{\"type\":\"ServiceOptions\",\"id\":3}}},\"MethodDescriptorProto\":{\"fields\":{\"name\":{\"type\":\"string\",\"id\":1},\"inputType\":{\"type\":\"string\",\"id\":2},\"outputType\":{\"type\":\"string\",\"id\":3},\"options\":{\"type\":\"MethodOptions\",\"id\":4},\"clientStreaming\":{\"type\":\"bool\",\"id\":5,\"options\":{\"default\":false}},\"serverStreaming\":{\"type\":\"bool\",\"id\":6,\"options\":{\"default\":false}}}},\"FileOptions\":{\"fields\":{\"javaPackage\":{\"type\":\"string\",\"id\":1},\"javaOuterClassname\":{\"type\":\"string\",\"id\":8},\"javaMultipleFiles\":{\"type\":\"bool\",\"id\":10,\"options\":{\"default\":false}},\"javaGenerateEqualsAndHash\":{\"type\":\"bool\",\"id\":20,\"options\":{\"deprecated\":true}},\"javaStringCheckUtf8\":{\"type\":\"bool\",\"id\":27,\"options\":{\"default\":false}},\"optimizeFor\":{\"type\":\"OptimizeMode\",\"id\":9,\"options\":{\"default\":\"SPEED\"}},\"goPackage\":{\"type\":\"string\",\"id\":11},\"ccGenericServices\":{\"type\":\"bool\",\"id\":16,\"options\":{\"default\":false}},\"javaGenericServices\":{\"type\":\"bool\",\"id\":17,\"options\":{\"default\":false}},\"pyGenericServices\":{\"type\":\"bool\",\"id\":18,\"options\":{\"default\":false}},\"phpGenericServices\":{\"type\":\"bool\",\"id\":42,\"options\":{\"default\":false}},\"deprecated\":{\"type\":\"bool\",\"id\":23,\"options\":{\"default\":false}},\"ccEnableArenas\":{\"type\":\"bool\",\"id\":31,\"options\":{\"default\":false}},\"objcClassPrefix\":{\"type\":\"string\",\"id\":36},\"csharpNamespace\":{\"type\":\"string\",\"id\":37},\"swiftPrefix\":{\"type\":\"string\",\"id\":39},\"phpClassPrefix\":{\"type\":\"string\",\"id\":40},\"phpNamespace\":{\"type\":\"string\",\"id\":41},\"phpMetadataNamespace\":{\"type\":\"string\",\"id\":44},\"rubyPackage\":{\"type\":\"string\",\"id\":45},\"uninterpretedOption\":{\"rule\":\"repeated\",\"type\":\"UninterpretedOption\",\"id\":999}},\"extensions\":[[1000,536870911]],\"reserved\":[[38,38]],\"nested\":{\"OptimizeMode\":{\"values\":{\"SPEED\":1,\"CODE_SIZE\":2,\"LITE_RUNTIME\":3}}}},\"MessageOptions\":{\"fields\":{\"messageSetWireFormat\":{\"type\":\"bool\",\"id\":1,\"options\":{\"default\":false}},\"noStandardDescriptorAccessor\":{\"type\":\"bool\",\"id\":2,\"options\":{\"default\":false}},\"deprecated\":{\"type\":\"bool\",\"id\":3,\"options\":{\"default\":false}},\"mapEntry\":{\"type\":\"bool\",\"id\":7},\"uninterpretedOption\":{\"rule\":\"repeated\",\"type\":\"UninterpretedOption\",\"id\":999}},\"extensions\":[[1000,536870911]],\"reserved\":[[8,8],[9,9]]},\"FieldOptions\":{\"fields\":{\"ctype\":{\"type\":\"CType\",\"id\":1,\"options\":{\"default\":\"STRING\"}},\"packed\":{\"type\":\"bool\",\"id\":2},\"jstype\":{\"type\":\"JSType\",\"id\":6,\"options\":{\"default\":\"JS_NORMAL\"}},\"lazy\":{\"type\":\"bool\",\"id\":5,\"options\":{\"default\":false}},\"deprecated\":{\"type\":\"bool\",\"id\":3,\"options\":{\"default\":false}},\"weak\":{\"type\":\"bool\",\"id\":10,\"options\":{\"default\":false}},\"uninterpretedOption\":{\"rule\":\"repeated\",\"type\":\"UninterpretedOption\",\"id\":999}},\"extensions\":[[1000,536870911]],\"reserved\":[[4,4]],\"nested\":{\"CType\":{\"values\":{\"STRING\":0,\"CORD\":1,\"STRING_PIECE\":2}},\"JSType\":{\"values\":{\"JS_NORMAL\":0,\"JS_STRING\":1,\"JS_NUMBER\":2}}}},\"OneofOptions\":{\"fields\":{\"uninterpretedOption\":{\"rule\":\"repeated\",\"type\":\"UninterpretedOption\",\"id\":999}},\"extensions\":[[1000,536870911]]},\"EnumOptions\":{\"fields\":{\"allowAlias\":{\"type\":\"bool\",\"id\":2},\"deprecated\":{\"type\":\"bool\",\"id\":3,\"options\":{\"default\":false}},\"uninterpretedOption\":{\"rule\":\"repeated\",\"type\":\"UninterpretedOption\",\"id\":999}},\"extensions\":[[1000,536870911]],\"reserved\":[[5,5]]},\"EnumValueOptions\":{\"fields\":{\"deprecated\":{\"type\":\"bool\",\"id\":1,\"options\":{\"default\":false}},\"uninterpretedOption\":{\"rule\":\"repeated\",\"type\":\"UninterpretedOption\",\"id\":999}},\"extensions\":[[1000,536870911]]},\"ServiceOptions\":{\"fields\":{\"deprecated\":{\"type\":\"bool\",\"id\":33,\"options\":{\"default\":false}},\"uninterpretedOption\":{\"rule\":\"repeated\",\"type\":\"UninterpretedOption\",\"id\":999}},\"extensions\":[[1000,536870911]]},\"MethodOptions\":{\"fields\":{\"deprecated\":{\"type\":\"bool\",\"id\":33,\"options\":{\"default\":false}},\"idempotencyLevel\":{\"type\":\"IdempotencyLevel\",\"id\":34,\"options\":{\"default\":\"IDEMPOTENCY_UNKNOWN\"}},\"uninterpretedOption\":{\"rule\":\"repeated\",\"type\":\"UninterpretedOption\",\"id\":999}},\"extensions\":[[1000,536870911]],\"nested\":{\"IdempotencyLevel\":{\"values\":{\"IDEMPOTENCY_UNKNOWN\":0,\"NO_SIDE_EFFECTS\":1,\"IDEMPOTENT\":2}}}},\"UninterpretedOption\":{\"fields\":{\"name\":{\"rule\":\"repeated\",\"type\":\"NamePart\",\"id\":2},\"identifierValue\":{\"type\":\"string\",\"id\":3},\"positiveIntValue\":{\"type\":\"uint64\",\"id\":4},\"negativeIntValue\":{\"type\":\"int64\",\"id\":5},\"doubleValue\":{\"type\":\"double\",\"id\":6},\"stringValue\":{\"type\":\"bytes\",\"id\":7},\"aggregateValue\":{\"type\":\"string\",\"id\":8}},\"nested\":{\"NamePart\":{\"fields\":{\"namePart\":{\"rule\":\"required\",\"type\":\"string\",\"id\":1},\"isExtension\":{\"rule\":\"required\",\"type\":\"bool\",\"id\":2}}}}},\"SourceCodeInfo\":{\"fields\":{\"location\":{\"rule\":\"repeated\",\"type\":\"Location\",\"id\":1}},\"nested\":{\"Location\":{\"fields\":{\"path\":{\"rule\":\"repeated\",\"type\":\"int32\",\"id\":1},\"span\":{\"rule\":\"repeated\",\"type\":\"int32\",\"id\":2},\"leadingComments\":{\"type\":\"string\",\"id\":3},\"trailingComments\":{\"type\":\"string\",\"id\":4},\"leadingDetachedComments\":{\"rule\":\"repeated\",\"type\":\"string\",\"id\":6}}}}},\"GeneratedCodeInfo\":{\"fields\":{\"annotation\":{\"rule\":\"repeated\",\"type\":\"Annotation\",\"id\":1}},\"nested\":{\"Annotation\":{\"fields\":{\"path\":{\"rule\":\"repeated\",\"type\":\"int32\",\"id\":1},\"sourceFile\":{\"type\":\"string\",\"id\":2},\"begin\":{\"type\":\"int32\",\"id\":3},\"end\":{\"type\":\"int32\",\"id\":4}}}}},\"Any\":{\"fields\":{\"type_url\":{\"type\":\"string\",\"id\":1},\"value\":{\"type\":\"bytes\",\"id\":2}}},\"Duration\":{\"fields\":{\"seconds\":{\"type\":\"int64\",\"id\":1},\"nanos\":{\"type\":\"int32\",\"id\":2}}},\"Empty\":{\"fields\":{}}}},\"rpc\":{\"options\":{\"go_package\":\"google.golang.org/genproto/googleapis/rpc/status;status\",\"java_multiple_files\":true,\"java_outer_classname\":\"StatusProto\",\"java_package\":\"com.google.rpc\",\"objc_class_prefix\":\"RPC\"},\"nested\":{\"Status\":{\"fields\":{\"code\":{\"type\":\"int32\",\"id\":1},\"message\":{\"type\":\"string\",\"id\":2},\"details\":{\"rule\":\"repeated\",\"type\":\"google.protobuf.Any\",\"id\":3}}}}}}}}}");
 
 /***/ }),
-/* 266 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44478,7 +44794,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const protobuf = __webpack_require__(107);
 class FallbackErrorDecoder {
     constructor() {
-        const errorProtoJson = __webpack_require__(267);
+        const errorProtoJson = __webpack_require__(269);
         this.root = protobuf.Root.fromJSON(errorProtoJson);
         this.anyType = this.root.lookupType('google.protobuf.Any');
         this.statusType = this.root.lookupType('google.rpc.Status');
@@ -44513,13 +44829,13 @@ exports.FallbackErrorDecoder = FallbackErrorDecoder;
 //# sourceMappingURL=fallbackError.js.map
 
 /***/ }),
-/* 267 */
+/* 269 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"nested\":{\"google\":{\"nested\":{\"protobuf\":{\"nested\":{\"Any\":{\"fields\":{\"type_url\":{\"type\":\"string\",\"id\":1},\"value\":{\"type\":\"bytes\",\"id\":2}}},\"Duration\":{\"fields\":{\"seconds\":{\"type\":\"int64\",\"id\":1},\"nanos\":{\"type\":\"int32\",\"id\":2}}}}},\"rpc\":{\"options\":{\"go_package\":\"google.golang.org/genproto/googleapis/rpc/errdetails;errdetails\",\"java_multiple_files\":true,\"java_outer_classname\":\"ErrorDetailsProto\",\"java_package\":\"com.google.rpc\",\"objc_class_prefix\":\"RPC\"},\"nested\":{\"Status\":{\"fields\":{\"code\":{\"type\":\"int32\",\"id\":1},\"message\":{\"type\":\"string\",\"id\":2},\"details\":{\"rule\":\"repeated\",\"type\":\"google.protobuf.Any\",\"id\":3}}},\"RetryInfo\":{\"fields\":{\"retryDelay\":{\"type\":\"google.protobuf.Duration\",\"id\":1}}},\"DebugInfo\":{\"fields\":{\"stackEntries\":{\"rule\":\"repeated\",\"type\":\"string\",\"id\":1},\"detail\":{\"type\":\"string\",\"id\":2}}},\"QuotaFailure\":{\"fields\":{\"violations\":{\"rule\":\"repeated\",\"type\":\"Violation\",\"id\":1}},\"nested\":{\"Violation\":{\"fields\":{\"subject\":{\"type\":\"string\",\"id\":1},\"description\":{\"type\":\"string\",\"id\":2}}}}},\"PreconditionFailure\":{\"fields\":{\"violations\":{\"rule\":\"repeated\",\"type\":\"Violation\",\"id\":1}},\"nested\":{\"Violation\":{\"fields\":{\"type\":{\"type\":\"string\",\"id\":1},\"subject\":{\"type\":\"string\",\"id\":2},\"description\":{\"type\":\"string\",\"id\":3}}}}},\"BadRequest\":{\"fields\":{\"fieldViolations\":{\"rule\":\"repeated\",\"type\":\"FieldViolation\",\"id\":1}},\"nested\":{\"FieldViolation\":{\"fields\":{\"field\":{\"type\":\"string\",\"id\":1},\"description\":{\"type\":\"string\",\"id\":2}}}}},\"RequestInfo\":{\"fields\":{\"requestId\":{\"type\":\"string\",\"id\":1},\"servingData\":{\"type\":\"string\",\"id\":2}}},\"ResourceInfo\":{\"fields\":{\"resourceType\":{\"type\":\"string\",\"id\":1},\"resourceName\":{\"type\":\"string\",\"id\":2},\"owner\":{\"type\":\"string\",\"id\":3},\"description\":{\"type\":\"string\",\"id\":4}}},\"Help\":{\"fields\":{\"links\":{\"rule\":\"repeated\",\"type\":\"Link\",\"id\":1}},\"nested\":{\"Link\":{\"fields\":{\"description\":{\"type\":\"string\",\"id\":1},\"url\":{\"type\":\"string\",\"id\":2}}}}},\"LocalizedMessage\":{\"fields\":{\"locale\":{\"type\":\"string\",\"id\":1},\"message\":{\"type\":\"string\",\"id\":2}}}}}}}}}");
 
 /***/ }),
-/* 268 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44543,10 +44859,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * Path template utility.
  */
-const has = __webpack_require__(269);
+const has = __webpack_require__(271);
 const util = __webpack_require__(12);
 const extras = __webpack_require__(133);
-const parser = __webpack_require__(270);
+const parser = __webpack_require__(272);
 class PathTemplate {
     /**
      * @param {String} data the of the template
@@ -44684,7 +45000,7 @@ function formatSegments(segments) {
 //# sourceMappingURL=pathTemplate.js.map
 
 /***/ }),
-/* 269 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -45780,7 +46096,7 @@ module.exports = has;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 270 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -46459,13 +46775,13 @@ module.exports = (() => {
 
 
 /***/ }),
-/* 271 */
+/* 273 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"interfaces\":{\"google.cloud.speech.v1p1beta1.Speech\":{\"retry_codes\":{\"non_idempotent\":[],\"idempotent\":[\"DEADLINE_EXCEEDED\",\"UNAVAILABLE\"]},\"retry_params\":{\"default\":{\"initial_retry_delay_millis\":100,\"retry_delay_multiplier\":1.3,\"max_retry_delay_millis\":60000,\"initial_rpc_timeout_millis\":60000,\"rpc_timeout_multiplier\":1,\"max_rpc_timeout_millis\":60000,\"total_timeout_millis\":600000}},\"methods\":{\"Recognize\":{\"timeout_millis\":5000000,\"retry_codes_name\":\"idempotent\",\"retry_params_name\":\"default\"},\"LongRunningRecognize\":{\"timeout_millis\":5000000,\"retry_codes_name\":\"non_idempotent\",\"retry_params_name\":\"default\"},\"StreamingRecognize\":{\"timeout_millis\":5000000,\"retry_codes_name\":\"idempotent\",\"retry_params_name\":\"default\"}}}}}");
 
 /***/ }),
-/* 272 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46488,12 +46804,12 @@ module.exports = JSON.parse("{\"interfaces\":{\"google.cloud.speech.v1p1beta1.Sp
 // ** https://github.com/googleapis/gapic-generator-typescript **
 // ** All changes to this file may be overwritten. **
 Object.defineProperty(exports, "__esModule", { value: true });
-var speech_client_1 = __webpack_require__(273);
+var speech_client_1 = __webpack_require__(275);
 exports.SpeechClient = speech_client_1.SpeechClient;
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 273 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46518,7 +46834,7 @@ exports.SpeechClient = speech_client_1.SpeechClient;
 Object.defineProperty(exports, "__esModule", { value: true });
 const gax = __webpack_require__(106);
 const path = __webpack_require__(19);
-const gapicConfig = __webpack_require__(274);
+const gapicConfig = __webpack_require__(276);
 const version = __webpack_require__(134).version;
 /**
  *  Service that implements Google Cloud Speech API.
@@ -46798,13 +47114,13 @@ exports.SpeechClient = SpeechClient;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0), "/"))
 
 /***/ }),
-/* 274 */
+/* 276 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"interfaces\":{\"google.cloud.speech.v1.Speech\":{\"retry_codes\":{\"non_idempotent\":[],\"idempotent\":[\"DEADLINE_EXCEEDED\",\"UNAVAILABLE\"]},\"retry_params\":{\"default\":{\"initial_retry_delay_millis\":100,\"retry_delay_multiplier\":1.3,\"max_retry_delay_millis\":60000,\"initial_rpc_timeout_millis\":60000,\"rpc_timeout_multiplier\":1,\"max_rpc_timeout_millis\":60000,\"total_timeout_millis\":600000}},\"methods\":{\"Recognize\":{\"timeout_millis\":5000000,\"retry_codes_name\":\"idempotent\",\"retry_params_name\":\"default\"},\"LongRunningRecognize\":{\"timeout_millis\":5000000,\"retry_codes_name\":\"non_idempotent\",\"retry_params_name\":\"default\"},\"StreamingRecognize\":{\"timeout_millis\":5000000,\"retry_codes_name\":\"idempotent\",\"retry_params_name\":\"default\"}}}}}");
 
 /***/ }),
-/* 275 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46823,13 +47139,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-const googleauth_1 = __webpack_require__(276);
+const googleauth_1 = __webpack_require__(278);
 exports.GoogleAuth = googleauth_1.GoogleAuth;
 var computeclient_1 = __webpack_require__(138);
 exports.Compute = computeclient_1.Compute;
 var envDetect_1 = __webpack_require__(141);
 exports.GCPEnv = envDetect_1.GCPEnv;
-var iam_1 = __webpack_require__(285);
+var iam_1 = __webpack_require__(287);
 exports.IAMAuth = iam_1.IAMAuth;
 var idtokenclient_1 = __webpack_require__(140);
 exports.IdTokenClient = idtokenclient_1.IdTokenClient;
@@ -46851,7 +47167,7 @@ exports.auth = auth;
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 276 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47441,7 +47757,7 @@ GoogleAuth.DefaultTransporter = transporters_1.DefaultTransporter;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),
-/* 277 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47468,7 +47784,7 @@ const querystring_1 = __importDefault(__webpack_require__(10));
 const is_stream_1 = __importDefault(__webpack_require__(76));
 const url_1 = __importDefault(__webpack_require__(38));
 const common_1 = __webpack_require__(136);
-const retry_1 = __webpack_require__(278);
+const retry_1 = __webpack_require__(280);
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable node/no-unsupported-features/node-builtins */
 const URL = hasURL() ? window.URL : url_1.default.URL;
@@ -47675,7 +47991,7 @@ exports.Gaxios = Gaxios;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),
-/* 278 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47813,7 +48129,7 @@ function getConfig(err) {
 //# sourceMappingURL=retry.js.map
 
 /***/ }),
-/* 279 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47919,7 +48235,7 @@ exports.BrowserCrypto = BrowserCrypto;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),
-/* 280 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47970,7 +48286,7 @@ exports.NodeCrypto = NodeCrypto;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1).Buffer))
 
 /***/ }),
-/* 281 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48011,13 +48327,13 @@ exports.validate = validate;
 //# sourceMappingURL=options.js.map
 
 /***/ }),
-/* 282 */
+/* 284 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_from\":\"google-auth-library@6.0.0\",\"_id\":\"google-auth-library@6.0.0\",\"_inBundle\":false,\"_integrity\":\"sha512-uLydy1t6SHN/EvYUJrtN3GCHFrnJ0c8HJjOxXiGjoTuYHIoCUT3jVxnzmjHwVnSdkfE9Akasm2rM6qG1COTXfQ==\",\"_location\":\"/google-auth-library\",\"_phantomChildren\":{\"abort-controller\":\"3.0.0\",\"extend\":\"3.0.2\",\"https-proxy-agent\":\"5.0.0\",\"is-stream\":\"2.0.0\",\"json-bigint\":\"0.3.0\",\"jws\":\"4.0.0\",\"mime\":\"2.4.4\",\"node-fetch\":\"2.6.0\",\"node-forge\":\"0.9.1\"},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"google-auth-library@6.0.0\",\"name\":\"google-auth-library\",\"escapedName\":\"google-auth-library\",\"rawSpec\":\"6.0.0\",\"saveSpec\":null,\"fetchSpec\":\"6.0.0\"},\"_requiredBy\":[\"/\"],\"_resolved\":\"https://registry.npmjs.org/google-auth-library/-/google-auth-library-6.0.0.tgz\",\"_shasum\":\"f92576e9e920803634c258b25f091604c1379722\",\"_spec\":\"google-auth-library@6.0.0\",\"_where\":\"C:\\\\_proj\\\\nodejs-speech-kiosk-usercase\",\"author\":{\"name\":\"Google Inc.\"},\"bugs\":{\"url\":\"https://github.com/googleapis/google-auth-library-nodejs/issues\"},\"bundleDependencies\":false,\"dependencies\":{\"arrify\":\"^2.0.0\",\"base64-js\":\"^1.3.0\",\"ecdsa-sig-formatter\":\"^1.0.11\",\"fast-text-encoding\":\"^1.0.0\",\"gaxios\":\"^3.0.0\",\"gcp-metadata\":\"^4.0.0\",\"gtoken\":\"^5.0.0\",\"jws\":\"^4.0.0\",\"lru-cache\":\"^5.0.0\"},\"deprecated\":false,\"description\":\"Google APIs Authentication Client Library for Node.js\",\"devDependencies\":{\"@compodoc/compodoc\":\"^1.1.7\",\"@types/base64-js\":\"^1.2.5\",\"@types/chai\":\"^4.1.7\",\"@types/jws\":\"^3.1.0\",\"@types/lru-cache\":\"^5.0.0\",\"@types/mocha\":\"^7.0.0\",\"@types/mv\":\"^2.1.0\",\"@types/ncp\":\"^2.0.1\",\"@types/node\":\"^10.5.1\",\"@types/sinon\":\"^7.0.0\",\"@types/tmp\":\"^0.1.0\",\"assert-rejects\":\"^1.0.0\",\"c8\":\"^7.0.0\",\"chai\":\"^4.2.0\",\"codecov\":\"^3.0.2\",\"execa\":\"^4.0.0\",\"gts\":\"^2.0.0-alpha.8\",\"is-docker\":\"^2.0.0\",\"karma\":\"^4.0.0\",\"karma-chrome-launcher\":\"^3.0.0\",\"karma-coverage\":\"^2.0.0\",\"karma-firefox-launcher\":\"^1.1.0\",\"karma-mocha\":\"^1.3.0\",\"karma-remap-coverage\":\"^0.1.5\",\"karma-sourcemap-loader\":\"^0.3.7\",\"karma-webpack\":\"^4.0.0\",\"keypair\":\"^1.0.1\",\"linkinator\":\"^2.0.0\",\"mocha\":\"^7.0.0\",\"mv\":\"^2.1.1\",\"ncp\":\"^2.0.0\",\"nock\":\"^12.0.0\",\"null-loader\":\"^3.0.0\",\"puppeteer\":\"^2.0.0\",\"sinon\":\"^9.0.0\",\"tmp\":\"^0.1.0\",\"ts-loader\":\"^6.0.0\",\"typescript\":\"^3.8.3\",\"webpack\":\"^4.20.2\",\"webpack-cli\":\"^3.1.1\"},\"engines\":{\"node\":\">=10\"},\"files\":[\"build/src\",\"!build/src/**/*.map\"],\"homepage\":\"https://github.com/googleapis/google-auth-library-nodejs#readme\",\"keywords\":[\"google\",\"api\",\"google apis\",\"client\",\"client library\"],\"license\":\"Apache-2.0\",\"main\":\"./build/src/index.js\",\"name\":\"google-auth-library\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/googleapis/google-auth-library-nodejs.git\"},\"scripts\":{\"browser-test\":\"karma start\",\"clean\":\"gts clean\",\"compile\":\"tsc -p .\",\"docs\":\"compodoc src/\",\"docs-test\":\"linkinator docs\",\"fix\":\"gts fix && eslint --fix '**/*.js'\",\"lint\":\"gts check\",\"predocs-test\":\"npm run docs\",\"prelint\":\"cd samples; npm link ../; npm i\",\"prepare\":\"npm run compile\",\"presystem-test\":\"npm run compile\",\"pretest\":\"npm run compile\",\"samples-test\":\"cd samples/ && npm link ../ && npm test && cd ../\",\"system-test\":\"mocha build/system-test --timeout 60000\",\"test\":\"c8 mocha build/test\",\"webpack\":\"webpack\"},\"types\":\"./build/src/index.d.ts\",\"version\":\"6.0.0\"}");
+module.exports = JSON.parse("{\"_args\":[[\"google-auth-library@6.0.0\",\"C:\\\\_Dmitry\\\\_proj\\\\nodejs-speech-kiosk-usercase\"]],\"_from\":\"google-auth-library@6.0.0\",\"_id\":\"google-auth-library@6.0.0\",\"_inBundle\":false,\"_integrity\":\"sha512-uLydy1t6SHN/EvYUJrtN3GCHFrnJ0c8HJjOxXiGjoTuYHIoCUT3jVxnzmjHwVnSdkfE9Akasm2rM6qG1COTXfQ==\",\"_location\":\"/google-auth-library\",\"_phantomChildren\":{\"abort-controller\":\"3.0.0\",\"extend\":\"3.0.2\",\"https-proxy-agent\":\"5.0.0\",\"is-stream\":\"2.0.0\",\"json-bigint\":\"0.3.0\",\"jws\":\"4.0.0\",\"mime\":\"2.4.4\",\"node-fetch\":\"2.6.0\",\"node-forge\":\"0.9.1\"},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"google-auth-library@6.0.0\",\"name\":\"google-auth-library\",\"escapedName\":\"google-auth-library\",\"rawSpec\":\"6.0.0\",\"saveSpec\":null,\"fetchSpec\":\"6.0.0\"},\"_requiredBy\":[\"/\",\"/@grpc/grpc-js\",\"/google-gax\"],\"_resolved\":\"https://registry.npmjs.org/google-auth-library/-/google-auth-library-6.0.0.tgz\",\"_spec\":\"6.0.0\",\"_where\":\"C:\\\\_Dmitry\\\\_proj\\\\nodejs-speech-kiosk-usercase\",\"author\":{\"name\":\"Google Inc.\"},\"bugs\":{\"url\":\"https://github.com/googleapis/google-auth-library-nodejs/issues\"},\"dependencies\":{\"arrify\":\"^2.0.0\",\"base64-js\":\"^1.3.0\",\"ecdsa-sig-formatter\":\"^1.0.11\",\"fast-text-encoding\":\"^1.0.0\",\"gaxios\":\"^3.0.0\",\"gcp-metadata\":\"^4.0.0\",\"gtoken\":\"^5.0.0\",\"jws\":\"^4.0.0\",\"lru-cache\":\"^5.0.0\"},\"description\":\"Google APIs Authentication Client Library for Node.js\",\"devDependencies\":{\"@compodoc/compodoc\":\"^1.1.7\",\"@types/base64-js\":\"^1.2.5\",\"@types/chai\":\"^4.1.7\",\"@types/jws\":\"^3.1.0\",\"@types/lru-cache\":\"^5.0.0\",\"@types/mocha\":\"^7.0.0\",\"@types/mv\":\"^2.1.0\",\"@types/ncp\":\"^2.0.1\",\"@types/node\":\"^10.5.1\",\"@types/sinon\":\"^7.0.0\",\"@types/tmp\":\"^0.1.0\",\"assert-rejects\":\"^1.0.0\",\"c8\":\"^7.0.0\",\"chai\":\"^4.2.0\",\"codecov\":\"^3.0.2\",\"execa\":\"^4.0.0\",\"gts\":\"^2.0.0-alpha.8\",\"is-docker\":\"^2.0.0\",\"karma\":\"^4.0.0\",\"karma-chrome-launcher\":\"^3.0.0\",\"karma-coverage\":\"^2.0.0\",\"karma-firefox-launcher\":\"^1.1.0\",\"karma-mocha\":\"^1.3.0\",\"karma-remap-coverage\":\"^0.1.5\",\"karma-sourcemap-loader\":\"^0.3.7\",\"karma-webpack\":\"^4.0.0\",\"keypair\":\"^1.0.1\",\"linkinator\":\"^2.0.0\",\"mocha\":\"^7.0.0\",\"mv\":\"^2.1.1\",\"ncp\":\"^2.0.0\",\"nock\":\"^12.0.0\",\"null-loader\":\"^3.0.0\",\"puppeteer\":\"^2.0.0\",\"sinon\":\"^9.0.0\",\"tmp\":\"^0.1.0\",\"ts-loader\":\"^6.0.0\",\"typescript\":\"^3.8.3\",\"webpack\":\"^4.20.2\",\"webpack-cli\":\"^3.1.1\"},\"engines\":{\"node\":\">=10\"},\"files\":[\"build/src\",\"!build/src/**/*.map\"],\"homepage\":\"https://github.com/googleapis/google-auth-library-nodejs#readme\",\"keywords\":[\"google\",\"api\",\"google apis\",\"client\",\"client library\"],\"license\":\"Apache-2.0\",\"main\":\"./build/src/index.js\",\"name\":\"google-auth-library\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/googleapis/google-auth-library-nodejs.git\"},\"scripts\":{\"browser-test\":\"karma start\",\"clean\":\"gts clean\",\"compile\":\"tsc -p .\",\"docs\":\"compodoc src/\",\"docs-test\":\"linkinator docs\",\"fix\":\"gts fix && eslint --fix '**/*.js'\",\"lint\":\"gts check\",\"predocs-test\":\"npm run docs\",\"prelint\":\"cd samples; npm link ../; npm i\",\"prepare\":\"npm run compile\",\"presystem-test\":\"npm run compile\",\"pretest\":\"npm run compile\",\"samples-test\":\"cd samples/ && npm link ../ && npm test && cd ../\",\"system-test\":\"mocha build/system-test --timeout 60000\",\"test\":\"c8 mocha build/test\",\"webpack\":\"webpack\"},\"types\":\"./build/src/index.d.ts\",\"version\":\"6.0.0\"}");
 
 /***/ }),
-/* 283 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48073,13 +48389,13 @@ exports.AuthClient = AuthClient;
 //# sourceMappingURL=authclient.js.map
 
 /***/ }),
-/* 284 */
+/* 286 */
 /***/ (function(module, exports) {
 
 
 
 /***/ }),
-/* 285 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48126,12 +48442,111 @@ exports.IAMAuth = IAMAuth;
 //# sourceMappingURL=iam.js.map
 
 /***/ }),
-/* 286 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-//https://github.com/kdavis-mozilla/vad.js
+
+
+// var lastDate = 0;
+// var data = []
+// var TICKINTERVAL = 86400000
+// let XAXISRANGE = 777600000
+// // function getDayWiseTimeSeries(baseval, count, yrange) {
+// //   var i = 0;
+// //   while (i < count) {
+// //     var x = baseval;
+// //     var y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+
+// //     data.push({
+// //       x, y
+// //     });
+// //     lastDate = baseval
+// //     baseval += TICKINTERVAL;
+// //     i++;
+// //   }
+// // }
+
+// // getDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 10, {
+// //   min: 10,
+// //   max: 90
+// // })
+
+// function getNewSeries(baseval, y) {
+//   var newDate = baseval + TICKINTERVAL;
+//   lastDate = newDate
+
+//   for(var i = 0; i< data.length - 10; i++) {
+//     // IMPORTANT
+//     // we reset the x and y of the data which is out of drawing area
+//     // to prevent memory leaks
+//     data[i].x = newDate - XAXISRANGE - TICKINTERVAL
+//     data[i].y = 0
+//   }
+
+//   data.push({
+//     x: newDate,
+//     y
+//   })
+
+//   chart.updateSeries([{ data }])
+// }
+
+// function resetData(){
+//   // Alternatively, you can also reset the data at certain intervals to prevent creating a huge series 
+//   data = data.slice(data.length - 10, data.length);
+// }
+
+
+// const ApexCharts = require('apexcharts/dist/apexcharts.common')
+
+// // let data = []
+
+// var options = {
+//   series: [{ data: data.slice() }],
+//   chart: {
+//     id: 'realtime',
+//     height: 350,
+//     type: 'line',
+//     animations: {
+//       enabled: true,
+//       easing: 'linear',
+//       dynamicAnimation: {speed: 1000}
+//     },
+//     toolbar: {show: false},
+//     zoom: {enabled: false}
+//   },
+//   dataLabels: {enabled: false},
+//   stroke: {curve: 'smooth'},
+//   title: {
+//     text: 'Dynamic Updating Chart',
+//     align: 'left'
+//   },
+//   markers: {size: 0},
+//   xaxis: {
+//     type: 'datetime',
+//     range: XAXISRANGE,
+//   },
+//   yaxis: {max: 30, min: -30},
+//   legend: {show: false}
+// };
+
+// var chart = new ApexCharts(document.querySelector("#chart"), options);
+// chart.render()
+
+// window.setInterval(function () {
+//   getNewSeries(lastDate, { min: 10, max: 90 })
+//   chart.updateSeries([{ data: data }])
+// }, 1000)
+
+// var chart = new ApexCharts(document.querySelector('#chart'), options)
+// chart.appendSeries({
+//   name: 'newSeries',
+//   data: [32, 44, 31, 41, 22]
+// })
+// chart.render()
+
 //https://github.com/kdavis-mozilla/vad.js
 class VAD {
   constructor(options) {
@@ -48139,8 +48554,8 @@ class VAD {
     // debugger;
     // Default options
     this.options = {
-      fftSize: 512,
-      bufferLen: 512,
+      fftSize: 512, //512,
+      bufferLen: 512, //512,
       voice_stop: function () { },
       voice_start: function () { },
       smoothingTimeConstant: 0.99,
@@ -48156,6 +48571,8 @@ class VAD {
       context: null,
       DEBUG: false
     };
+    this.canvas = document.getElementById('draw')
+    this.canvasCtx = this.canvas.getContext("2d");
     // User options
     for (let option in options) {
       if (options.hasOwnProperty(option)) {
@@ -48217,7 +48634,10 @@ class VAD {
     this.scriptProcessorNode.connect(this.options.context.destination);
     // Create callback to update/analyze floatFrequencyData
     let self = this;
-    this.scriptProcessorNode.onaudioprocess = function (event) {
+    this.scriptProcessorNode.onaudioprocess = function (e) {
+      console.log('onaudioprocess')
+      // const floatSamples = e.inputBuffer.getChannelData(0)
+      // console.log(floatSamples.getSettings())
       self.analyser.getFloatFrequencyData(self.floatFrequencyData);
       self.update();
       self.monitor();
@@ -48263,6 +48683,7 @@ class VAD {
       this.ready.energy = true;
       return energy;
     };
+    let logg = []
     this.monitor = function () {
       let energy = this.getEnergy();
       let signal = energy - this.energy_offset;
@@ -48290,10 +48711,27 @@ class VAD {
         // End of speech detected
         end = true;
       }
+      // const loggData = {
+      //   energy,
+      //   energy_offset: this.energy_offset,
+      //   energy_threshold_pos: this.energy_threshold_pos,
+      //   energy_threshold_neg: this.energy_threshold_neg,
+      //   signal, integration, voiceTrend: this.voiceTrend, start, end
+      // }
+
+      // logg.push(this.voiceTrend)
+      // getNewSeries(lastDate, this.voiceTrend)
+
       // Integration brings in the real-time aspect through the relationship with the frequency this functions is called.
+
+      // Интеграция привносит аспект реального времени через связь с частотой, которую называют эти функции.
       let integration = signal * this.iterationPeriod * this.options.energy_integration;
+
       // Idea?: The integration is affected by the voiceTrend magnitude? - Not sure. Not doing atm.
       // The !end limits the offset delta boost till after the end is detected.
+
+      // Идея ?: На интеграцию влияет величина voiceTrend? - Точно сказать не могу. Не делаю атм.
+      //! End ограничивает увеличение дельты смещения до тех пор, пока не будет обнаружен конец.
       if (integration > 0 || !end) {
         this.energy_offset += integration;
       }
@@ -48309,6 +48747,7 @@ class VAD {
         this.options.voice_start();
       }
       if (end && this.vadState) {
+        console.log(logg)
         this.vadState = false;
         this.options.voice_stop();
       }
@@ -48329,7 +48768,7 @@ class VAD {
 module.exports = VAD
 
 /***/ }),
-/* 287 */
+/* 289 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
