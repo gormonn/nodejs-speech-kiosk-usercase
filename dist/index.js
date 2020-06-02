@@ -30017,8 +30017,9 @@ function Recognizer({
 	this._idleTimeout = null
 	this._touched = false
 	this._recorder = { worker: false }
-
+	
 	const mediaListener = stream => {
+		this.Stream = stream
 		const speechEvents = hark(stream, harkOptions)
 
 		this._audioContext = new AudioContext();
@@ -30111,7 +30112,8 @@ function Recognizer({
 		// console.log('stopListening', this._audioContext.state)
 		clearTimeout(this._idleTimeout)
 		if(this._audioContext.state !== 'closed'){ // по сути недостижимо, ибо чистим idleTimeout
-			await this._audioContext.close();
+			this.Stream.getTracks()[0].stop()
+			await this._audioContext.close()
 		}
 	}
 	
