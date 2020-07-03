@@ -1,1 +1,3 @@
 node_modules
+src/vosk/models/**
+src/vosk/media/**
