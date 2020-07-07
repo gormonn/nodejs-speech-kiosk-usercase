@@ -3,6 +3,7 @@ const hark = require('hark')
 const Recorder = require('./recorder')
 const { recognize } = require('./index')
 const VAD = require('./vad')
+const {zipResults} = require('./utils')
 
 // example use:
 // const keys = {
@@ -33,7 +34,8 @@ function Recognizer({
 		autoInit = true,
 		forced = true,
 		idleDelay = 5000,
-		harkOptions = {}
+		harkOptions = {},
+		save = false
 	} = options
 	// it's might be an issue with memory (global)
 	this._isSpeech2Text = isSpeech2Text
@@ -73,16 +75,26 @@ function Recognizer({
 			this._recorder.clear() // иначе, запись склеивается
 		}
 
+		const speechSave = (results, buffer) => {
+			let link = document.createElement('a')
+			const blob = new Blob([buffer], {type: 'audio/x-wav'})
+			link.href = URL.createObjectURL(blob)
+			link.setAttribute("download", zipResults(results))
+			link.click()
+			URL.revokeObjectURL(link.href)
+		}
+
 		const googleSpeechRequest = blob => {
 			const { googleCloud = [] } = apiKeys
 			const [googleCloudKey] = googleCloud
 			let reader = new FileReader()
 			reader.onload = async function() {
 				if (reader.readyState == 2) {
-					const uint8Array = new Uint8Array(reader.result);
-					const recognitionResult = await recognize(uint8Array, googleCloudKey);
-					onSpeechRecognized(recognitionResult)
-					// console.log({recognitionResult})
+					const buffer = reader.result
+					const uint8Array = new Uint8Array(buffer)
+					const recognitionResult = await recognize(uint8Array, googleCloudKey)
+					onSpeechRecognized(recognitionResult, buffer)
+					if(save) speechSave(recognitionResult, buffer)
 				}
 			}
 			reader.readAsArrayBuffer(blob)

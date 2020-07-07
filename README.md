@@ -52,8 +52,42 @@ const Rec = new Recognizer({
 // Rec.stopRecognize() - stop recording and recognize
 // Rec.startRecognize() - start recording and recognize
 ```
-
 > **For those who read it: the example below can only be used in kiosk usecase. For regular browsers, please use `OAuth2Client` to implement a proper authentication workflow.**
+
+# Saving WAV files to local machine
+Add this to Electron's `main` process:
+```
+const {app, BrowserWindow} = require('electron')
+const {speechSaverHandler} = require('nodejs-speech-kiosk-usercase/src/utils-node')
+
+const win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true
+    }
+})
+// than add this handler to your 'will-download' event
+
+const projectPath = app.getAppPath()
+win.webContents.session.on('will-download', function(...rest){
+	speechSaverHandler(projectPath, ...rest)
+})
+```
+Then set the `save` option in your Recognizer:
+```
+const Rec = new Recognizer({
+	apiKeys, 
+	onSpeechRecognized: res => console.log('РЕЗУЛЬТАТ! ' + JSON.stringify(res)), 
+	onSpeechStart: () => console.log('ГОВОРИТ!'), // fires on speech started
+	onSpeechEnd: () => console.log('ЗАМОЛЧАЛ!'), // fires on speech ended
+	options: {
+		save: true
+	}
+})
+
+```
+Enjoy!
 
 Создание ключа:
 1. https://console.cloud.google.com/apis/credentials
