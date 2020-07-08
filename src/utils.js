@@ -4,6 +4,25 @@ const SPEECH_NAME_DEFAULT = 'speech'
 const SPEECH_DATA_SEPARATOR = '___SDS___'
 const SPEECH_GOOGLE_RESULT_SEPARATOR = '___GRS___'
 const SPEECH_SAVE_PATH = '/tmp/speech/'
+const SPEECH_SAVE_PATH_L = SPEECH_SAVE_PATH + '70-80/' // low confidence
+const SPEECH_SAVE_PATH_H = SPEECH_SAVE_PATH + '90/' // high confidence
+
+const createSavePath = (projectPath, item, confidence) => {
+    if(confidence >= .7){
+        const path = (confidence <= .8) ? SPEECH_SAVE_PATH_L : SPEECH_SAVE_PATH_H
+        return `${projectPath + path + item.getStartTime()}.wav`
+    }else{
+        return false
+    }
+}
+
+// const getPathByConfidence = confidence => {
+//     if(confidence >= .7){
+//         const path = (confidence <= .8) ? SPEECH_SAVE_PATH_L : SPEECH_SAVE_PATH_H
+//     }else{
+//         return false
+//     }
+// }
 
 const zip = (array, separator) =>
     array.join(separator)
@@ -38,8 +57,5 @@ const unzipResults = string => {
 }
 const isCorrectDownload = fileName =>
     fileName === SPEECH_NAME_DEFAULT
-
-const createSavePath = (projectPath, item) =>
-    `${projectPath + SPEECH_SAVE_PATH + item.getStartTime()}.wav`
 
 module.exports = {zipResults, unzipResults, isCorrectDownload, createSavePath}

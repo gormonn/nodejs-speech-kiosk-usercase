@@ -37,15 +37,17 @@ function speechSaverHandler(projectPath, e, item, webContents){
         // ds("/" , function(error , data){
         //     console.log(data)   // return {usedSize : "" , totalSize : ""}  in Byte
         // })
-        const savePath = createSavePath(projectPath, item)
-        item.setSavePath(savePath)
-        item.once('done', (event, state) => {
-            if (state === 'completed') {
-                setMetadata(savePath, [transcript, confidence])
-            } else {
-                console.log(`Download failed: ${state}`)
-            }
-        })
+        const savePath = createSavePath(projectPath, item, confidence)
+        if(savePath){
+            item.setSavePath(savePath)
+            item.once('done', (event, state) => {
+                if (state === 'completed') {
+                    setMetadata(savePath, [transcript, confidence])
+                } else {
+                    console.log(`Download failed: ${state}`)
+                }
+            })
+        }
     }else{
         console.log("A speech file won't save")
         e.preventDefault()

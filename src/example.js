@@ -47,7 +47,7 @@ function Recognizer({
 		this.Stream = stream
 		const speechEvents = hark(stream, harkOptions)
 
-		this._audioContext = new AudioContext();
+		this._audioContext = new AudioContext({sampleRate: 16000});
 		const source = this._audioContext.createMediaStreamSource(stream)		
 		this._recorder = new Recorder(source, {numChannels: 1})
 
