@@ -87,8 +87,13 @@ class Recorder {
                     interleaved = buffers[0];
                 }
                 let dataview = encodeWAV(interleaved);
+                // console.log('exportWAV',{type})
                 let audioBlob = new Blob([dataview], {type: type});
-
+                // let audioBlob = new Blob([dataview], {type: 'audio/x-wav'});
+                // console.log('Recorder typeof audioBlob:', {
+                //     data: audioBlob, 
+                //     type: typeof audioBlob
+                // })
                 this.postMessage({command: 'exportWAV', data: audioBlob});
             }
 

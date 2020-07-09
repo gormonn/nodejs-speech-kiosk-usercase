@@ -26,9 +26,11 @@
   "homepage": "https://github.com/gormonn/nodejs-speech-kiosk-usercase#readme",
   "dependencies": {
     "@google-cloud/speech": "^3.6.0",
+    "ffmetadata": "^1.6.0",
     "google-auth-library": "^6.0.0",
     "hark": "^1.2.3",
-    "inline-worker": "^1.1.0"
+    "inline-worker": "^1.1.0",
+    "ws": "^7.3.1"
   },
   "devDependencies": {
     "null-loader": "^4.0.0",
