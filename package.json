@@ -1,21 +1,19 @@
 {
-  "name": "nodejs-speech-kiosk-usercase",
-  "version": "0.3.0",
-  "main": "dist/index.js",
-  "license": "MIT",
-  "scripts": {
-    "build": "webpack --config webpack.config.js"
-  },
+  "license": "ISC",
+  "name": "electron-vosk-speech",
+  "version": "0.0.1",
+  "description": "Lightweight Speech Recognition Library for Electron. Based on [nodejs-speech-kiosk-usercase](https://www.npmjs.com/package/nodejs-speech-kiosk-usercase) and [vosk-api](https://github.com/alphacep/vosk-api).",
+  "main": "src/index.js",
   "keywords": [
-    "vad",
-    "google-speech",
+    "speech-recognition",
+    "vosk-api",
+    "speech",
     "electron"
   ],
   "contributors": [
-    "Alexander Fenster <fenster@google.com> (https://github.com/alexander-fenster)",
     "Dmitriy Aleksandrovich Chernukho <wfuzerbar@gmail.com> (https://github.com/gormonn)"
   ],
-  "description": "Google Speech node-js build for Electron kiosk usercase",
+  "author": "Dmitriy Aleksandrovich Chernukho <wfuzerbar@gmail.com> (https://github.com/gormonn)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gormonn/nodejs-speech-kiosk-usercase.git"
@@ -23,16 +21,9 @@
   "bugs": {
     "url": "https://github.com/gormonn/nodejs-speech-kiosk-usercase/issues"
   },
-  "homepage": "https://github.com/gormonn/nodejs-speech-kiosk-usercase#readme",
+  "homepage": "https://github.com/gormonn/electron-vosk-speech#readme",
   "dependencies": {
-    "@google-cloud/speech": "^3.6.0",
-    "google-auth-library": "^6.0.0",
     "hark": "^1.2.3",
     "inline-worker": "^1.1.0"
-  },
-  "devDependencies": {
-    "null-loader": "^4.0.0",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
   }
 }
