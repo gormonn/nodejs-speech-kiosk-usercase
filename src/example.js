@@ -57,6 +57,7 @@ function Recognizer({
 			onSpeechStart()
 		}
 		const onVoiceEnd = () => {
+			speechEvents.stop()
 			stopRecording()
 			onSpeechEnd()
 		}
@@ -162,9 +163,9 @@ function Recognizer({
 
 	this.stopAll = async () => {
 		// не понятно, останавливается ли запись
+		if(this._recorder.worker) this._recorder.worker.terminate()
 		this.stopRecognize()
 		await this.stopListening()
-		if(this._recorder.worker) this._recorder.worker.terminate()
 		onAllStop()
 	}
 	this.startAll = async () => {
