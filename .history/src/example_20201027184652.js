@@ -2,6 +2,7 @@
 const hark = require('hark')
 const Recorder = require('./recorder')
 const { recognize } = require('./index')
+const VAD = require('./vad')
 const {zipResults} = require('./utils')
 
 // example use:
@@ -178,4 +179,4 @@ function Recognizer({
 	}
 }
 
-module.exports = {Recognizer, Recorder, recognize}
+module.exports = {Recognizer, Recorder, VAD, recognize}
